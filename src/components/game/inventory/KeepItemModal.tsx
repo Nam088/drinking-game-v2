@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { useGameStore } from "@/store/useGameStore"
 import { motion } from "framer-motion"
+import { v4 as uuidv4 } from "uuid"
 
 import { Icons } from "../../icons"
 
@@ -29,7 +30,7 @@ export const KeepItemModal = ({ card, onClose, onSuccess }: KeepItemModalProps) 
 
     // If typing a new name, create player first
     if (newPlayerName.trim()) {
-      const id = crypto.randomUUID()
+      const id = uuidv4()
       addPlayer(newPlayerName.trim())
       ownerId = id
       // Since addPlayer is async via zustand we use the local variable for the item

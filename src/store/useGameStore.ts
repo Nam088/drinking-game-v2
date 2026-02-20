@@ -1,4 +1,5 @@
 import { create } from 'zustand'
+import { v4 as uuidv4 } from 'uuid'
 import { persist } from 'zustand/middleware'
 
 export interface Player {
@@ -39,7 +40,7 @@ export const useGameStore = create<GameState>()(
       items: [],
       
       addPlayer: (name) => set((state) => ({
-        players: [...state.players, { id: crypto.randomUUID(), name }]
+        players: [...state.players, { id: uuidv4(), name }]
       })),
       
       editPlayer: (id, newName) => set((state) => ({
@@ -55,7 +56,7 @@ export const useGameStore = create<GameState>()(
       addItem: (item) => set((state) => ({
         items: [{
           ...item,
-          id: crypto.randomUUID(),
+          id: uuidv4(),
           acquiredAt: Date.now()
         }, ...state.items]
       })),
