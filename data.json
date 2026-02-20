@@ -19556,5 +19556,1545 @@
     "content": "[SỰ KIỆN] Đại Tiệc: Tất cả mọi người cùng đứng dậy, cụng ly hô 'Một Hai Ba Zô' và uống 50% ly để tăng tình đoàn kết.",
     "penalty": "Cả làng uống 50%",
     "difficulty": "Party"
+  },
+  {
+    "id": 1821,
+    "category": "VOTE",
+    "content": "Đếm 1-2-3, chỉ tay vào người 'mỏ hỗn' (hay cãi bù lu bù loa, hay chê) nhất bàn.",
+    "penalty": "Nhà vô địch mỏ hỗn uống 2 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1822,
+    "category": "DARE",
+    "content": "Quay sang người bên trái, nhìn vào mắt họ 5 giây và nghiêm túc nói: 'Tớ có bầu rồi / Tớ làm người ta có bầu rồi'.",
+    "penalty": "Không dám diễn uống 2 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1823,
+    "category": "GROUP_TRUTH",
+    "content": "Ai đã từng bị người yêu (hoặc người yêu cũ) block trên Facebook/Zalo/Insta? Tự giác cầm ly lên.",
+    "penalty": "Hội bị block uống 1 ly",
+    "difficulty": "Drama"
+  },
+  {
+    "id": 1824,
+    "category": "MINI-GAME",
+    "content": "Đấu Tố: Tự nghĩ ra một lý do vô lý nhất để chê bai người đối diện (VD: thở to quá tao nhức đầu). Hai bên chê nhau, ai bí từ trước thì thua.",
+    "penalty": "Người thua uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1825,
+    "category": "SKILL",
+    "content": "Ngậm 1 ngụm bia hoặc 1 viên đá mím chặt miệng lại, rồi hát ngân nga bài 'Con bướm xuân'.",
+    "penalty": "Phun nước/Rớt đá uống 1 ly",
+    "difficulty": "Physical"
+  },
+  {
+    "id": 1826,
+    "category": "CURSE",
+    "content": "Lời nguyền Suy (Overthinking): Trong 2 vòng tới, trước khi đưa ly bia lên uống phải thở dài thườn thượt và nhăn nhó nói: 'Áp lực ngang'.",
+    "penalty": "Quên diễn uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 1827,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Hãy khen một câu vu vơ về mồi nhậu trên bàn (Ví dụ: 'Miếng đậu này ngon vãi'). Ai có tật hùa theo ngay lập tức, người đó dính bẫy.",
+    "penalty": "Người hùa theo uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1828,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Kiểm Tra Nhân Phẩm: Tất cả mọi người bỏ điện thoại lên bàn. Ai có % pin thấp nhất thì uống phạt vì tội hững hờ với máy.",
+    "penalty": "Kẻ pin yếu uống 1 ly",
+    "difficulty": "Luck"
+  },
+  {
+    "id": 1829,
+    "category": "TRUTH",
+    "content": "Hãy đọc to dòng tin nhắn gần nhất bạn nhắn với Bố/Mẹ (hoặc người nhà). Không có gì khuất tất thì đọc đi sợ gì!",
+    "penalty": "Không dám đọc uống 2 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1830,
+    "category": "BUDDY",
+    "content": "Chọn 1 người làm 'Đồng bọn sống ảo': Trong 15 phút tới, hễ bạn cầm điện thoại lên bấm bấm, người kia cũng phải cầm điện thoại lên lướt dù không có thông báo gì.",
+    "penalty": "Quên diễn uống 1 ly",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1831,
+    "category": "VOTE",
+    "content": "1-2-3, đồng loạt chỉ tay vào người hay 'Ra vẻ' (thích làm màu, hay tỏ ra tỏ vẻ) nhất hội. Nếu áp đảo số phiếu thì đứa đó uống.",
+    "penalty": "Thánh ra vẻ uống 2 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1832,
+    "category": "CURSE",
+    "content": "Lời nguyền Rối Loạn Danh Tính: Trong 1 vòng tới, cấm gọi tên thật/nghệ danh của nhau. Phải gọi nhau là 'Đồng chí'.",
+    "penalty": "Gọi lỡ mồm tên thật uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 1833,
+    "category": "PARTNER",
+    "content": "Chọn 1 người để đọ độ Flexing: Mỗi người kể 1 điểm mlem nhất / thành tựu xịn nhất về bản thân. Cả bàn làm ban giám khảo xem ai Out trình.",
+    "penalty": "Kẻ Flex phèn hơn uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1834,
+    "category": "GROUP_TRUTH",
+    "content": "Ai đã từng lên mạng than vãn 'Em dạo này hết tiền rồi' nhưng 2 ngày sau lại có đồ mới chốt đơn?",
+    "penalty": "Hội tiêu hoang uống 1 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1835,
+    "category": "TRUTH",
+    "content": "Bạn đánh giá người ngồi bên phải thuộc kiểu Red Flag (cờ đỏ) hay Green Flag (cờ xanh) trong tình yêu? Tại sao?",
+    "penalty": "Bao biện không logic uống 1 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1836,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Sao Kê Nào: Ai trong bàn có số dư tài khoản ngân hàng chính nhỏ hơn 500k thì giơ tay lên và... uống đi cho đỡ sầu.",
+    "penalty": "Hội đỗ nghèo khỉ uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1837,
+    "category": "DARE",
+    "content": "Hát 1 đoạn Vinahouse bằng giọng chay (tự beat) và múa quạt 5 giây trước sự ngỡ ngàng của cả bàn.",
+    "penalty": "Chê không làm rể uống 2 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1838,
+    "category": "SKILL",
+    "content": "Cầm ly bia bằng 2 mu bàn tay hoặc 2 khuỷu tay (tuyệt đối không dùng cụm ngón tay giữ) và uống 1 ngụm.",
+    "penalty": "Làm đổ bia ra áo uống 2 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1839,
+    "category": "MINI-GAME",
+    "content": "Đố vui Teencode/Từ lóng: Phát âm lại 1 từ teencode Gen-Z mạo danh bất kỳ. Người bên phải phải giải nghĩa. Chậm quá 5s là uống.",
+    "penalty": "Thua uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1840,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Báo Đời: Lúc nào thích, rút thẻ này ra và ép 1 người phải... lặp lại y xì đúc án phạt DARE hoặc TRUTH mà họ vừa mới hoàn thành ở lượt trước.",
+    "penalty": "Nạn nhân phải làm thẻ cũ lần 2",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1841,
+    "category": "VOTE",
+    "content": "Đếm 1-2-3, chỉ mặt đứa hay có thói quen 'Seen không rep' tin nhắn trong group chat nhất.",
+    "penalty": "Thánh bơ tin nhắn uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1842,
+    "category": "DARE",
+    "content": "Mở TikTok, tìm 1 điệu nhảy đang trend bắt mắt nhất và nhảy lại trong 15 giây.",
+    "penalty": "Từ chối nghệ thuật uống 2 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1843,
+    "category": "TRUTH",
+    "content": "Lần gần đây nhất bạn cãi nhau với người yêu (hoặc crush) là vì lý do ngớ ngẩn nào?",
+    "penalty": "Không khai uống 2 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1844,
+    "category": "GROUP_TRUTH",
+    "content": "Ai trong bàn này từng đăng story 'chỉ một người xem' (hoặc close friends) để thả thính? Tự giác uống.",
+    "penalty": "Hội thả thính ngầm uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1845,
+    "category": "MINI-GAME",
+    "content": "Đố vui vô tri: Hát 1 câu bài hát nhạc thiếu nhi nhưng theo phong cách Bolero. Ai hát dở nhất bàn chấm thua.",
+    "penalty": "Trưởng ban phá hit uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1846,
+    "category": "SKILL",
+    "content": "Dùng 2 ngón tay (trỏ và giữa) gắp 1 miếng mồi hoặc 1 viên đá nhỏ cho vào miệng mà không rơi.",
+    "penalty": "Rớt mồi uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1847,
+    "category": "CURSE",
+    "content": "Lời nguyền Thảo Mai: Trong 1 vòng tới, trước khi nói câu gì cũng phải chêm từ 'Dạ cưng' hoặc 'Vâng ạ'.",
+    "penalty": "Thái độ lồi lõm uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 1848,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Hãy khen cái áo (hoặc phụ kiện) của người bên trái. Nếu họ cười hoặc nói 'Cảm ơn', họ dính bẫy.",
+    "penalty": "Người bị khen uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1849,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Lọc Bạn Bè: Ai đang có dưới 500 bạn bè trên Facebook/Insta thì giơ tay. Ít giao du quá, uống 1 ly mở rộng quan hệ.",
+    "penalty": "Hội hướng nội uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1850,
+    "category": "BUDDY",
+    "content": "Chọn 1 người làm 'Đồng minh Simp Lỏ': Hễ bạn uống bia, người kia phải lấy tay làm hình trái tim gửi đến bạn.",
+    "penalty": "Quên thả tim phá game uống 1 ly",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1851,
+    "category": "VOTE",
+    "content": "Đếm 1-2-3, bình chọn xem ai là người lụy tình nhất (từng khóc vì tình) trong bàn này.",
+    "penalty": "Simp chúa uống 2 ly",
+    "difficulty": "Drama"
+  },
+  {
+    "id": 1852,
+    "category": "DARE",
+    "content": "Cam thường không filter: Mở camera thường bằng điện thoại người bên cạnh, chụp 1 góc mặt nọng và đặt làm hình nền 10 phút.",
+    "penalty": "Không dám đối mặt sự thật uống 2 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1853,
+    "category": "TRUTH",
+    "content": "Nói 1 điểm bạn thấy 'chê' nhất ở ngoại hình của mình. Cấm nói dối.",
+    "penalty": "Nói điêu uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1854,
+    "category": "GROUP_TRUTH",
+    "content": "Ai đã từng lén lút xem trộm điện thoại của người yêu lúc họ đang đi vệ sinh/ngủ? Tự thú đi.",
+    "penalty": "Hội FBI uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1855,
+    "category": "MINI-GAME",
+    "content": "Đấu khẩu: Bạn và người đối diện thay nhau nói 1 từ diễn tả cảm giác thất tình (VD: Đau, sầu, cay...). Ai bí từ trước thua.",
+    "penalty": "Kẻ đuối lý uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1856,
+    "category": "SKILL",
+    "content": "Đặt điện thoại lên đầu, giữ thăng bằng và đứng lên ngồi xuống 3 lần.",
+    "penalty": "Làm rớt điện thoại uống 1 ly",
+    "difficulty": "Physical"
+  },
+  {
+    "id": 1857,
+    "category": "CURSE",
+    "content": "Lời nguyền Bất Ổn: Trong 2 vòng tới, mỗi khi bị gọi tên, bạn phải giật mình kêu 'Hả?' thật to giả vờ ngơ ngác.",
+    "penalty": "Quên diễn nét ngơ uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1858,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Cố tình nhại lại y đúc câu nói cuối cùng của người bên phải. Nếu họ chửi 'Bị điên à?', họ thua.",
+    "penalty": "Người mắng chửi uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1859,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Bốc Phốt: Dùng thẻ này để ép 1 người phải đưa điện thoại cho bạn lướt xem ảnh (Album) trong 30 giây.",
+    "penalty": "Không cho xem uống 2 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1860,
+    "category": "PARTNER",
+    "content": "Chọn 1 người để đọ mắt: Nhìn chằm chằm nhau trong 30 giây không được chớp mắt. Lệ rơi là thua.",
+    "penalty": "Kẻ bại trận uống 1 ly",
+    "difficulty": "Physical"
+  },
+  {
+    "id": 1861,
+    "category": "VOTE",
+    "content": "1-2-3, chỉ tay vào người mỏ hỗn nhưng tâm trong sáng nhất hội. Tính hay chửi nhưng lại rất tốt bụng.",
+    "penalty": "Thánh mỏ hỗn tốt bụng uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1862,
+    "category": "DARE",
+    "content": "Quay sang người bên trái và nói 1 câu thoại ngôn tình sến súa nhất bạn nhớ được (VD: Em là định mệnh đời anh).",
+    "penalty": "Mắc cỡ không nói uống 2 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1863,
+    "category": "TRUTH",
+    "content": "Bạn đã từng có suy nghĩ muốn 'tuyệt giao' (bo bo xì) với ai ngồi trong bàn này chưa? Đã từng thoáng qua thôi cũng phải khai.",
+    "penalty": "Không dám trả lời uống 2 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1864,
+    "category": "GROUP_TRUTH",
+    "content": "Ai đã từng mua đồ online rồi lấy lý do đi vắng không nhận hàng (bùng hàng)?",
+    "penalty": "Bom hàng uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1865,
+    "category": "MINI-GAME",
+    "content": "Đấu nối từ version Động Vật: Bạn bắt đầu (VD: Con chó). Trái qua phải nối đuôi. Ai bí uống.",
+    "penalty": "Bí từ uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1866,
+    "category": "SKILL",
+    "content": "Dùng 2 môi (không dùng răng hay tay) kẹp lấy 1 nắp chai trong 5 giây.",
+    "penalty": "Rớt nắp uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1867,
+    "category": "CURSE",
+    "content": "Lời nguyền Ngoại Ngữ Phèn: Trong 1 vòng tới, cấm nói bất kỳ từ tiếng Anh nào chêm vào (Cấm hello, ok, chốt, bill...).",
+    "penalty": "Nói lọt tiếng Anh uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 1868,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Hãy giả vờ ngáp thật to và vươn vai. Theo hiệu ứng thì ai ngáp lây theo bạn người đó uống.",
+    "penalty": "Ai ngáp theo uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1869,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Kiểm Du: Mọi người mở ứng dụng Ngân hàng. Số cuối cùng trong số dư khả dụng của ai nhỏ nhất, người đó uống.",
+    "penalty": "Kẻ nghèo hèn uống 1 ly",
+    "difficulty": "Luck"
+  },
+  {
+    "id": 1870,
+    "category": "BUDDY",
+    "content": "Chọn 1 người làm 'Thư ký': Hễ bạn định uống bia, Thư ký phải rót thêm mồi hoặc đưa khăn giấy cho bạn.",
+    "penalty": "Thư ký vô trách nhiệm uống 1 ly",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1871,
+    "category": "VOTE",
+    "content": "Chỉ tay vào đứa ăn mặc 'Trưởng thành ép buộc' nhất (mặc đồ già dặn nỗ lực nhưng mặt vẫn non chẹt).",
+    "penalty": "Anh chú chị dì uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1872,
+    "category": "DARE",
+    "content": "Vào Zalo/Mess, gửi cho 1 nhóm bạn (hoặc nhóm cty) 1 tin nhắn bất kỳ chỉ toàn Icon vô tri ngớ ngẩn. Không giải thích.",
+    "penalty": "Không dám gửi uống 2 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1873,
+    "category": "TRUTH",
+    "content": "Sự ảo tưởng lớn nhất về bản thân bạn là gì? (Nghĩ mình hát hay, đẹp trai...)",
+    "penalty": "Giấu giếm uống 2 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1874,
+    "category": "GROUP_TRUTH",
+    "content": "Ai đã từng dính lời nguyền 'Chia tay đòi quà' (đòi lại hoặc bị đòi lại) trong quá khứ?",
+    "penalty": "Hội sòng phẳng uống 1 ly",
+    "difficulty": "Drama"
+  },
+  {
+    "id": 1875,
+    "category": "MINI-GAME",
+    "content": "Kể tên 5 thương hiệu son môi (hoặc đồ trang điểm) trong 10 giây. Đàn ông không rành món này chắc chắn chết.",
+    "penalty": "Không kể đủ uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1876,
+    "category": "SKILL",
+    "content": "Dùng 1 ngón tay đẩy cái ly/cốc trượt trên mặt bàn. Trượt càng gần mép bàn (mà không rớt) càng tốt. Thua người giỏi nhất thì uống.",
+    "penalty": "Trượt ra ngoài/Yếu nhất uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1877,
+    "category": "CURSE",
+    "content": "Lời nguyền Tự Kỷ: Trong 2 vòng tới, hễ bị ai phạt hoặc mời uống, bạn phải nói 'Tự tôi uống không cần ai mời' rồi mới uống.",
+    "penalty": "Quên diễn uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1878,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Gõ gõ ngón tay xuống bàn tạo nhịp điệu. Ai vô thức gõ theo nhịp của bạn hoặc hát theo, họ dính bẫy.",
+    "penalty": "Người bắt nhịp uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1879,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Thao Túng Tâm Lý: Khi bốc dính hình phạt DARE, gọi tên 1 người. Người đó phải tư vấn cho bạn cách lách luật hoặc nhận phạt hộ 1 nửa.",
+    "penalty": "Người bị gọi tự nhiên mất nửa chai",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1880,
+    "category": "PARTNER",
+    "content": "Chọn 1 bạn nữ (hoặc bạn nam). Hai người cùng đứng lên tạo dáng 'JoJo Pose' thật thần thái trong 5 giây.",
+    "penalty": "Tạo dáng phèn uống mỗi người 1 ly",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1881,
+    "category": "VOTE",
+    "content": "Chỉ tay vào đứa có khả năng 'Overthinking' (suy nghĩ thái quá) đến mất ngủ vì 1 tin nhắn 'Seen' nhất.",
+    "penalty": "Chúa đảo suy nghĩ uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1882,
+    "category": "DARE",
+    "content": "Dùng ứng dụng ghi âm, hát chay (không nhạc) 1 đoạn rap dở tệ rồi mở lại loa ngoài cho cả bàn cùng thẩm định.",
+    "penalty": "Không hát rớt đài uống 2 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1883,
+    "category": "TRUTH",
+    "content": "Lần mượn tiền (bạn bè/người nhà) tồi tệ nhất của bạn vì mục đích 'báo thủ' là gì?",
+    "penalty": "Chối cãi uống 2 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1884,
+    "category": "GROUP_TRUTH",
+    "content": "Ai hôm nay ra khỏi nhà mà quên xịt nước hoa hoặc quên đánh răng? Khai thật đi nha.",
+    "penalty": "Hội có mùi uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1885,
+    "category": "MINI-GAME",
+    "content": "Trò chơi đếm số mìn: Đọc số 1, 2, 3... Đến số có chứa 3 hoặc chia hết cho 3 phải vỗ tay thay vì đọc. Ai nhẩm nhầm uống trọn ly.",
+    "penalty": "Não cá vàng uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1886,
+    "category": "SKILL",
+    "content": "Ném 1 tờ giấy vo tròn vào ly bia của người đối diện từ khoảng cách 1 mét. 3 lần ném.",
+    "penalty": "Ném xịt uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1887,
+    "category": "CURSE",
+    "content": "Lời nguyền Hoàng Gia: Bắt đầu từ giờ, để cụng ly, bạn phải dơ ngón út cong lên (kiểu quý tộc Anh) mỗi lần cầm ly.",
+    "penalty": "Quên làm đuông dừa uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1888,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Lấy 1 ly nước lọc uống và chép miệng 'Bia (Rượu) hôm nay hơi nhạt nhỉ'. Ai đồng tình câu này lập tức bị phạt uống bia thật.",
+    "penalty": "Kẻ hùa theo uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1889,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Thiên Khiển: Người nào đang sở hữu nhiều thẻ ITEM GIỮ LẠI nhất trong tay phải nộp lại bài cho nhà cái và uống 1 ly.",
+    "penalty": "Đại gia phá sản uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1890,
+    "category": "BUDDY",
+    "content": "Chọn 1 người làm 'Bác sĩ tâm lý'. Bạn có quyền than thở 1 chuyện bù lu bù loa, người đó phải vỗ nhẹ lưng bạn và nói 'Ổn thôi'.",
+    "penalty": "Không diễn đúng thái độ thì cả hai uống",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1891,
+    "category": "VOTE",
+    "content": "Chỉ tay vào đứa có tướng mạo 'Nhà mặt phố bố làm to' nhưng thực ra là Đỗ Nghèo Khỉ trong truyền thuyết.",
+    "penalty": "Đỗ Nghèo Khỉ uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1892,
+    "category": "DARE",
+    "content": "Cầm đồ ăn bằng đũa, chạy lăng xăng quanh bàn và mời mọi người ăn kiểu mẹ ép con ăn bột.",
+    "penalty": "Ngần ngại uống 2 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1893,
+    "category": "TRUTH",
+    "content": "Lần gần nhất bạn trễ hẹn vì lý do 'kẹt xe' nhưng thực ra là ngủ quên hoặc bận makeup là khi nào?",
+    "penalty": "Nói xạo uống 1 ly",
+    "difficulty": "Drama"
+  },
+  {
+    "id": 1894,
+    "category": "GROUP_TRUTH",
+    "content": "Ai trong bàn này xài ốp lưng chống sốc siêu dày (hoặc siêu vàng ố)? Tự giác nâng ly.",
+    "penalty": "Hội thực dụng uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1895,
+    "category": "MINI-GAME",
+    "content": "Thi Ai Nín Thở Lâu Nhất. Cùng bấm giờ, ai thở ra (hoặc cười trào khí) đầu tiên thì thua cuộc.",
+    "penalty": "Người đuối lý uống 1 ly",
+    "difficulty": "Physical"
+  },
+  {
+    "id": 1896,
+    "category": "SKILL",
+    "content": "Vắt ngang 1 chiếc đũa qua sống mũi và giữ thăng bằng trong 10 giây.",
+    "penalty": "Văng đũa uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1897,
+    "category": "CURSE",
+    "content": "Lời nguyền Người Lạ Ơi: Trong 1 vòng, cấm nói chuyện trực tiếp với người đối diện, chỉ được nhờ người thứ 3 chuyển lời.",
+    "penalty": "Quên mà nói thẳng uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 1898,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Hỏi cả bàn: 'Ê có ai nghe tiếng nhạc bé đi không?'. Ai ngây thơ trả lời 'Không thấy' thì người đó dính bẫy.",
+    "penalty": "Người ngây thơ uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1899,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Phản Lưới Nhà: Bất cứ ai định rủ bạn cụng ly dzô (100%), bạn lôi thẻ này ra, người đó phải tự gánh thay bạn luôn ly đó.",
+    "penalty": "Người rủ rê tự gánh 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1900,
+    "category": "PARTNER",
+    "content": "Chọn 1 người, hai bạn tạo hình 'Bắn tim' chéo tay (tay người này ghép tim với tay người kia) để chụp 1 bô ảnh.",
+    "penalty": "Photogenic fail uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1901,
+    "category": "VOTE",
+    "content": "1-2-3, chỉ vào đứa có thói quen hứa lèo 'Hôm nay tao không uống đâu' xong cuối cùng say sấp mặt nhất.",
+    "penalty": "Báo thủ mỏ điêu uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1902,
+    "category": "DARE",
+    "content": "Gọi điện cho ai đó, khi họ bắt máy, lập tức bật đoạn ghi âm tiếng Chó sủa hoặc Mèo kêu rồi cúp máy.",
+    "penalty": "Sợ bị chửi không làm uống 2 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1903,
+    "category": "TRUTH",
+    "content": "Lần bạn bị quê mặt nhất chốn đông người là vì cái gì? Vấp ngã, rớt đồ hay gọi nhầm người?",
+    "penalty": "Không kể được kỉ niệm uống 2 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1904,
+    "category": "GROUP_TRUTH",
+    "content": "Ai đã từng lén ăn phần đồ ăn ngon nhất (VD toping xịn) trong bát người khác lúc họ không để ý?",
+    "penalty": "Kẻ tham ăn uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1905,
+    "category": "MINI-GAME",
+    "content": "Đố vui Tốc Độ: 1+2+3+4 = ? Bật ra sau 3 giây. Trả lời chậm (hơn 3s) hoặc sai đều uống.",
+    "penalty": "Kẻ tính chậm uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1906,
+    "category": "SKILL",
+    "content": "Đổ bìa từ ly này sang ly khác từ độ cao khoảng 1 gang tay mà không vãi ra giọt nào.",
+    "penalty": "Làm rớt bia uống 1 ly gùi lau",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1907,
+    "category": "CURSE",
+    "content": "Lời nguyền Cục Súc: Trong vòng tới, trả lời bất kỳ ai cũng phải cộc lốc 1 từ duy nhất (Ví dụ: Ờ, Không, Dạ, Ukm...).",
+    "penalty": "Nói dài dòng 2 từ uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 1908,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Cố tình nhếch mép cười đểu nhìn người bên trái. Nếu nó hỏi 'Mày thái độ gì?', nó uống phạt vì tội tò mò.",
+    "penalty": "Người nóng tính uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1909,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Vòng Xoay Tâm Linh: Bạn quay 1 cái nắp chai trên bàn. Nắp hướng mũi nhọn (mặt hở) vào ai, đó là người bị chọn để uống ly cạn.",
+    "penalty": "Kẻ xui xẻo uống 1 ly cạn",
+    "difficulty": "Luck"
+  },
+  {
+    "id": 1910,
+    "category": "BUDDY",
+    "content": "Chọn 1 người làm 'Công chúa bé bỏng', từ giờ trở đi hễ họ nâng ly thì bạn phải lấy tay đỡ dưới đáy ly của họ cho sang trọng.",
+    "penalty": "Dịch vụ kém uống 1 ly",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1911,
+    "category": "VOTE",
+    "content": "Chỉ vào người có gu âm nhạc tồi tệ nhất (chuyên gia mở nhạc quẩy giật tung chảo, hoặc quá suy lúc anh em đang vui).",
+    "penalty": "DJ thất bại uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1912,
+    "category": "DARE",
+    "content": "Cắn 1 lát chanh mỏng, nhai nó mà không được thay đổi biểu cảm gương mặt (chua) trong 5 giây.",
+    "penalty": "Nhe răng nhăn mặt uống 2 ly",
+    "difficulty": "Physical"
+  },
+  {
+    "id": 1913,
+    "category": "TRUTH",
+    "content": "Châm ngôn tình yêu hiện tại của bạn là gì? Thích độc thân hay muốn có người bao nuôi?",
+    "penalty": "Không trả lời uống 1 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1914,
+    "category": "GROUP_TRUTH",
+    "content": "Ai hay tắt thông báo nhóm làm việc/nhóm lớp nhất thì tự thú nâng ly.",
+    "penalty": "Thánh chống đối cộng đồng uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1915,
+    "category": "MINI-GAME",
+    "content": "Đấu Thể Lực: Cầm ly bia của bạn, giữ thẳng cánh tay song song với mặt đất trong 1 phút không được run.",
+    "penalty": "Giữ không nổi uống 1 ly",
+    "difficulty": "Physical"
+  },
+  {
+    "id": 1916,
+    "category": "SKILL",
+    "content": "Tung 3 hạt lạc (hoặc đá viên) lên không và bắt lại 1 lượt bằng một tay giống tung hứng.",
+    "penalty": "Rớt đồ uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1917,
+    "category": "CURSE",
+    "content": "Lời nguyền Điệp Ngữ: Lặp lại 2 từ cuối của người vừa mới nói chuyện xong. (VD: ... ăn ngon không? -> Bạn: Ngon không). Tồn tại trong 3 phút.",
+    "penalty": "Quên điệp ngữ uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 1918,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Gãi nhẹ sau gáy (hoặc đầu) rồi nhìn người đối diện. Ai bị ảo giác gãi đầu theo bạn thì người đó bị bắt phạt.",
+    "penalty": "Người bị ảo giác tự gãi đầu uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1919,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Thẩm Định Giá: Tới lượt chọn phạt ai, bạn lôi thẻ này ra ép người đó. Sau đó rút điện thoại check giá món đồ người đó đang mặc, nếu trên 500k uống 2 ly, dưới uống 1 ly.",
+    "penalty": "Con mồi hẩm hiu uống 1 hoặc 2 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1920,
+    "category": "PARTNER",
+    "content": "Chọn 1 bạn, cả hai thi 'Ai lạnh lùng hơn' bằng cách đọc tin nhắn sến súa cho nhau nghe mà không được cười.",
+    "penalty": "Ai phì cười uống 1 ly",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1921,
+    "category": "VOTE",
+    "content": "Chỉ vào đứa 'Hệ tâm linh', suốt ngày coi Tarot, thần số học, bói toán mà cung tình duyên vẫn nát.",
+    "penalty": "Thánh bói toán uống 1 ly",
+    "difficulty": "Drama"
+  },
+  {
+    "id": 1922,
+    "category": "DARE",
+    "content": "Hôn (thơm) vào lưng bàn tay của người ngồi bên phải với ánh mắt cực kỳ đắm đuối.",
+    "penalty": "Từ chối nụ hôn uống 2 ly",
+    "difficulty": "Hot"
+  },
+  {
+    "id": 1923,
+    "category": "TRUTH",
+    "content": "Lần bạn cảm thấy mình 'trẩu tre' (trẻ trâu) nhất là hồi năm bao nhiêu tuổi? Có hành động gì bứt rứt bây giờ kể lại không?",
+    "penalty": "Giấu nhẹm quá khứ uống 1 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1924,
+    "category": "GROUP_TRUTH",
+    "content": "Ai đã từng xin đi vệ sinh chỉ để lén ra ngoài nghe điện thoại buôn chuyện (chứ không phải giải quyết nỗi buồn)?",
+    "penalty": "Hội mượn cớ uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1925,
+    "category": "MINI-GAME",
+    "content": "Đố từ ghép vần bằng chữ Y (VD: Y Yêu, Y Yếu, Y Yến...). Đọc theo vòng, lặp lại thua.",
+    "penalty": "Bí từ uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1926,
+    "category": "SKILL",
+    "content": "Cuộn lưỡi thành hình lưỡi ống (hoặc hình hoa). Không làm được uống bia phạt đi.",
+    "penalty": "Không biết cuộn lưỡi uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1927,
+    "category": "CURSE",
+    "content": "Lời nguyền Cẩu Huyết: Trong 2 vòng tới, xưng hô phải tự xưng là 'Bản cung', 'Trẫm' hoặc 'Thần thiếp'.",
+    "penalty": "Xưng tên uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1928,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Giả vờ hốt hoảng hét lên 'Ui có con gián!'. Ai giật mình rụt chân hoặc hét theo thì dính án uống phạt.",
+    "penalty": "Người yếu bóng vía uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1929,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Chia Sẻ Đắng Cay: Cầm ly bia của mình rót đều san sẻ bớt cho 2 người bên cạnh (trái 1 ít, phải 1 ít). Ăn chung mâm uống chung ly.",
+    "penalty": "2 người bên cạnh uống ly thập cẩm",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1930,
+    "category": "BUDDY",
+    "content": "Đồng minh Nhác Cười: Hễ bạn cười, người được bạn chọn (Đồng Bọn) phải bịp miệng bạn lại.",
+    "penalty": "Cả hai ngó lơ nhau uống 1 ly",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1931,
+    "category": "VOTE",
+    "content": "Chỉ vào đứa có lịch sử 'Trễ Hẹn Kinh Niên' (cứ nói 5p nữa tới là auto 30p sau mới thấy mặt).",
+    "penalty": "Báo thủ thời gian uống 2 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1932,
+    "category": "DARE",
+    "content": "Trùm áo lên đầu (hoặc che mặt) trong suốt phần còn lại của vòng chơi để trốn tránh ánh sáng.",
+    "penalty": "Tháo xuống sớm uống 2 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1933,
+    "category": "TRUTH",
+    "content": "Kể tên một tật xấu của chính bản thân mình mà bạn biết là phiền nhưng 'không thèm sửa'.",
+    "penalty": "Bảo thủ uống 1 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1934,
+    "category": "GROUP_TRUTH",
+    "content": "Ai có hình xăm ẩn (ở những vị trí không show ra bình thường được) tự giác khai và uống 1 ly nha.",
+    "penalty": "Hội giang hồ ngầm uống 1 ly",
+    "difficulty": "Hot"
+  },
+  {
+    "id": 1935,
+    "category": "MINI-GAME",
+    "content": "Đếm từ 1-10 bằng một ngoại ngữ nào đó không phải tiếng Anh (Nhật, Hàn, Trung, Pháp...).",
+    "penalty": "Không biết ngôn ngữ thứ 3 uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1936,
+    "category": "SKILL",
+    "content": "Ngồi thăng bằng trên ghế bằng 2 chân sau (nhấc 2 chân trước của ghế lên) trong 5 giây. Không được vịn bàn.",
+    "penalty": "Chống tay hoặc rớt ghế uống 1 ly",
+    "difficulty": "Physical"
+  },
+  {
+    "id": 1937,
+    "category": "CURSE",
+    "content": "Lời nguyền Lịch Sự Vô Tri: Trong 1 vòng tới, khi cụng ly phải cúi đầu sát bàn như người Nhật rồi hô 'Arigato'.",
+    "penalty": "Quên cúi đầu uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1938,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Mời người bên phải 1 miếng mồi. Cố ý gắp rót rớt ra ngoài. Nó chê thì nó uống, nó nhặt lên ăn thì thôi nể sức bền của nó.",
+    "penalty": "Nó nhặt lên ăn, nó được điểm, bạn uống.",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1939,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Phong Ấn: Ép 1 người bạn chọn vào trạng thái 'Cấm nói'. Chỉ được lắc đầu, gật đầu hoặc nhắn tin bằng điện thoại trong 3 phút.",
+    "penalty": "Vi phạm nói thành tiếng phạt 2 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1940,
+    "category": "PARTNER",
+    "content": "Cùng 1 người nữa diễn phân đoạn Slow Motion (chuyển động chậm) khi cụng ly và uống rượu như trong phim hành động Ấn Độ.",
+    "penalty": "Diễn không deep uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1941,
+    "category": "VOTE",
+    "content": "1-2-3, chỉ mặt người mở miệng ra là kêu 'em mập quá' nhưng đụng tới mồi là gắp nhanh nhất mâm.",
+    "penalty": "Thánh ăn dối lòng uống 2 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1942,
+    "category": "DARE",
+    "content": "Hít đất 5 cái hoặc squat 10 cái ngay tại chỗ, miệng hô to 'Thể dục thể thao, nâng cao đô nhậu!'.",
+    "penalty": "Sức khỏe yếu kém phạt 2 ly",
+    "difficulty": "Physical"
+  },
+  {
+    "id": 1943,
+    "category": "TRUTH",
+    "content": "Đã bao giờ bạn giả vờ say để được crush/người yêu đưa về hoặc làm cớ nhắn tin xàm xí chưa?",
+    "penalty": "Lươn lẹo tình trường uống 2 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1944,
+    "category": "GROUP_TRUTH",
+    "content": "Ai trong bàn hay xài ốp lưng có khe nhét tiền mặt/thẻ đen nhưng bên trong toàn hóa đơn với tiền lẻ?",
+    "penalty": "Hội phông bạt uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1945,
+    "category": "MINI-GAME",
+    "content": "Đố vui: Nhanh trí kể tên 3 diễn viên JAV/Phim 18+ mà bạn biết trong 5 giây.",
+    "penalty": "Tỏ vẻ ngây thơ giả nai uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1946,
+    "category": "SKILL",
+    "content": "Dùng 2 chiếc đũa gắp 1 viên đá mút hờ rồi cắn vỡ, không được dùng tay hứng.",
+    "penalty": "Rớt đá hoặc ê răng uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1947,
+    "category": "CURSE",
+    "content": "Lời nguyền Vô Diện: Lấy 1 tờ khăn giấy đắp trúng nửa mặt (từ sống mũi trở xuống) tới khi lượt tiếp theo của bạn tới.",
+    "penalty": "Rớt khăn giấy uống 1 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1948,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Lấy điện thoại/giấy ghi 1 từ khóa (VD: 'Ngon'). Dụ người khác nhắc đến từ đó trong 5 phút.",
+    "penalty": "Người nói trúng từ khóa uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1949,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Lộc Bất Tận Hưởng: Ai nãy giờ chưa đi vệ sinh lần nào kể từ lúc dọn mâm thì bị phạt vì thận quá khỏe.",
+    "penalty": "Thận khỏe nạp thêm 1 ly",
+    "difficulty": "Luck"
+  },
+  {
+    "id": 1950,
+    "category": "BUDDY",
+    "content": "Chọn 1 người làm 'Bóng ma': Họ không được nói, chỉ ra dấu. Bạn làm phiên dịch. Dịch sai ý là cả 2 uống.",
+    "penalty": "Bóng ma lên tiếng uống 2 ly",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1951,
+    "category": "TROLL",
+    "content": "Chỉ tay vào đứa có thói quen up story đi chơi nhưng ráng 'giấu mặt' người đi cùng để ra vẻ bí ẩn.",
+    "penalty": "Thánh drama ngầm uống 2 ly",
+    "difficulty": "Drama"
+  },
+  {
+    "id": 1952,
+    "category": "DARE",
+    "content": "Cầm muỗng làm Micro, phỏng vấn nhanh cảm nghĩ của người đối diện về cục mụn/vết thâm trên mặt họ.",
+    "penalty": "Phản biện yếu uống 1 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1953,
+    "category": "DRAMA",
+    "content": "Số tiền lớn nhất bạn từng bị lừa (hoặc bị mượn không trả) là bao nhiêu? Xót xa thì làm 1 ly.",
+    "penalty": "Giấu nỗi đau tự phạt 1 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1954,
+    "category": "GROUP_TRUTH",
+    "content": "Ai từng chốt đơn Shopee/TikTok Shop vô tội vạ xong lúc giao hàng giả vờ đi vắng hoặc boom luôn?",
+    "penalty": "Hội bom hàng uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1955,
+    "category": "MINI-GAME",
+    "content": "Đố nối từ bằng chữ T (VD: T To, T Tài, T Tình...). Đọc theo vòng, ai lặp lại hoặc bí thì thua.",
+    "penalty": "Bí từ uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1956,
+    "category": "SKILL",
+    "content": "Gỡ 1 viên đá nhỏ ra khỏi ly bia của mình bằng đũa mà không chạm tay, thả sang ly bên cạnh.",
+    "penalty": "Rớt đá xuống bàn uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1957,
+    "category": "CURSE",
+    "content": "Lời nguyền Tỏ Tình: Trong 1 vòng, cuối mỗi câu nói phải chêm thêm từ 'Yêu anh/Yêu em'.",
+    "penalty": "Quên thả thính uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 1958,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Nhìn xuống dưới gầm bàn giả vờ tìm kiếm gì đó. Ai tò mò cúi nhìn theo thì dính án phạt.",
+    "penalty": "Người tò mò cúi nhìn uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1959,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Kim Bài Miễn Tử: Khi có người bắt bẻ hoặc dụ phạt bạn, đưa thẻ này ra ép ngược họ uống thay.",
+    "penalty": "Chỉ dùng 1 lần phản đòn",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1960,
+    "category": "PARTNER",
+    "content": "Chọn 1 chiến hữu. Kẹp tay kiểu 'Giao bôi' và cùng cạn 1 ngụm bia chậm rãi, mắt đắm đuối nhìn nhau.",
+    "penalty": "Đổ bia hay ngại thì phạt mỗi người 1 ly",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1961,
+    "category": "VOTE",
+    "content": "Chỉ vào người có giao diện 'Trap boy/Trap girl' bad boy mlem mlem nhưng nội tâm thì lụy tình khóc thầm.",
+    "penalty": "Trap fake uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1962,
+    "category": "CHALLENGE",
+    "content": "Đi vòng quanh xin mỗi người 1 miếng mồi, bỏ vào 1 chén chung rồi ăn bằng hết mớ hỗn lốn đó.",
+    "penalty": "Sĩ diện ko xin uống 2 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1963,
+    "category": "TRUTH",
+    "content": "Lần 'Quê' nhất khi thả thính bị tạt ráo nước lạnh (rep seen/rep cộc lốc) của bạn là khi nào?",
+    "penalty": "Dấu diếm lịch sử uống 2 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1964,
+    "category": "GROUP_TRUTH",
+    "content": "Ai là trùm lén soi lương / điểm số của người khác bằng mắt lé nhưng mình thì giấu như mèo giấu cứt?",
+    "penalty": "Hội tàu ngầm uống 1 ly",
+    "difficulty": "Drama"
+  },
+  {
+    "id": 1965,
+    "category": "MINI-GAME",
+    "content": "Đếm 1,2,3 nhưng thay bằng tên các món nhậu đang có trên mâm. Trùng lặp hoặc đứng hình chậm 3s uống.",
+    "penalty": "Não cá vàng uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1966,
+    "category": "SKILL",
+    "content": "Dùng tay không thuận viết biệt danh người bên phải lên khăn giấy. Ai không dịch được chữ thì bạn uống.",
+    "penalty": "Chữ như gà bới uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1967,
+    "category": "CURSE",
+    "content": "Lời nguyền Người Mẫu Lạnh Lùng: Bạn không được phép để hở răng khi cười trong 3 phút tới (chỉ được mỉm cười).",
+    "penalty": "Lộ 1 hột răng uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1968,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Thử nháy mắt liên tục với người đối diện, Nếu họ chửi 'Bị điên à' hoặc bị lé lây, họ uống.",
+    "penalty": "Nạn nhân chửi xéo uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1969,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Lọc Nhóm Máu: Hỏi cả mâm ai mang nhóm máu O (máu làm từ thiện cho muỗi). Tự nguyện hốt 1 ly đi!",
+    "penalty": "Người nhóm máu O khóc thét 1 ly",
+    "difficulty": "Luck"
+  },
+  {
+    "id": 1970,
+    "category": "BUDDY",
+    "content": "Kết nạp 1 'Vệ Sĩ'. Nếu ai định phạt bạn, Vệ Sĩ phải đứng dậy dang tay chắn 'Quân tử động khẩu không động thủ'.",
+    "penalty": "Vệ sĩ lơ đễnh cả 2 cùng uống",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1971,
+    "category": "VOTE",
+    "content": "Đếm 1-2-3, bình chọn xem ai có nụ cười công nghiệp (cười giả trân, cười thảo mai, bằng mặt không bằng lòng) nhất bàn.",
+    "penalty": "Đại sứ giả trân uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1972,
+    "category": "DARE",
+    "content": "Cầm điện thoại, gọi số gần nhất trong danh bạ cuộc gọi và nói 'Em (Anh) ra nông nỗi này là do anh (em) cả'. Tắt máy luôn.",
+    "penalty": "Sợ mang hoạ uống 3 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1973,
+    "category": "DRAMA",
+    "content": "Nói 1 bí mật nhảm nhí hoặc ngu ngốc nhất hồi đi mẫu giáo/cấp 1 (VD: gặm móng chân, ăn rỉ mũi, ỉa đùn).",
+    "penalty": "Xạo sự che giấu uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1974,
+    "category": "GROUP_TRUTH",
+    "content": "Ai có nết đọc review quán ăn chê tanh bành nhưng tới lúc mình lỡ ăn bị dở cũng ráng lên khen ngon để lùa gà người đi sau?",
+    "penalty": "Hội đâm chọt uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1975,
+    "category": "MINI-GAME",
+    "content": "Trò chơi logic: Cái gì của bạn mà người khác dùng nhiều hơn bận? (Đáp án: Cái tên). Ai đáp sai/chậm nhất uống.",
+    "penalty": "Chậm tiêu uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1976,
+    "category": "SKILL",
+    "content": "Để ly bia trên mu bàn tay và đứng dậy xoay 1 vòng tại chỗ 360 độ rồi ngồi xuống.",
+    "penalty": "Đổ bia uống dọn 2 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1977,
+    "category": "CURSE",
+    "content": "Lời nguyền Cổ Đại: Cấm sử dụng các từ gen-z (Slay, báo, khum, ô dề, keo lỳ...). Phát hiện dùng từ lóng là phạt.",
+    "penalty": "Lỡ miệng uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 1978,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Gõ đũa leng keng vào thành ly thành 2 nhịp. Ai chửi 'ồn ào quá' hoặc cướp đũa thì họ phạt.",
+    "penalty": "Kẻ nóng nảy uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1979,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Báo Ứng: Khiến kẻ kế tiếp bốc trúng lá DARE/TRUTH phải chịu hình phạt x2 số ly quy định.",
+    "penalty": "Báo ứng đến x2 nhậu x2",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1980,
+    "category": "PARTNER",
+    "content": "Chỉ định 1 bạn khác phái, cùng ngậm 2 đầu 1 cọng hành / cọng rau muống rồi nhai đến khi đụng mỏ (Pocky Game phèn bản).",
+    "penalty": "Né tránh xí hổ phạt 2 ly",
+    "difficulty": "Hot"
+  },
+  {
+    "id": 1981,
+    "category": "TROLL",
+    "content": "1-2-3, bầu cho đứa 'hay đạo lý' nhất mâm, thích mở miệng ra dạy đời đạo Phật nhưng bản tính sân si như quỷ dữ.",
+    "penalty": "Vĩ nhân mâm nhậu uống 2 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1982,
+    "category": "CHALLENGE",
+    "content": "Lấy 1 tờ khăn ướt, gấp thành hình cái bỉm tam giác và ụp lên đầu người bên phải 3 phút.",
+    "penalty": "Bị hất xuống tự uống 1 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1983,
+    "category": "TRUTH",
+    "content": "Món đồ đắt tiền nhất (hoặc tiền mặt) bạn từng mượn rồi 'quên béng' đi chiếm đoạt làm của riêng là gì?",
+    "penalty": "Khai thật mau uống 2 ly",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 1984,
+    "category": "GROUP_TRUTH",
+    "content": "Ai hay thức tới 3h sáng để cày phim lỏ / TopTop dù sáng hôm sau 7h có báo thức đi làm/đi học?",
+    "penalty": "Cú đêm vô kỷ luật uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1985,
+    "category": "MINI-GAME",
+    "content": "Kể tên 5 bài hit của Sơn Tùng M-TP trong 5 giây. Không kể kịp thì tự phạt đi đừng để Sếp buồn.",
+    "penalty": "Sếp ko cứu uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1986,
+    "category": "SKILL",
+    "content": "Dùng 2 cây đũa kẹp lấy 1 tờ tiền rơi tự do từ trên cao do người khác buông xuống. Thử 3 lần.",
+    "penalty": "Mắt lé kẹp hụt uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 1987,
+    "category": "CURSE",
+    "content": "Lời nguyền Chanh Khế: Khi nói chuyện phải chụm chúm chím hai bờ môi lại ra vẻ cực kỳ xét nét, chanh chua.",
+    "penalty": "Quên chúm chím uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1988,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Đặt điện thoại xuống ngửa mặt lên thở phào nói: 'May quá chưa bị cap màn hình'. Đứa nào hỏi 'May gì?' uống phạt ngay.",
+    "penalty": "Kẻ hóng hớt uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1989,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Thiên Lôi: Quay 1 chiếc đũa giữa bàn. Đầu nhỏ đũa chỉ trúng ai, người đó và 2 người kế bên phải cùng uống.",
+    "penalty": "Liên lụi 3 người cùng cạn 1 ly",
+    "difficulty": "Luck"
+  },
+  {
+    "id": 1990,
+    "category": "BUDDY",
+    "content": "Chọn Vua / Hoàng Hậu. Hễ họ cầm ly uống, bạn phải vỗ tay lốp bốp hô to: 'Bệ hạ vạn tuế, tửu lượng vô song!'.",
+    "penalty": "Bề tôi bất kính phạt 1 ly",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 1991,
+    "category": "VOTE",
+    "content": "Chỉ vào người có nết ngủ 'hết cứu' nhất hội (Ngáy to như bò rống, chảy ke, leo len người khác...).",
+    "penalty": "Idol ngủ ngoan uống 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 1992,
+    "category": "DARE",
+    "content": "Dùng cọng dây thun / thun nịt cột tóc mái hoặc buộc 1 chỏm trên đỉnh đầu người bên trái. Để vậy 5 phút.",
+    "penalty": "Không cho tạo kiểu tự phạt 2 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1993,
+    "category": "DRAMA",
+    "content": "Có bí mật thầm kín nào trên người bạn (nốt ruồi phong thủy, sẹo hình thù dị hợm, bớt) mà xưa nay che giấu kỹ không?",
+    "penalty": "Giấu khuyết điểm uống 1 ly",
+    "difficulty": "Hot"
+  },
+  {
+    "id": 1994,
+    "category": "GROUP_TRUTH",
+    "content": "Ai từng lén ăn vặt lúc nửa đêm trên giường xong mệt quá không màng đánh răng mà ngủ luôn tới sáng?",
+    "penalty": "Hội dơ dáy dể thương uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 1995,
+    "category": "MINI-GAME",
+    "content": "Đố vui Tiếng Anh Spelling: Người kế bên đọc 1 từ vựng tiếng Anh trung bình (VD: Beautiful). Bạn đánh vần từng chữ cái. Sai uống.",
+    "penalty": "Dốt ngoại ngữ uống 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 1996,
+    "category": "SKILL",
+    "content": "Nhắm mắt, há miệng ra chờ người bên cạnh đút ngẫu nhiên một món gì đó trên bàn gắp vào mồm. Nhai nuốt luôn.",
+    "penalty": "Nôn mửa phun rớt đồ ăn phạt 3 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 1997,
+    "category": "CURSE",
+    "content": "Lời nguyền Mọt Sách: Trong vòng tới, mọi câu nói của bạn phải bắt đầu bằng cụm 'Theo triết lý khoa học cho thấy...'.",
+    "penalty": "Quên mở bài uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 1998,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Nắn bóp bắp tay người bên phải (hoặc mỡ bụng 😈) rồi lắc đầu chê yếu. Nó dỗi rút tay lại, nó phạt.",
+    "penalty": "Nạn nhân dễ tự ái uống trọn 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 1999,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Thẻ Đỏ Quyền Lực: Thấy ai đang cãi nhau sùi bọt mép, ném thẻ này ra. Ép cả 2 đối thủ gác mỏ ngậm miệng cụng cạn ly tàn cuộc.",
+    "penalty": "Hòa giải bằng men bia cả 2 cạn ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 2000,
+    "category": "PARTNER",
+    "content": "Cùng 1 người diễn màn 'Đậm Đà': Trước khi uống, hai bạn phải cụng ly vòng ráng chạm nhau 1 chạm vai nẩy một cái.",
+    "penalty": "Rớt nhịp điệu phạt gốc đôi",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 2001,
+    "category": "TROLL",
+    "content": "Chỉ tay người hay làm mấy pha 'Mù mắt' (Chơi game siêu noob, đi đường tông cột đèn, hậu đậu làm đổ đồ).",
+    "penalty": "God of Mù Mắt uống 2 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 2002,
+    "category": "DARE",
+    "content": "Cập nhật Status mxh ngay lúc này: 'Cuộc đời sao lắm trái ngang, yêu em anh vỡ tụy vỡ cmn gan rồi! Tâm trí loạn nhịp'. Quanh xong 10p được xoá.",
+    "penalty": "Sợ bị quan tâm inbox từ chối uống 2 ly",
+    "difficulty": "Drama"
+  },
+  {
+    "id": 2003,
+    "category": "TRUTH",
+    "content": "Lần bạn 'bạo gan' nhất gửi tấm ảnh hơi mlem/khoét sâu/khoe body cho crush hay người yêu là tấm nào, khi nào?",
+    "penalty": "Ngại ngần đỏ mặt uống 2 ly",
+    "difficulty": "Hot"
+  },
+  {
+    "id": 2004,
+    "category": "GROUP_TRUTH",
+    "content": "Ai từng mượn áo khoác, đồ đạc, đồ buộc tóc, nón mũ của bạn bè xong ỉm mẹ luôn biến thành đồ của mình?",
+    "penalty": "Kẻ ăn cắp vặt chuyên nghiệp uống 1 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 2005,
+    "category": "MINI-GAME",
+    "content": "Trò 'Chưa Bao Giờ' version Tởm lợm: 'Tôi chưa bao giờ gãi nách xong hít ngửi'. Đứa nào từng làm thì tự giác nhấc ly.",
+    "penalty": "Hội có tật giật ly nhâm nhi 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 2006,
+    "category": "SKILL",
+    "content": "Thả 1 cái tăm vô ly nước của mình (Hoặc 1 mảnh ớt nhỏ tí xíu), dùng đũa khuấy ly và dùng lưỡi bắt mút dính lấy nó lên.",
+    "penalty": "Bắt mãi k dính uống 1 ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 2007,
+    "category": "CURSE",
+    "content": "Lời nguyền Tóp Tóp: Bất cứ ai chạm điện thoại hoặc dơ điện thoại lên bàn mâm, bạn phải hô hoán: 'Bớt lướt rác lại 1 2 3 dô đi bây'.",
+    "penalty": "Lười hô hoán phạt 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 2008,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Chép miệng thều thào lầm bầm: 'Thế éo nào thẻ nhạt thế...', Đứa nào hóng chuyện nghểnh cổ lên hỏi 'Thẻ kêu mẹ gì', Đứa nó uống mỏi mồm.",
+    "penalty": "Con chiên tò mò vô tri bốc 1 shot",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 2009,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Lọc Biển Biển Kiểm Soát Xe: Ai chạy xe biển số xe máy kết thúc bằng số 0 2 4 6 8 (số chẵn). Uống! Giải hên lấy rủi bù lại.",
+    "penalty": "Tùy duyên biển chẵn cụng 1 round xíu xiu",
+    "difficulty": "Luck"
+  },
+  {
+    "id": 2010,
+    "category": "BUDDY",
+    "content": "Chọn 1 chiếc đuôi: Hễ bạn đi WC hay đứng dậy ra ngoài nghe đỗi thoải mái hóng gió. Chiếc đuôi nó cũng phải lẽo đẽo bước theo sát bạn y xì 1 bước đi lượn theo tàn cuộc.",
+    "penalty": "Đi theo không kịp mâm phạt x2",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 2011,
+    "category": "VOTE",
+    "content": "1-2-3 bóp nghẹt 1 gương mặt 'Bên ngoài bóng bẩy sang xịn - Bên trong phòng ốc dơ như chuồng heo bò lợn'.",
+    "penalty": "Chúa Tể Ở Dơ Lười Biếng móc mồm phạt uống 1 ly",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 2012,
+    "category": "DARE",
+    "content": "Mút 1 miếng đá mát lạnh bằng đầu chóp lưỡi. Rồi trượt qua chạm liếm nhẹ sống môi vào viền ngoài mép ly người bạn bên phải. Đậm kịch bản sexy.",
+    "penalty": "Lười biếng kinh tởm không làm nộp 2 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 2013,
+    "category": "TRUTH",
+    "content": "Trong giấc mơ kì lạ và đen tối nhất, ai trong mâm ngồi đây từng lướt qua trong mảng tâm trí mơ tưởng 'Xếp Trình' 18+ của bạn chưa?",
+    "penalty": "Lươn lẹo nói xạo né tránh luồn lách uống 2 ly",
+    "difficulty": "Hot"
+  },
+  {
+    "id": 2014,
+    "category": "GROUP_TRUTH",
+    "content": "Ai ở nhà thường thói lười biếng ăn xong quẳng cái bát cái dĩa đũa nhét trong tủ phòng không thèm rửa dơ dấy kinh tởm báo đời cha mẹ.",
+    "penalty": "Đứa con báo đời phá hoại tốn công rửa dọn húp 1 ly",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 2015,
+    "category": "MINI-GAME",
+    "content": "Luật tính toán ác quỷ: (Bí từ phạt ly)  '6 x 9 + 4 - 8' chia 2 ? 5 giây đọc mồm thầm bật ngữa phạt.",
+    "penalty": "Tính dở môn toán kẹt số học nộp 1 ly",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 2016,
+    "category": "SKILL",
+    "content": "Lật úp 2 ly trống mâm thành cái bồn, dùng đũa đánh 2 chiêc bát gõ nhè nhẹ vào mâm thành beat Vinahouse xoay quay đảo điên. Tạo nhịp 10 giây. Đứt quãng phạt.",
+    "penalty": "Nhịp phèn đứt tiếng lủng trống đền ly",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 2017,
+    "category": "CURSE",
+    "content": "Lời Cảnh Khoa Sang Chảnh: Bưng chén đũa nâng niu múc đồ ăn... Bạn phải lấy cây đũa gắp ngón út cong phệnh ra lên tỏ vẻ xịn xò mâm Châu Âu.",
+    "penalty": "Mất trớn rụng móng tay xìu ngoo uống 1 ly",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 2018,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Lật úp cái bát (hoặc ly trống) mâm đồ ăn để trước ngực làm trò bưng bít giả bộ úp mặt xuống giấu khóc. Đứa nào đưa tay hóng 'm bị saoo thế'. Nó ăn cú lừa. Phạt.",
+    "penalty": "Ăn cú lừa nhân ái dính bẫy ngơ ngoan uống 1 ly",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 2019,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Thầy Pháp Giải Nghiệp: Ai trong mâm bị đánh lời nguyền Curse khó nhai. Rút ra chọc vào mặt 1 phát là giải nguyền xoá bài gánh team vớt lỗi free lầm lỡ. Nhận 1 lời biết ơn.",
+    "penalty": "Kẻ bị xui xẻo nhận ân sủng nợ 1 mớ ơn huệ",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 2020,
+    "category": "PARTNER",
+    "content": "Kết nạp Tình Địch: Bất cứ lúc nào mâm cụng ly. Tình địch của bạn nẹt bô kéo ly phải hét lên 'Mày phải uống sấp đôi tao nghe hông'. Hét chọi nhau mới lọt tròng thả xuống bú mồi.",
+    "penalty": "Quên đấm mồm cãi nhau đâm bịch bịch phạt gấp đôi bấy xù",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 2021,
+    "category": "VOTE",
+    "content": "Chỉ vào kẻ mắc Bệnh 'Thèm thuồng chê ỏng chê eo' - Đầu mâm mới bưng món ngon ra (Vd như bạch tuột / hàu / thịt) chê ầm ỉ tanh thế nọ... nhưng lúc nhập tâm ăn sạch đĩa dĩa k chừa cặn bã ai.",
+    "penalty": "Thánh ăn tạp sỉ diện hão cụng móc họng 2 ly",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 2022,
+    "category": "CHALLENGE",
+    "content": "Đánh đổi phụ kiện: Hãy năn nỉ đổi lấy 1 cái nhẫn/Đồng hồ/Vòng tay của nhỏ/anh bạn bên phải tay đeo qua vòng mình 5 round bấu víu mồ hôi chua sùi. Khéo chà. Trả lại nó nhận mùi dơ.",
+    "penalty": "Đánh rớt phụ kiện mướn của nó hoặc đền nộp gốc đổi phạt 3 ly đau đớn",
+    "difficulty": "Bựa"
+  },
+  {
+    "id": 2023,
+    "category": "TRUTH",
+    "content": "Sự thèm khát chức quyền hoặc danh vọng nhất mà bạn từng cắn móng tay ức phát khóc tranh công cùng ai (bạn học team, đồng nghiệp mâm, mảng drama cty)?",
+    "penalty": "Lật tẩy mặt tối nấp kín chối tội dập 2 ly che giấu",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 2024,
+    "category": "GROUP_TRUTH",
+    "content": "Có cái bill tiền nước, bill phòng vé, bill coi phim nào thanh toán đi chơi chung... Mà lén ém nhẹm không chia bill sòng phẳng để qua ngày quỵt luôn không? Nhắc tẹt cạn ly xin lỗi.",
+    "penalty": "Chơi bẩn nợ xấu húp 1 ly sòng phẳng chia sẻ",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 2025,
+    "category": "MINI-GAME",
+    "content": "Đố nối tên Danh Nhân Phiên Bản Đảo: Trọng Thuỷ... Tao nói Thuỷ Tinh... mày nói Tinh Thần. Nhanh xoay vòng 5s kẹt nón óc chó thua uống nước tiểu.",
+    "penalty": "Kẹt từ điển không não chết rủ uống 1 ly học lại môn Sử Văn",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 2026,
+    "category": "SKILL",
+    "content": "Khéo léo lấy ngón chân rờ chân thằng hoặc con đang xỉn bên trái chọc vào khuỷu cẳng. Kẹp ngón tay nhéo bèo beo bóp chân nó bằng chân bạn.",
+    "penalty": "Tay chân bại liệt văng lọt ghế hão phạt cụng 2 li",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 2027,
+    "category": "CURSE",
+    "content": "Ách Nhà Văn Nửa Mùa: Rặn ra câu tiếp theo cho bất kỳ ai phải bồi 1 chữ điệp như 'Mơ mơ màng màng', 'Dâm dâm dật dật', 'Róc róc rách rách'.",
+    "penalty": "Quên chữ điệp mất não rụt 1 ly bia cay đắng",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 2028,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Nắn bóp mặt giả vờ quẹt nước mũi xụyt xụyt kêu bệnh dơ dơ xí mủn. Đứa tò mò bên kia nhíu chân mài lại hỏi 'Cảm cúm covid hay cái éo trâu gì?' Đập nhẹ vào vai 1 cái dính bẫy xui rủi tò mò lây.",
+    "penalty": "Kẻ quan tâm thái quá uống 1 ly phạt cữ giải xui",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 2029,
+    "category": "ITEM",
+    "content": "[SỰ KIỆN] Kiểm Tra App Giao Đồ Ăn Sinh Tồn: Bốc điện thoại dí vào màn hình. 1 tháng gần nhất trên Shopee Food/Grab ai số bill tiền đặt chẵn 0 Đồng cạn dơ tay... Ai nợ bill mua lộn bịp cao nết ăn tục nạp số. Tàu lượn nghèo hèn uống phạt nghèo.",
+    "penalty": "Nghèo khỉ tiết kiệm nát bóp dạ dày cụng ly tạ",
+    "difficulty": "Luck"
+  },
+  {
+    "id": 2030,
+    "category": "BUDDY",
+    "content": "Kết hợp Bạn Hậu Phương Vững Chãi: Nó ngửa ly thì bạn phải vỗ tay lốp bộp phụ tá 'Chiến sĩ tốt chiến sĩ dũng mãnh'. Động viên tinh thần cụng chéo ly.",
+    "penalty": "Hậu phương bỏ đói không vỗ nhịp đứt phanh phụ họa cùng cạn bù lỗi x2",
+    "difficulty": "Roleplay"
+  },
+  {
+    "id": 2031,
+    "category": "TROLL",
+    "content": "Bạn được quyền phong 1 người nết chó mặt ngựa trong mâm biệt danh: 'Hâm dở mảng tường'. Kẻ bị phong suốt 2 round đít ly không được ai kêu đính danh lại đính kèm mảng tường vô tội ngơ.",
+    "penalty": "Thích kêu tên thật phạt kẻ lọt tròng ngơ mồm kêu uống.",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 2032,
+    "category": "DARE",
+    "content": "Xách cằm cọ xát cái mũi mồm vào má bạn nhậu bên Tả (Bên phải dính dớp). Bắn tim chu mỏ chọt nhéo lọt sịt 5s cho nổi da gà rúng rộng hội. Ánh mắt dâm bụt nha.",
+    "penalty": "Sợ mang hoạn gay les cự tuyệt bú mút 2 li dằn dơ.",
+    "difficulty": "Hot"
+  },
+  {
+    "id": 2033,
+    "category": "DRAMA",
+    "content": "Khai cho thủng nồi chát nát mặt - Thứ lỗi lầm lớn nhất gây đau buồn gia đình bạn đã báo từ năm học cấp phổ thông đến tựu lòi tuổi não. Làm gia đình chửi điên mặt.",
+    "penalty": "Bưng bít mảng báo chối che dấu xảo quyệt tự cạn lợp chớp 2 cuống họng",
+    "difficulty": "Deep"
+  },
+  {
+    "id": 2034,
+    "category": "GROUP_TRUTH",
+    "content": "Hội dơ dáy - Lăn tăn ngủ ngáy hoặc khét mùi chân thúi lôi bùn nổ lúc đắp mền cùng ai đó chê rách. Lúc bị nện thức dắt bẩn rũ ruột thì dơ tay cụng.",
+    "penalty": "Mùi khét bẩn bốc bát giấu nấp ăn vụng hầm 1 ly xin tẩy phơi",
+    "difficulty": "Chaos"
+  },
+  {
+    "id": 2035,
+    "category": "MINI-GAME",
+    "content": "Đếm chuỗi - Đọc chéo mâm - Tên bài nhạc thiếu nhi mà không được dính Tên Động vật (Cấm gà lợn cún chim chó). Não xoắn chậm quá 5s đuối óc chó lôi ly nạp nước cút.",
+    "penalty": "Trắng não bí ý tịt lặp chết rụt 1 ly bỉ ổi",
+    "difficulty": "Brain"
+  },
+  {
+    "id": 2036,
+    "category": "SKILL",
+    "content": "Giật điện giật gân: Hai tay cầm 2 cục đá to bóp nát trên không dơ móng úa ra. Ai rớt đá trước lạnh óc tê liệt thần kinh. Ném sụt phạt đền rớt ly cạn lũng mâm 1 ly tạ rớt.",
+    "penalty": "\"Yếu rát nén thả trước ăn x2 li ớn lạnh\"",
+    "difficulty": "Skill"
+  },
+  {
+    "id": 2037,
+    "category": "CURSE",
+    "content": "Lời Cảnh Lịch Sự Hoàng Hậu Lãnh Cung: Mái mép nâng cằm không được để rơi giọt nước rơi ra miệng lỡ chớn rụng dơ. Uống bia hút sáo xúp púp trân trân kiểu khinh khỉnh không hé nụ. Cười là đứt.",
+    "penalty": "Văng nụ mép hở rụng đít chai ngục uống phạt 1 li gục ngã",
+    "difficulty": "Fun"
+  },
+  {
+    "id": 2038,
+    "category": "SECRET",
+    "content": "[ĐỌC THẦM] Gào rú hắng giọng khặc nhổ phun tí hạt mồi ra đít giấy. Chú ý dồn 1 đứa kẹt sỉ nó hỏi 'Mày ăn dính ớt cay xương xóc cá mẹ m à'. Bạn nhe rang trỏ thẳng chỉ ngón vào mồm nó. Nó uống.",
+    "penalty": "Kẻ hóng chửi tò mò ác nhân nghiệp tụ tự chịu bốc phạt 1 ngụm văng.",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 2039,
+    "category": "ITEM",
+    "content": "[GIỮ LẠI] Thẻ Quyền Vạn Tuế Đảo Ngược: Lật ngửa mâm ngục tối... Bạn dơ Thẻ ra... Người vừa chịu phạt xong thay vì tha. Rút bắt họ chịu phạt thêm x1 bồi hoàn ngự nể để chốt sổ cống nộp rũi cho mâm tẩu hoả...",
+    "penalty": "Kính bồi vòng đúp 2 shot trọn dơ bẩn kẻ rọi ngục dập li thảm",
+    "difficulty": "Tactical"
+  },
+  {
+    "id": 2040,
+    "category": "PARTNER",
+    "content": "Kết nghĩa Cùng Sống Cùng Chết Phim Mafia. Kẹp đũa vô tay bắn 'Tằng Tằng Tằng Tằng' xéo đối phương mâm. Bạn bên kia không nằm sấp lộn diễn trúng đạn xủi lơ. Bắt đền cả 2 nhồi ngục cụng bia hất tung.",
+    "penalty": "Đóng không đạt đứt diễn ốc chối lội ngược nhục nhã chung vui 2 shot chia nhau cạn lấp mâm.",
+    "difficulty": "Roleplay"
   }
 ]
