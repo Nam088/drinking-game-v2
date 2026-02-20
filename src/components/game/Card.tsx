@@ -129,7 +129,7 @@ export const Card = ({ category, content, penalty, difficulty }: CardProps) => {
         }
     }
 
-    const categoryInfo = getCategoryInfo(category)
+const categoryInfo = getCategoryInfo(category)
 
     return (
         <div
@@ -142,10 +142,10 @@ export const Card = ({ category, content, penalty, difficulty }: CardProps) => {
                 whileTap={{ scale: 0.98 }}
                 animate={{ rotateY: isFlipped ? 180 : 0 }}
                 transition={{
-                    duration: 0.5,
+                    duration: 0.3,
                     type: "spring",
-                    stiffness: 200,
-                    damping: 25
+                    stiffness: 260,
+                    damping: 20
                 }}
                 style={{
                     transformStyle: "preserve-3d"
@@ -202,7 +202,7 @@ export const Card = ({ category, content, penalty, difficulty }: CardProps) => {
 
                 {/* BACK (Content) */}
                 <motion.div
-                    className="absolute inset-0 rounded-2xl overflow-hidden border-4 border-white shadow-xl bg-white"
+                    className="absolute inset-0 rounded-2xl overflow-hidden border-4 border-white shadow-xl bg-white flex flex-col"
                     style={{
                         transform: "rotateY(180deg)",
                         backfaceVisibility: "hidden",
@@ -211,7 +211,7 @@ export const Card = ({ category, content, penalty, difficulty }: CardProps) => {
                 >
                     {/* Header */}
                     <div
-                        className="h-28 flex flex-col items-center justify-center relative overflow-hidden"
+                        className="h-28 flex flex-col items-center justify-center relative overflow-hidden shrink-0"
                         style={{ background: `linear-gradient(135deg, ${colors.from}, ${colors.to})` }}
                     >
                         <div className="absolute inset-0 bg-black/10" />
@@ -235,24 +235,37 @@ export const Card = ({ category, content, penalty, difficulty }: CardProps) => {
                     </div>
 
                     {/* Body */}
-                    <div className="p-5 flex flex-col h-[calc(100%-7rem)] justify-between relative">
+                    <div className="p-5 flex flex-col flex-1 relative overflow-hidden">
                         {/* Content */}
-                        <div className="flex-1 flex items-center justify-center overflow-y-auto">
+                        <div className="flex-1 flex items-center justify-center overflow-y-auto min-h-0 py-2">
                             <p className="text-center text-slate-800 font-bold text-lg leading-relaxed px-2">
                                 {content}
                             </p>
                         </div>
 
                         {/* Divider */}
-                        <div className="w-full h-px bg-slate-200 my-3" />
+                        <div className="w-full h-px bg-slate-200 my-3 shrink-0" />
 
                         {/* Penalty */}
-                        <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 text-center">Hình Phạt</p>
-                            <p className="text-center font-black text-base" style={{ color: colors.to }}>
-                                {penalty}
-                            </p>
-                        </div>
+                        {category !== "ITEM" ? (
+                            <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 shrink-0">
+                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 text-center">Hình Phạt</p>
+                                <p className="text-center font-black text-base" style={{ color: colors.to }}>
+                                    {penalty}
+                                </p>
+                            </div>
+                        ) : (
+                            <div className="shrink-0 flex justify-center">
+                                {/* The keep button will be rendered by the parent if needed, 
+                                    or we just show a hint here since the drag action is the main interaction */}
+                                <div className="bg-purple-50 rounded-xl p-3 border border-purple-100 w-full">
+                                    <p className="text-[10px] font-bold text-purple-400 uppercase tracking-wider mb-1 text-center">Vật Phẩm</p>
+                                    <p className="text-center font-bold text-purple-600 text-sm">
+                                        Giữ thẻ này để dùng sau!
+                                    </p>
+                                </div>
+                            </div>
+                        )}
 
                         {/* Difficulty Badge */}
                         <div className="absolute top-2 right-2">
