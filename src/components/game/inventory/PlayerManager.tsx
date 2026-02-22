@@ -24,7 +24,7 @@ export const PlayerManager = ({ onClose }: { onClose: () => void }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.15 }}
       style={{ willChange: "opacity" }}
-      className="fixed inset-0 z-[60] flex items-end justify-center bg-slate-950/80 backdrop-blur-[2px] sm:items-center sm:p-4"
+      className="fixed inset-0 z-[60] flex items-end justify-center bg-black/80 sm:items-center sm:p-4"
     >
       <motion.div
         initial={{ y: "100%" }}
@@ -38,7 +38,7 @@ export const PlayerManager = ({ onClose }: { onClose: () => void }) => {
           if (info.offset.y > 100) onClose()
         }}
         style={{ willChange: "transform" }}
-        className="w-full max-w-md bg-slate-900 rounded-t-3xl sm:rounded-2xl border-t border-x sm:border border-purple-500/30 p-6 pb-8 shadow-[0_-10px_40px_rgba(168,85,247,0.15)] relative flex flex-col max-h-[90vh]"
+        className="w-full max-w-md bg-slate-900 rounded-t-3xl sm:rounded-2xl border-t border-x sm:border border-purple-500/30 p-6 pb-8 shadow-2xl relative flex flex-col max-h-[90vh]"
       >
         {/* Drag Handle for Mobile */}
         <div className="w-12 h-1.5 bg-slate-700 rounded-full mx-auto mb-6 sm:hidden cursor-grab active:cursor-grabbing shrink-0" />

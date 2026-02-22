@@ -53,7 +53,7 @@ export const InventoryDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose:
             transition={{ duration: 0.15 }}
             style={{ willChange: "opacity" }}
             onClick={onClose}
-            className="fixed inset-0 z-40 bg-slate-950/60 backdrop-blur-sm"
+            className="fixed inset-0 z-40 bg-black/80"
           />
           <motion.div
             initial={{ y: "100%" }}
@@ -67,7 +67,7 @@ export const InventoryDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose:
             onDragEnd={(_, info) => {
               if (info.offset.y > 100) handleClose()
             }}
-            className="fixed bottom-0 left-0 right-0 z-50 h-[85vh] sm:h-[80vh] bg-slate-900 border-t border-purple-500/30 rounded-t-3xl shadow-[0_-10px_40px_rgba(168,85,247,0.15)] flex flex-col"
+            className="fixed bottom-0 left-0 right-0 z-50 h-[85vh] sm:h-[80vh] bg-slate-900 border-t border-purple-500/30 rounded-t-3xl shadow-2xl flex flex-col"
           >
             {/* Header */}
             <div className="flex-1 overflow-hidden flex flex-col pt-2 bg-slate-900 rounded-t-3xl">
@@ -149,9 +149,9 @@ export const InventoryDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose:
                             <div className="absolute inset-0 bg-black/10" />
                             <CategoryIcon
                               category={selectedItem.category}
-                              className="w-16 h-16 text-white drop-shadow-lg relative z-10 mb-2"
+                              className="w-16 h-16 text-white relative z-10 mb-2"
                             />
-                            <h3 className="text-2xl font-black text-white uppercase tracking-wider text-center relative z-10 drop-shadow-md">
+                            <h3 className="text-2xl font-black text-white uppercase tracking-wider text-center relative z-10">
                               {selectedItem.category.replace(/_/g, " ")}
                             </h3>
                           </div>

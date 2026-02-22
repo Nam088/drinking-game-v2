@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 import { Card } from "@/components/game/Card"
 import { motion, AnimatePresence, PanInfo } from "framer-motion"
 import { InventoryDrawer } from "@/components/game/inventory/InventoryDrawer"
@@ -23,9 +23,8 @@ export default function GamePage() {
   const [nextCard, setNextCard] = useState<CardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [isDrawing, setIsDrawing] = useState(false)
-  const [dragProgress, setDragProgress] = useState(0) // Map to 0 (center) to 1 (left) or -1 (right)
 
-  const preloadNextCard = async () => {
+  const preloadNextCard = useCallback(async () => {
     try {
       const res = await fetch("/api/cards/random")
       const data = await res.json()
@@ -35,7 +34,7 @@ export default function GamePage() {
     } catch (error) {
       console.error("Failed to preload next card", error)
     }
-  }
+  }, [])
   const [exitDirection, setExitDirection] = useState(-300)
   const [dragRotation, setDragRotation] = useState(0)
   const [isCardFlipped, setIsCardFlipped] = useState(false)
@@ -46,52 +45,45 @@ export default function GamePage() {
   const [isKeepModalOpen, setIsKeepModalOpen] = useState(false)
   const [isRulesOpen, setIsRulesOpen] = useState(false)
 
-  const drawCard = async () => {
-    if (isDrawing) return
+  const drawCard = useCallback(async () => {
+    if (loading || isDrawing) return
     setIsDrawing(true)
+    setLoading(true) // Set loading to true when drawing a new card
+    setIsCardFlipped(false) // Reset card flip state
 
-    if (nextCard) {
-      setIsCardFlipped(false)
-      setCurrentCard(nextCard)
-      setNextCard(null)
-      setIsDrawing(false)
-      setLoading(false)
-      preloadNextCard()
-    } else {
-      try {
-        setLoading(true)
+    try {
+      let cardToDraw: CardData | null = null
+      if (nextCard) {
+        cardToDraw = nextCard
+        setNextCard(null) // Clear nextCard after using it
+      } else {
+        // Fallback if nextCard isn't preloaded
         const res = await fetch("/api/cards/random")
         const data = await res.json()
-
         if (data.success && data.card) {
-          setIsCardFlipped(false)
-          setCurrentCard(data.card)
+          cardToDraw = data.card
         }
-      } catch (error) {
-        console.error("Failed to draw card", error)
-      } finally {
-        setIsDrawing(false)
-        setLoading(false)
-        preloadNextCard()
       }
+
+      if (cardToDraw) {
+        setCurrentCard(cardToDraw)
+      }
+    } catch (error) {
+      console.error("Failed to draw card:", error)
+    } finally {
+      setLoading(false)
+      setIsDrawing(false)
+      preloadNextCard() // Preload the *next* card
     }
-  }
+  }, [loading, isDrawing, nextCard, preloadNextCard])
 
   // Auto-draw first card on mount
   useEffect(() => {
     drawCard()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [drawCard])
 
-  const handleDrag = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-    // Map offset.x (-150 to 150) to progress (-1 to 1)
-    const progress = Math.max(-1, Math.min(1, info.offset.x / 150))
-    setDragProgress(progress)
-  }
-
-  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+  const handleDragEnd = (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     const swipeThreshold = 50
-    setDragProgress(0)
 
     // Swipe left or right to draw next card
     if (Math.abs(info.offset.x) > swipeThreshold) {
@@ -103,31 +95,8 @@ export default function GamePage() {
   }
 
   return (
-    <div 
-      className="min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden relative transition-colors duration-200"
-      style={{
-        backgroundColor: dragProgress === 0 
-          ? '#020617' // slate-950
-          : dragProgress > 0 
-            ? `rgba(2, 6, 23, ${1 - dragProgress * 0.3})` // fading right (adjust as needed)
-            : `rgba(2, 6, 23, ${1 + dragProgress * 0.3})` // fading left
-      }}
-    >
-      {/* Dynamic Colored Glow under everything based on swipe */}
-      <div 
-        className="absolute inset-0 opacity-20 transition-all duration-200"
-        style={{
-          background: dragProgress > 0 
-            ? `radial-gradient(circle at right, #22c55e ${dragProgress * 40}%, transparent 70%)` // Green for right
-            : dragProgress < 0
-              ? `radial-gradient(circle at left, #ef4444 ${Math.abs(dragProgress) * 40}%, transparent 70%)` // Red for left
-              : 'transparent'
-        }}
-      />
-
-      {/* Subtle noise texture */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 z-0" />
-
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden relative bg-slate-950">
+      
       {/* Top action bar */}
       <ActionBar 
         onOpenRules={() => setIsRulesOpen(true)}
@@ -196,7 +165,6 @@ export default function GamePage() {
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={0.7}
-                onDrag={handleDrag}
                 onDragEnd={handleDragEnd}
                 initial={{ opacity: 0, scale: 0.85, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}

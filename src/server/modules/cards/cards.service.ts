@@ -1,4 +1,4 @@
-import { Repository } from "typeorm"
+import { Repository, DeepPartial } from "typeorm"
 import { InjectRepository } from "@common/decorators/inject-repository.decorator"
 import { Service } from "@common/decorators/service.decorator"
 import { createLogger } from "@common/utils/logger"
@@ -20,14 +20,14 @@ export class CardService {
         const csvPath = path.join(process.cwd(), "data.csv")
         const jsonPath = path.join(process.cwd(), "data.json")
 
-        let cards: any[] = []
+        let cards: DeepPartial<Card>[] = []
 
         if (fs.existsSync(csvPath)) {
             logger.info("Found data.csv, parsing...")
             const fileContent = fs.readFileSync(csvPath, "utf-8")
             const { parse } = await import("csv-parse/sync")
 
-            const records = parse(fileContent, {
+            const records: Record<string, string>[] = parse(fileContent, {
                 columns: true,
                 skip_empty_lines: true,
                 trim: true,
@@ -36,12 +36,12 @@ export class CardService {
             })
 
             cards = records
-                .filter((record: any) => record.Category !== 'Category') // Filter out repeated headers
-                .map((record: any) => ({
-                    category: record.Category,
+                .filter((record) => record.Category !== 'Category') // Filter out repeated headers
+                .map((record) => ({
+                    category: record.Category as "DARE" | "TRUTH" | "GROUP_TRUTH" | "PARTNER" | "MINI_GAME" | "VOTE" | "BRAIN" | "SKILL" | "CURSE" | "BUDDY" | "ITEM" | "SECRET" | "ITEM_KEEP",
                     content: record.Content,
                     penalty: record.Penalty,
-                    difficulty: record.Difficulty
+                    difficulty: record.Difficulty as "EASY" | "MEDIUM" | "HARD" | "FUN" | "CHAOS" | "DARK"
                 }))
         } else if (fs.existsSync(jsonPath)) {
             logger.info("Found data.json, parsing...")

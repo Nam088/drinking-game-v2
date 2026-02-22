@@ -41,6 +41,7 @@ export default function GamePage() {
     // Auto-draw first card on mount
     useEffect(() => {
         drawCard()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {

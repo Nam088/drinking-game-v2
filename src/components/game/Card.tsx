@@ -173,14 +173,6 @@ const categoryInfo = getCategoryInfo(category)
                     <div className="absolute bottom-6 left-6 w-8 h-8 border-b-2 border-l-2 border-white/30 rounded-bl-lg" />
                     <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-white/30 rounded-br-lg" />
 
-                    {/* Geometric Pattern */}
-                    <div className="absolute inset-0 opacity-10"
-                        style={{
-                            backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)",
-                            backgroundSize: "24px 24px"
-                        }}
-                    />
-
                     {/* Central Logo */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                         {/* Outer Glow Circle */}
@@ -188,14 +180,14 @@ const categoryInfo = getCategoryInfo(category)
                             <div className="absolute inset-0 bg-purple-500/20 rounded-full" />
                             <div className="w-32 h-32 rounded-full border-4 border-white/20 flex items-center justify-center bg-slate-900/80 relative z-10">
                                 <div className="w-24 h-24 rounded-full border-2 border-white/10 flex items-center justify-center">
-                                    <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-purple-200 to-purple-400 drop-shadow-md" style={{ fontFamily: 'serif' }}>DG</span>
+                                    <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-purple-200 to-purple-400" style={{ fontFamily: 'serif' }}>DG</span>
                                 </div>
                             </div>
                         </div>
 
                         <div className="mt-8 text-center">
                             <div className="text-white/60 font-bold tracking-[0.3em] text-[10px] uppercase mb-1">Drinking Game</div>
-                            <div className="text-white font-black tracking-widest text-xl uppercase drop-shadow-md">Không say không về</div>
+                            <div className="text-white font-black tracking-widest text-xl uppercase">Không say không về</div>
                         </div>
 
                         <div className="absolute bottom-12 text-white/40 text-[10px] font-medium tracking-widest uppercase animate-pulse">
@@ -206,7 +198,7 @@ const categoryInfo = getCategoryInfo(category)
 
                 {/* BACK (Content) */}
                 <motion.div
-                    className="absolute inset-0 rounded-2xl overflow-hidden border-4 border-white shadow-lg bg-white flex flex-col pointer-events-none"
+                    className="absolute inset-0 rounded-2xl overflow-hidden border-4 border-white shadow-xl bg-white flex flex-col pointer-events-none"
                     style={{
                         transform: "rotateY(180deg)",
                         backfaceVisibility: "hidden",
@@ -226,8 +218,8 @@ const categoryInfo = getCategoryInfo(category)
                         </div>
 
                         <div className="relative z-10 flex flex-col items-center gap-1">
-                            <CategoryIcon category={category} className="w-12 h-12 text-white drop-shadow-md" />
-                            <h2 className="text-xl font-black text-white uppercase tracking-wide drop-shadow-md text-center px-3 leading-tight">
+                            <CategoryIcon category={category} className="w-12 h-12 text-white" />
+                            <h2 className="text-xl font-black text-white uppercase tracking-wide text-center px-3 leading-tight">
                                 {categoryInfo.name}
                             </h2>
                             {categoryInfo.desc && (
