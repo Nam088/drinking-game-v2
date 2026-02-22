@@ -136,7 +136,7 @@ const categoryInfo = getCategoryInfo(category)
 
     return (
         <div
-            className="relative w-full max-w-[90vw] sm:w-[320px] h-[480px] mx-auto"
+            className="relative w-full max-w-[90vw] sm:w-[320px] h-[60dvh] max-h-[480px] min-h-[400px] mx-auto"
             style={{ perspective: "1000px" }}
         >
             <motion.div
@@ -157,7 +157,7 @@ const categoryInfo = getCategoryInfo(category)
             >
                 {/* FRONT (Card Back) */}
                 <motion.div
-                    className="absolute inset-0 rounded-2xl overflow-hidden border-[6px] border-white shadow-lg bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 pointer-events-none"
+                    className="absolute inset-0 rounded-2xl overflow-hidden border-[6px] border-white bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 pointer-events-none"
                     style={{
                         backfaceVisibility: "hidden",
                         WebkitBackfaceVisibility: "hidden"
@@ -198,7 +198,7 @@ const categoryInfo = getCategoryInfo(category)
 
                 {/* BACK (Content) */}
                 <motion.div
-                    className="absolute inset-0 rounded-2xl overflow-hidden border-4 border-white shadow-xl bg-white flex flex-col pointer-events-none"
+                    className="absolute inset-0 rounded-2xl overflow-hidden border-4 border-white bg-white flex flex-col pointer-events-none"
                     style={{
                         transform: "rotateY(180deg)",
                         backfaceVisibility: "hidden",
@@ -265,7 +265,7 @@ const categoryInfo = getCategoryInfo(category)
 
                         {/* Difficulty Badge */}
                         <div className="absolute top-2 right-2">
-                            <span className={`px-2 py-1 rounded text-[9px] font-bold text-white shadow-sm ${colors.badge}`}>
+                            <span className={`px-2 py-1 rounded text-[9px] font-bold text-white ${colors.badge}`}>
                                 {difficulty}
                             </span>
                         </div>

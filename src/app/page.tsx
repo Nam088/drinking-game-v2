@@ -46,7 +46,7 @@ export default function GamePage() {
   const [isRulesOpen, setIsRulesOpen] = useState(false)
 
   const drawCard = useCallback(async () => {
-    if (loading || isDrawing) return
+    if (isDrawing) return
     setIsDrawing(true)
     setLoading(true) // Set loading to true when drawing a new card
     setIsCardFlipped(false) // Reset card flip state
@@ -75,12 +75,13 @@ export default function GamePage() {
       setIsDrawing(false)
       preloadNextCard() // Preload the *next* card
     }
-  }, [loading, isDrawing, nextCard, preloadNextCard])
+  }, [isDrawing, nextCard, preloadNextCard])
 
   // Auto-draw first card on mount
   useEffect(() => {
     drawCard()
-  }, [drawCard])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const handleDragEnd = (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     const swipeThreshold = 50
@@ -104,14 +105,14 @@ export default function GamePage() {
         onOpenInventory={() => setIsInventoryOpen(true)}
       />
 
-      <div className="relative z-10 w-full max-w-md flex flex-col items-center mt-12">
+      <div className="relative z-10 w-full max-w-md flex flex-col items-center mt-6 sm:mt-8">
         {/* Title */}
         <motion.div
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="mb-8 text-center"
+          className="mb-4 sm:mb-6 text-center"
         >
-          <h1 className="text-4xl sm:text-5xl text-white drop-shadow-lg tracking-wide uppercase font-display">
+          <h1 className="text-3xl sm:text-5xl text-white drop-shadow-lg tracking-wide uppercase font-display">
             Không say không về
           </h1>
           <p className="text-slate-400 mt-2 font-medium tracking-wider text-sm">
@@ -121,7 +122,7 @@ export default function GamePage() {
 
         {/* Card Area with Deck */}
         <div
-          className="relative w-full min-h-[480px] flex items-center justify-center"
+          className="relative w-full h-[60dvh] max-h-[480px] min-h-[400px] flex items-center justify-center"
           style={{ perspective: "1500px", contain: "layout style" }}
         >
           {/* Stacked Cards - Deck Background (Fixed position with slight rotation) */}
@@ -129,7 +130,7 @@ export default function GamePage() {
             {[3, 2, 1].map((i) => (
               <div
                 key={i}
-                className="absolute w-full max-w-[90vw] sm:w-[320px] h-[480px] rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border-4 border-white/10 shadow-xl"
+                className="absolute w-full max-w-[90vw] sm:w-[320px] h-full sm:h-[480px] max-h-full rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border-4 border-white/10"
                 style={{
                   transform: `translateY(${i * 8}px) scale(${1 - i * 0.02}) rotate(${-2 + i * 0.5}deg)`,
                   opacity: 0.3 + (3 - i) * 0.2,
@@ -204,7 +205,7 @@ export default function GamePage() {
                           e.stopPropagation()
                           setIsKeepModalOpen(true)
                         }}
-                        className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black py-4 rounded-xl shadow-[0_10px_30px_rgba(168,85,247,0.4)] border border-purple-400/50 transition-transform active:scale-95 flex items-center justify-center gap-2 text-lg tracking-wide"
+                        className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black py-4 rounded-xl border border-purple-400/50 transition-transform active:scale-95 flex items-center justify-center gap-2 text-lg tracking-wide"
                       >
                         <Icons.Backpack className="w-5 h-5" /> Cất Vào Túi Đồ
                       </button>
