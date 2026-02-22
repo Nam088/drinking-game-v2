@@ -4,10 +4,10 @@ import { useEffect, useState } from "react"
 import { Card } from "@/components/game/Card"
 import { motion, AnimatePresence, PanInfo } from "framer-motion"
 import { InventoryDrawer } from "@/components/game/inventory/InventoryDrawer"
+import { ActionBar } from "@/components/game/ActionBar"
 import { KeepItemModal } from "@/components/game/inventory/KeepItemModal"
 import { PlayerManager } from "@/components/game/inventory/PlayerManager"
 import { RuleModal } from "@/components/game/RuleModal"
-import { useGameStore } from "@/store/useGameStore"
 import { Icons } from "@/components/icons"
 
 interface CardData {
@@ -20,10 +20,25 @@ interface CardData {
 
 export default function GamePage() {
   const [currentCard, setCurrentCard] = useState<CardData | null>(null)
+  const [nextCard, setNextCard] = useState<CardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [isDrawing, setIsDrawing] = useState(false)
+  const [dragProgress, setDragProgress] = useState(0) // Map to 0 (center) to 1 (left) or -1 (right)
+
+  const preloadNextCard = async () => {
+    try {
+      const res = await fetch("/api/cards/random")
+      const data = await res.json()
+      if (data.success && data.card) {
+        setNextCard(data.card)
+      }
+    } catch (error) {
+      console.error("Failed to preload next card", error)
+    }
+  }
   const [exitDirection, setExitDirection] = useState(-300)
   const [dragRotation, setDragRotation] = useState(0)
+  const [isCardFlipped, setIsCardFlipped] = useState(false)
 
   // Modals state
   const [isInventoryOpen, setIsInventoryOpen] = useState(false)
@@ -31,34 +46,52 @@ export default function GamePage() {
   const [isKeepModalOpen, setIsKeepModalOpen] = useState(false)
   const [isRulesOpen, setIsRulesOpen] = useState(false)
 
-  const { items } = useGameStore()
-
   const drawCard = async () => {
     if (isDrawing) return
     setIsDrawing(true)
 
-    try {
-      const res = await fetch("/api/cards/random")
-      const data = await res.json()
-
-      if (data.success && data.card) {
-        setCurrentCard(data.card)
-      }
-    } catch (error) {
-      console.error("Failed to draw card", error)
-    } finally {
+    if (nextCard) {
+      setIsCardFlipped(false)
+      setCurrentCard(nextCard)
+      setNextCard(null)
       setIsDrawing(false)
       setLoading(false)
+      preloadNextCard()
+    } else {
+      try {
+        setLoading(true)
+        const res = await fetch("/api/cards/random")
+        const data = await res.json()
+
+        if (data.success && data.card) {
+          setIsCardFlipped(false)
+          setCurrentCard(data.card)
+        }
+      } catch (error) {
+        console.error("Failed to draw card", error)
+      } finally {
+        setIsDrawing(false)
+        setLoading(false)
+        preloadNextCard()
+      }
     }
   }
 
   // Auto-draw first card on mount
   useEffect(() => {
     drawCard()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  const handleDrag = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    // Map offset.x (-150 to 150) to progress (-1 to 1)
+    const progress = Math.max(-1, Math.min(1, info.offset.x / 150))
+    setDragProgress(progress)
+  }
 
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     const swipeThreshold = 50
+    setDragProgress(0)
 
     // Swipe left or right to draw next card
     if (Math.abs(info.offset.x) > swipeThreshold) {
@@ -70,39 +103,37 @@ export default function GamePage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4 overflow-hidden relative">
+    <div 
+      className="min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden relative transition-colors duration-200"
+      style={{
+        backgroundColor: dragProgress === 0 
+          ? '#020617' // slate-950
+          : dragProgress > 0 
+            ? `rgba(2, 6, 23, ${1 - dragProgress * 0.3})` // fading right (adjust as needed)
+            : `rgba(2, 6, 23, ${1 + dragProgress * 0.3})` // fading left
+      }}
+    >
+      {/* Dynamic Colored Glow under everything based on swipe */}
+      <div 
+        className="absolute inset-0 opacity-20 transition-all duration-200"
+        style={{
+          background: dragProgress > 0 
+            ? `radial-gradient(circle at right, #22c55e ${dragProgress * 40}%, transparent 70%)` // Green for right
+            : dragProgress < 0
+              ? `radial-gradient(circle at left, #ef4444 ${Math.abs(dragProgress) * 40}%, transparent 70%)` // Red for left
+              : 'transparent'
+        }}
+      />
+
       {/* Subtle noise texture */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5" />
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 z-0" />
 
       {/* Top action bar */}
-      <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-30">
-        <div className="flex gap-2">
-          <button
-            onClick={() => setIsRulesOpen(true)}
-            className="bg-slate-800/80 hover:bg-slate-700 backdrop-blur-md border border-white/10 text-white p-3 rounded-full shadow-lg transition-colors flex items-center justify-center"
-          >
-            <Icons.Info className="w-5 h-5 text-slate-300" />
-          </button>
-          <button
-            onClick={() => setIsPlayerManagerOpen(true)}
-            className="bg-slate-800/80 hover:bg-slate-700 backdrop-blur-md border border-white/10 text-white p-3 rounded-full shadow-lg transition-colors flex items-center justify-center"
-          >
-            <Icons.Users className="w-5 h-5 text-slate-300" />
-          </button>
-        </div>
-
-        <button
-          onClick={() => setIsInventoryOpen(true)}
-          className="relative bg-slate-800/80 hover:bg-slate-700 backdrop-blur-md border border-white/10 text-white p-3 rounded-full shadow-lg transition-colors flex items-center justify-center"
-        >
-          <Icons.Backpack className="w-5 h-5 text-slate-300" />
-          {items.length > 0 && (
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-slate-900">
-              {items.length}
-            </span>
-          )}
-        </button>
-      </div>
+      <ActionBar 
+        onOpenRules={() => setIsRulesOpen(true)}
+        onOpenPlayerManager={() => setIsPlayerManagerOpen(true)}
+        onOpenInventory={() => setIsInventoryOpen(true)}
+      />
 
       <div className="relative z-10 w-full max-w-md flex flex-col items-center mt-12">
         {/* Title */}
@@ -122,7 +153,7 @@ export default function GamePage() {
         {/* Card Area with Deck */}
         <div
           className="relative w-full min-h-[480px] flex items-center justify-center"
-          style={{ perspective: "1500px" }}
+          style={{ perspective: "1500px", contain: "layout style" }}
         >
           {/* Stacked Cards - Deck Background (Fixed position with slight rotation) */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -131,9 +162,9 @@ export default function GamePage() {
                 key={i}
                 className="absolute w-full max-w-[90vw] sm:w-[320px] h-[480px] rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border-4 border-white/10 shadow-xl"
                 style={{
-                  transform: `translateY(${i * 8}px) translateZ(-${i * 20}px) scale(${1 - i * 0.02}) rotate(${-2 + i * 0.5}deg)`,
+                  transform: `translateY(${i * 8}px) scale(${1 - i * 0.02}) rotate(${-2 + i * 0.5}deg)`,
                   opacity: 0.3 + (3 - i) * 0.2,
-                  transformStyle: "preserve-3d"
+                  willChange: "transform"
                 }}
               >
                 {/* Dot pattern on deck cards */}
@@ -164,66 +195,84 @@ export default function GamePage() {
                 key={currentCard.id}
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.9}
+                dragElastic={0.7}
+                onDrag={handleDrag}
                 onDragEnd={handleDragEnd}
                 initial={{ opacity: 0, scale: 0.85, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{
                   x: exitDirection,
-                  y: -100,
+                  y: -50,
                   opacity: 0,
-                  scale: 0.7,
+                  scale: 0.8,
                   rotate: dragRotation
                 }}
-                transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                transition={{ type: "spring", stiffness: 500, damping: 30, mass: 0.8 }}
                 className="w-full relative z-20 flex flex-col items-center"
                 style={{
-                  cursor: "grab"
+                  cursor: "grab",
+                  touchAction: "none",
+                  willChange: "transform"
                 }}
                 whileDrag={{
                   cursor: "grabbing",
-                  scale: 1.05
+                  scale: 1.02
                 }}
               >
-                <Card {...currentCard} />
+                <Card {...currentCard} onFlip={setIsCardFlipped} />
 
                 {/* Keep Item Button overlay below the card if it's an ITEM */}
-                {currentCard.category === 'ITEM' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                    className="absolute -bottom-16 w-full max-w-[90vw] sm:w-[320px]"
-                  >
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        setIsKeepModalOpen(true)
-                      }}
-                      className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-3 rounded-xl shadow-lg shadow-purple-500/25 border border-purple-400/30 transition-all flex items-center justify-center gap-2"
+                <AnimatePresence>
+                  {currentCard.category === 'ITEM' && isCardFlipped && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.5, y: -20 }}
+                      animate={{ opacity: 1, scale: 1, y: 0 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ type: "spring", damping: 15, stiffness: 300, delay: 0.2 }}
+                      className="absolute -bottom-20 w-[95%] sm:w-full z-50 pointer-events-auto"
                     >
-                      <Icons.Backpack className="w-5 h-5" /> Cất Vào Túi Đồ
-                    </button>
-                  </motion.div>
-                )}
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setIsKeepModalOpen(true)
+                        }}
+                        className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black py-4 rounded-xl shadow-[0_10px_30px_rgba(168,85,247,0.4)] border border-purple-400/50 transition-transform active:scale-95 flex items-center justify-center gap-2 text-lg tracking-wide"
+                      >
+                        <Icons.Backpack className="w-5 h-5" /> Cất Vào Túi Đồ
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ) : null}
           </AnimatePresence>
         </div>
 
         {/* Instructions */}
-        <motion.div
-          className="mt-20 text-center space-y-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: currentCard && !loading ? 1 : 0 }}
-        >
-          <p className="text-white/40 text-xs sm:text-sm font-medium tracking-widest uppercase">
-            Chạm Để Lật Bài
-          </p>
-          <p className="text-white/40 text-xs sm:text-sm font-medium tracking-widest uppercase">
-            Vuốt Để Rút Bài Mới
-          </p>
-        </motion.div>
+        <AnimatePresence>
+          {currentCard && !loading && !isCardFlipped && (
+            <motion.div
+              className="mt-16 text-center space-y-2 pointer-events-none"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+            >
+              <p className="text-white/40 text-xs sm:text-sm font-medium tracking-widest uppercase animate-pulse">
+                Chạm Để Lật Bài
+              </p>
+            </motion.div>
+          )}
+          
+          {currentCard && !loading && isCardFlipped && (
+            <motion.div
+              className="mt-16 flex items-center justify-center gap-4 text-white/30 text-[10px] font-bold tracking-widest uppercase pointer-events-none"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              <Icons.ChevronLeft className="w-4 h-4" /> Vuốt bỏ <Icons.ChevronRight className="w-4 h-4 ml-2" />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Card Count Info */}
         <motion.div
@@ -231,8 +280,8 @@ export default function GamePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: currentCard && !loading ? 1 : 0 }}
         >
-          <p className="text-white/20 text-xs font-medium">
-            Lá bài #{currentCard?.id || 0}
+          <p className="text-white/10 font-mono text-xs font-bold tracking-widest">
+            # {currentCard?.id?.toString().padStart(4, '0') || '0000'}
           </p>
         </motion.div>
       </div>

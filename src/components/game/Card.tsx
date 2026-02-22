@@ -9,13 +9,16 @@ interface CardProps {
     content: string
     penalty: string
     difficulty: string
+    onFlip?: (flipped: boolean) => void
 }
 
-export const Card = ({ category, content, penalty, difficulty }: CardProps) => {
+export const Card = ({ category, content, penalty, difficulty, onFlip }: CardProps) => {
     const [isFlipped, setIsFlipped] = useState(false)
 
     const handleFlip = () => {
-        setIsFlipped(!isFlipped)
+        const nextState = !isFlipped
+        setIsFlipped(nextState)
+        if (onFlip) onFlip(nextState)
     }
 
     // Comprehensive Color Mapping
@@ -142,18 +145,19 @@ const categoryInfo = getCategoryInfo(category)
                 whileTap={{ scale: 0.98 }}
                 animate={{ rotateY: isFlipped ? 180 : 0 }}
                 transition={{
-                    duration: 0.3,
                     type: "spring",
-                    stiffness: 260,
-                    damping: 20
+                    stiffness: 400,
+                    damping: 25,
+                    mass: 0.8
                 }}
                 style={{
-                    transformStyle: "preserve-3d"
+                    transformStyle: "preserve-3d",
+                    willChange: "transform"
                 }}
             >
                 {/* FRONT (Card Back) */}
                 <motion.div
-                    className="absolute inset-0 rounded-2xl overflow-hidden border-[6px] border-white shadow-2xl bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900"
+                    className="absolute inset-0 rounded-2xl overflow-hidden border-[6px] border-white shadow-lg bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 pointer-events-none"
                     style={{
                         backfaceVisibility: "hidden",
                         WebkitBackfaceVisibility: "hidden"
@@ -181,10 +185,10 @@ const categoryInfo = getCategoryInfo(category)
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                         {/* Outer Glow Circle */}
                         <div className="relative">
-                            <div className="absolute inset-0 bg-purple-500/20 blur-xl rounded-full" />
-                            <div className="w-32 h-32 rounded-full border-4 border-white/20 flex items-center justify-center bg-slate-900/50 backdrop-blur-sm relative z-10">
+                            <div className="absolute inset-0 bg-purple-500/20 rounded-full" />
+                            <div className="w-32 h-32 rounded-full border-4 border-white/20 flex items-center justify-center bg-slate-900/80 relative z-10">
                                 <div className="w-24 h-24 rounded-full border-2 border-white/10 flex items-center justify-center">
-                                    <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-purple-200 to-purple-400 drop-shadow-lg" style={{ fontFamily: 'serif' }}>DG</span>
+                                    <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-purple-200 to-purple-400 drop-shadow-md" style={{ fontFamily: 'serif' }}>DG</span>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +206,7 @@ const categoryInfo = getCategoryInfo(category)
 
                 {/* BACK (Content) */}
                 <motion.div
-                    className="absolute inset-0 rounded-2xl overflow-hidden border-4 border-white shadow-xl bg-white flex flex-col"
+                    className="absolute inset-0 rounded-2xl overflow-hidden border-4 border-white shadow-lg bg-white flex flex-col pointer-events-none"
                     style={{
                         transform: "rotateY(180deg)",
                         backfaceVisibility: "hidden",
@@ -235,31 +239,31 @@ const categoryInfo = getCategoryInfo(category)
                     </div>
 
                     {/* Body */}
-                    <div className="p-5 flex flex-col flex-1 relative overflow-hidden">
+                    <div className="p-4 flex flex-col flex-1 relative overflow-hidden">
                         {/* Content */}
-                        <div className="flex-1 flex items-center justify-center overflow-y-auto min-h-0 py-2">
-                            <p className="text-center text-slate-800 font-bold text-lg leading-relaxed px-2">
+                        <div className="flex-1 flex items-center justify-center overflow-hidden min-h-[100px] py-2">
+                            <p className="text-center text-slate-800 font-bold text-lg leading-relaxed px-2 line-clamp-6">
                                 {content}
                             </p>
                         </div>
 
                         {/* Divider */}
-                        <div className="w-full h-px bg-slate-200 my-3 shrink-0" />
+                        <div className="w-full h-px bg-slate-200 my-2 shrink-0" />
 
                         {/* Penalty */}
                         {category !== "ITEM" ? (
-                            <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 shrink-0">
-                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 text-center">Hình Phạt</p>
+                            <div className="bg-slate-50 rounded-xl p-2.5 border border-slate-100 shrink-0">
+                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5 text-center">Hình Phạt</p>
                                 <p className="text-center font-black text-base" style={{ color: colors.to }}>
                                     {penalty}
                                 </p>
                             </div>
                         ) : (
-                            <div className="shrink-0 flex justify-center">
+                            <div className="shrink-0 flex justify-center pb-8 sm:pb-0">
                                 {/* The keep button will be rendered by the parent if needed, 
                                     or we just show a hint here since the drag action is the main interaction */}
-                                <div className="bg-purple-50 rounded-xl p-3 border border-purple-100 w-full">
-                                    <p className="text-[10px] font-bold text-purple-400 uppercase tracking-wider mb-1 text-center">Vật Phẩm</p>
+                                <div className="bg-purple-50 rounded-xl p-2.5 border border-purple-100 w-full mb-4 sm:mb-0">
+                                    <p className="text-[10px] font-bold text-purple-400 uppercase tracking-wider mb-0.5 text-center">Vật Phẩm</p>
                                     <p className="text-center font-bold text-purple-600 text-sm">
                                         Giữ thẻ này để dùng sau!
                                     </p>

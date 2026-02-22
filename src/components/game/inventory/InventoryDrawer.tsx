@@ -6,55 +6,10 @@ import { CategoryIcon } from "../CategoryIcon"
 import { useState } from "react"
 import { Icons } from "../../icons"
 
-export const ItemCardMini = ({ item, onClick }: { item: InventoryItem, onClick: () => void }) => {
-  const getColors = (diff: string) => {
-    const d = diff.toLowerCase().trim()
-    if (d === "hard" || d === "dark") return { from: "#ef4444", to: "#b91c1c" }
-    if (d === "fun" || d === "easy") return { from: "#4ade80", to: "#16a34a" }
-    if (d === "chaos" || d === "drama") return { from: "#a78bfa", to: "#7c3aed" }
-    return { from: "#8b5cf6", to: "#6d28d9" }
-  }
-
-  const colors = getColors(item.difficulty)
-
-  return (
-    <motion.button
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      onClick={onClick}
-      className="relative rounded-xl overflow-hidden shadow-lg border-2 border-slate-700 bg-slate-800 flex flex-col h-40 text-left w-full transition-colors hover:border-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
-    >
-      <div 
-        className="h-10 flex items-center px-3 gap-2 relative overflow-hidden shrink-0"
-        style={{ background: `linear-gradient(135deg, ${colors.from}, ${colors.to})` }}
-      >
-        <div className="absolute inset-0 bg-black/10" />
-        <CategoryIcon category={item.category} className="w-5 h-5 text-white z-10" />
-        <span className="font-bold text-white text-xs z-10 truncate font-display tracking-widest uppercase">
-          {item.category.replace(/_/g, " ")}
-        </span>
-      </div>
-
-      <div className="absolute top-2 right-2 z-20">
-        <span className="bg-slate-950/80 backdrop-blur text-white text-[10px] font-bold px-2 py-1 rounded-full border border-white/10 shadow-sm flex items-center gap-1">
-          <Icons.User className="w-3 h-3 text-slate-300" /> {item.ownerName}
-        </span>
-      </div>
-
-      <div className="flex-1 p-3 flex flex-col justify-between overflow-hidden">
-        <p className="text-slate-300 text-xs line-clamp-3 font-medium flex-1">
-          {item.content}
-        </p>
-        <div className="mt-2 text-[10px] text-slate-500 uppercase tracking-widest font-bold flex items-center gap-1">
-          <Icons.Info className="w-3 h-3" /> Chi tiết
-        </div>
-      </div>
-    </motion.button>
-  )
-}
+import { ItemCardMini } from "./ItemCardMini"
 
 export const InventoryDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
-  const { items, useItem } = useGameStore()
+  const { items, useItem: consumeItem } = useGameStore()
   const [selectedItem, setSelectedItem] = useState<InventoryItem | null>(null)
   const [isUsing, setIsUsing] = useState(false)
 
@@ -64,7 +19,7 @@ export const InventoryDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose:
     if (!selectedItem) return
     setIsUsing(true)
     setTimeout(() => {
-      useItem(selectedItem.id)
+      consumeItem(selectedItem.id)
       setSelectedItem(null)
       setIsUsing(false)
     }, 600)
@@ -95,40 +50,53 @@ export const InventoryDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose:
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+            style={{ willChange: "opacity" }}
             onClick={onClose}
             className="fixed inset-0 z-40 bg-slate-950/60 backdrop-blur-sm"
           />
           <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed inset-y-0 right-0 z-50 w-full md:max-w-md bg-slate-950 border-l border-white/10 shadow-2xl flex flex-col"
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "100%" }}
+            transition={{ type: "spring", stiffness: 400, damping: 25, mass: 0.8 }}
+            style={{ willChange: "transform" }}
+            drag="y"
+            dragConstraints={{ top: 0, bottom: 0 }}
+            dragElastic={0.2}
+            onDragEnd={(_, info) => {
+              if (info.offset.y > 100) handleClose()
+            }}
+            className="fixed bottom-0 left-0 right-0 z-50 h-[85vh] sm:h-[80vh] bg-slate-900 border-t border-purple-500/30 rounded-t-3xl shadow-[0_-10px_40px_rgba(168,85,247,0.15)] flex flex-col"
           >
             {/* Header */}
-            <div className="p-4 border-b border-white/10 flex items-center justify-between bg-slate-900/50 backdrop-blur shrink-0 max-h-16">
-              <div className="flex items-center gap-3">
-                {selectedItem && (
-                  <button 
-                    onClick={() => setSelectedItem(null)}
-                    className="p-2 -ml-2 rounded-full hover:bg-white/10 text-slate-300 transition-colors"
-                  >
-                    <Icons.ChevronLeft className="w-5 h-5" />
-                  </button>
-                )}
-                <h2 className="text-xl font-black text-white font-display tracking-wider uppercase flex items-center gap-2">
-                  <Icons.Backpack className="w-6 h-6 text-purple-400" />
-                  {selectedItem ? "Chi Tiết" : "Túi Đồ"}
-                  {!selectedItem && <span className="text-purple-400 text-sm">({items.length})</span>}
-                </h2>
+            <div className="flex-1 overflow-hidden flex flex-col pt-2 bg-slate-900 rounded-t-3xl">
+              {/* Drag indicator / Handle */}
+              <div className="w-12 h-1.5 bg-slate-700/50 rounded-full mx-auto my-3 cursor-grab active:cursor-grabbing" />
+              
+              <div className="flex items-center justify-between px-6 pb-4 border-b border-white/5">
+                <div className="flex items-center gap-3">
+                  {selectedItem && (
+                    <button 
+                      onClick={() => setSelectedItem(null)}
+                      className="p-2 -ml-2 rounded-full hover:bg-white/10 text-slate-300 transition-colors"
+                    >
+                      <Icons.ChevronLeft className="w-5 h-5" />
+                    </button>
+                  )}
+                  <h2 className="text-xl font-black text-white flex items-center gap-2">
+                    <Icons.Backpack className="w-6 h-6 text-purple-400" />
+                    {selectedItem ? "Chi Tiết" : "Túi Đồ"}
+                    {!selectedItem && <span className="text-purple-400 text-sm">({items.length})</span>}
+                  </h2>
+                </div>
+                <button
+                  onClick={handleClose}
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition"
+                >
+                  <Icons.X className="w-5 h-5" />
+                </button>
               </div>
-              <button
-                onClick={onClose}
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition"
-              >
-                <Icons.X className="w-5 h-5" />
-              </button>
-            </div>
 
             {/* Content Area */}
             <div className="flex-1 overflow-hidden relative">
@@ -160,78 +128,102 @@ export const InventoryDrawer = ({ isOpen, onClose }: { isOpen: boolean, onClose:
                       </div>
                     )}
                   </motion.div>
-                ) : (
-                  /* Detail View */
-                  <motion.div
-                    key="detail"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, scale: 0.9, y: 50 }}
-                    className="h-full overflow-y-auto p-6 flex flex-col items-center"
-                  >
-                    <div className="w-full max-w-sm flex-1 flex flex-col">
-                      <div className="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-xl mb-6 flex-1 flex flex-col">
-                        
-                        {/* Detail Header */}
-                        <div 
-                          className="p-6 flex flex-col items-center relative"
-                          style={{ background: `linear-gradient(135deg, ${getColors(selectedItem.difficulty).from}, ${getColors(selectedItem.difficulty).to})` }}
-                        >
-                          <div className="absolute inset-0 bg-black/10" />
-                          <CategoryIcon category={selectedItem.category} className="w-16 h-16 text-white drop-shadow-lg relative z-10 mb-2" />
-                          <h3 className="text-2xl font-black text-white uppercase tracking-wider text-center relative z-10 drop-shadow-md">
-                            {selectedItem.category.replace(/_/g, " ")}
-                          </h3>
-                        </div>
+                  ) : (
+                    /* Detail View */
+                    <motion.div
+                      key="detail"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, scale: 0.9, y: 50 }}
+                      className="h-full overflow-y-auto p-4 sm:p-6 flex flex-col items-center pb-12"
+                    >
+                      <div className="w-full max-w-sm flex-1 flex flex-col">
+                        <div className="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-xl mb-4 sm:mb-6 flex-1 flex flex-col">
+                          {/* Detail Header */}
+                          <div
+                            className="p-6 flex flex-col items-center relative"
+                            style={{
+                              background: `linear-gradient(135deg, ${getColors(selectedItem.difficulty).from}, ${getColors(selectedItem.difficulty).to})`,
+                            }}
+                          >
+                            <div className="absolute inset-0 bg-black/10" />
+                            <CategoryIcon
+                              category={selectedItem.category}
+                              className="w-16 h-16 text-white drop-shadow-lg relative z-10 mb-2"
+                            />
+                            <h3 className="text-2xl font-black text-white uppercase tracking-wider text-center relative z-10 drop-shadow-md">
+                              {selectedItem.category.replace(/_/g, " ")}
+                            </h3>
+                          </div>
 
-                        {/* Owner Badge */}
-                        <div className="px-6 pt-6 flex justify-center">
-                          <div className="bg-slate-900 px-4 py-2 rounded-full border border-slate-700 flex items-center gap-2 shadow-inner">
-                            <span className="text-xs text-slate-400 uppercase tracking-widest font-bold">Sở hữu:</span>
-                            <span className="text-sm text-white font-medium flex items-center gap-1">
-                              <Icons.User className="w-4 h-4 text-purple-400" /> {selectedItem.ownerName}
-                            </span>
+                          {/* Owner Badge */}
+                          <div className="px-6 pt-6 flex justify-center">
+                            <div className="bg-slate-900 px-4 py-2 rounded-full border border-slate-700 flex items-center gap-2 shadow-inner">
+                              <span className="text-xs text-slate-400 uppercase tracking-widest font-bold">
+                                Sở hữu:
+                              </span>
+                              <span className="text-sm text-white font-medium flex items-center gap-1">
+                                <Icons.User className="w-4 h-4 text-purple-400" />{" "}
+                                {selectedItem.ownerName}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Detail Body */}
+                          <div className="p-6 flex-1 flex flex-col">
+                            <div className="flex-1 flex items-center justify-center py-2 sm:py-4">
+                              <p className="text-slate-200 text-lg md:text-xl text-center font-medium leading-relaxed">
+                                {selectedItem.content}
+                              </p>
+                            </div>
+                            
+                            <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50 mt-4">
+                              <p className="text-xs text-slate-400 uppercase tracking-widest font-bold mb-1 text-center">
+                                Hình Phạt
+                              </p>
+                              <p
+                                className={`text-center font-bold text-lg ${getColors(selectedItem.difficulty).text}`}
+                              >
+                                {selectedItem.penalty}
+                              </p>
+                            </div>
                           </div>
                         </div>
 
-                        {/* Detail Body */}
-                        <div className="p-6 flex-1 flex flex-col">
-                          <div className="flex-1 flex items-center justify-center py-4">
-                            <p className="text-slate-200 text-lg md:text-xl text-center font-medium leading-relaxed">
-                              {selectedItem.content}
-                            </p>
-                          </div>
+                        {/* Action Buttons */}
+                        <div className="flex gap-3 mt-auto shrink-0">
+                          <button
+                            onClick={() => {
+                              consumeItem(selectedItem.id);
+                              setSelectedItem(null);
+                            }}
+                            className="flex-1 py-4 rounded-xl font-bold transition-all flex items-center justify-center gap-2 shadow-md bg-slate-800 text-rose-400 hover:bg-slate-700 hover:text-rose-300 border border-slate-700/50"
+                          >
+                            Xóa Bỏ
+                          </button>
                           
-                          <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50 mt-4">
-                            <p className="text-xs text-slate-400 uppercase tracking-widest font-bold mb-1 text-center">Hình Phạt</p>
-                            <p className={`text-center font-bold text-lg ${getColors(selectedItem.difficulty).text}`}>
-                              {selectedItem.penalty}
-                            </p>
-                          </div>
+                          <button
+                            onClick={handleUse}
+                            disabled={isUsing}
+                            className={`flex-[2] py-4 rounded-xl font-black text-lg transition-all flex items-center justify-center gap-2 shadow-xl ${
+                              isUsing 
+                                ? "bg-slate-700 text-slate-500 scale-95" 
+                                : "bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white hover:scale-[1.02]"
+                            }`}
+                          >
+                            <Icons.Zap className="w-5 h-5 sm:w-6 sm:h-6" />
+                            {isUsing ? "ĐANG SỬ DỤNG..." : "DÙNG NGAY!"}
+                          </button>
                         </div>
                       </div>
-
-                      {/* Use Action */}
-                      <button
-                        onClick={handleUse}
-                        disabled={isUsing}
-                        className={`w-full py-4 rounded-xl font-black text-lg transition-all flex items-center justify-center gap-2 shadow-xl shrink-0 ${
-                          isUsing 
-                            ? "bg-slate-700 text-slate-500 scale-95" 
-                            : "bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white hover:scale-[1.02]"
-                        }`}
-                      >
-                        <Icons.Zap className="w-6 h-6" />
-                        {isUsing ? "ĐANG SỬ DỤNG..." : "DÙNG NGAY!"}
-                      </button>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
           </motion.div>
         </>
       )}
     </AnimatePresence>
-  )
-}
+  );
+};

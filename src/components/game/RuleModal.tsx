@@ -11,11 +11,15 @@ export const RuleModal = ({ onClose }: RuleModalProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      transition={{ duration: 0.15 }}
+      style={{ willChange: "opacity" }}
       className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-sm"
     >
       <motion.div
         initial={{ scale: 0.9, y: 20 }}
         animate={{ scale: 1, y: 0 }}
+        transition={{ type: "spring", stiffness: 400, damping: 25, mass: 0.8 }}
+        style={{ willChange: "transform" }}
         className="bg-slate-900 border border-white/10 rounded-2xl p-6 w-full max-w-sm shadow-2xl relative max-h-[80vh] overflow-y-auto"
       >
         <button
