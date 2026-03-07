@@ -1,15 +1,20 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { Icons } from "@/components/icons"
 import { useGameStore } from "@/store/useGameStore"
+import { useTimerStore } from "@/store/useTimerStore"
 
 interface ActionBarProps {
   onOpenRules: () => void
   onOpenPlayerManager: () => void
   onOpenInventory: () => void
+  onOpenTimers: () => void
 }
 
-export const ActionBar = ({ onOpenRules, onOpenPlayerManager, onOpenInventory }: ActionBarProps) => {
+export const ActionBar = ({ onOpenRules, onOpenPlayerManager, onOpenInventory, onOpenTimers }: ActionBarProps) => {
   const { items } = useGameStore()
+  const { timers } = useTimerStore()
+
+  const runningTimersCount = timers.filter(t => t.isRunning).length
 
   return (
     <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-30 pointer-events-none">
@@ -26,6 +31,22 @@ export const ActionBar = ({ onOpenRules, onOpenPlayerManager, onOpenInventory }:
         >
           <Icons.Users className="w-5 h-5 text-slate-300" />
         </button>
+        <motion.button
+          onClick={onOpenTimers}
+          animate={runningTimersCount > 0 ? {
+            boxShadow: ["0px 0px 0px rgba(59,130,246,0)", "0px 0px 15px rgba(59,130,246,0.6)", "0px 0px 0px rgba(59,130,246,0)"],
+          } : {}}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="bg-slate-800/90 hover:bg-slate-700 border border-slate-600/50 text-white w-12 h-12 rounded-full shadow-lg transition-all flex items-center justify-center hover:scale-105 active:scale-95 relative"
+        >
+          <Icons.Timer className={`w-5 h-5 ${runningTimersCount > 0 ? 'text-blue-400' : 'text-slate-300'}`} />
+          {runningTimersCount > 0 && (
+            <>
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full animate-ping" />
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full" />
+            </>
+          )}
+        </motion.button>
       </div>
 
       <motion.button

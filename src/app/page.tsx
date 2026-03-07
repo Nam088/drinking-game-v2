@@ -8,6 +8,7 @@ import { ActionBar } from "@/components/game/ActionBar"
 import { KeepItemModal } from "@/components/game/inventory/KeepItemModal"
 import { PlayerManager } from "@/components/game/inventory/PlayerManager"
 import { RuleModal } from "@/components/game/RuleModal"
+import { TimerPanel } from "@/components/game/TimerPanel"
 import { Icons } from "@/components/icons"
 
 interface CardData {
@@ -44,6 +45,7 @@ export default function GamePage() {
   const [isPlayerManagerOpen, setIsPlayerManagerOpen] = useState(false)
   const [isKeepModalOpen, setIsKeepModalOpen] = useState(false)
   const [isRulesOpen, setIsRulesOpen] = useState(false)
+  const [isTimersOpen, setIsTimersOpen] = useState(false)
 
   const drawCard = useCallback(async () => {
     if (isDrawing) return
@@ -102,6 +104,7 @@ export default function GamePage() {
       <ActionBar 
         onOpenRules={() => setIsRulesOpen(true)}
         onOpenPlayerManager={() => setIsPlayerManagerOpen(true)}
+        onOpenTimers={() => setIsTimersOpen(true)}
         onOpenInventory={() => setIsInventoryOpen(true)}
       />
 
@@ -277,6 +280,8 @@ export default function GamePage() {
           />
         )}
       </AnimatePresence>
+
+      <TimerPanel isOpen={isTimersOpen} onClose={() => setIsTimersOpen(false)} />
 
       <InventoryDrawer 
         isOpen={isInventoryOpen} 
