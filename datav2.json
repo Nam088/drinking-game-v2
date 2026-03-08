@@ -92584,5 +92584,6800 @@
       "vibe": "funny",
       "sophistication_level": "7"
     }
+  },
+  {
+    "title": "Nhân Phẩm Xúc Xắc",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở công cụ Đổ Xúc Xắc. Nếu ra số LẺ (1,3,5), bạn phải tự uống 1 ly. Nếu ra số CHẴN (2,4,6), bạn được quyền chỉ định 1 người khác uống số ngụm bằng đúng số vừa đổ ra.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người thử nhân phẩm"
+    },
+    "penalty": {
+      "template": "Xui xẻo xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Sinh Tử Sấp Ngửa",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở công cụ Lật Đồng Xu. Trước khi lật, bạn chọn 'Sấp' hoặc 'Ngửa'. Lật sai, bạn cạn 1 ly. Lật đúng, bạn thoát và người bên phải phải lật tiếp. Thất bại: Người lật sai cuối cùng.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Kẻ lật sai"
+    },
+    "penalty": {
+      "template": "Đoán sai xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Sát Thủ Vòng Xoay",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở công cụ Xoay Chai. Đặt máy giữa bàn. Đầu chai chỉ vào ai, kẻ đó LẬP TỨC phải uống cạn 1 ly không được biện hộ.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Mục tiêu của vỏ chai"
+    },
+    "penalty": {
+      "template": "Trời gọi ai nấy dạ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Con Số Định Mệnh",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đếm số người trong bàn (VD: 6 người). Mở Máy Quay Số từ 1 đến 6. Bạn là số 1, đếm theo chiều kim đồng hồ. Số rơi trúng ai, người đó uống 2 ly.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ mang số xui xẻo"
+    },
+    "penalty": {
+      "template": "Trúng giải độc đắc xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Hack Não: 10s Bảng Cửu Chương",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Người đối diện sẽ hỏi bạn 3 phép tính nhân liên tiếp (VD: 7x8, 6x9, 8x4). Thất bại: Trả lời sai 1 phép tính hoặc hết giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Tính nhẩm kém xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đồng Minh Đồng Xu",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Bạn chọn 1 đồng minh. Bật Lật Đồng Xu. Nếu SẤP: Hai bạn an toàn trong 3 vòng. Nếu NGỬA: Lời nguyền dính chặt! Hễ 1 người uống, người kia phải uống theo trong 3 vòng tới.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Đồng minh may rủi"
+    },
+    "penalty": {
+      "template": "Chia sầu xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Khéo Léo: Cân Bằng Đũa 15s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 15
+    },
+    "content": "Bật Đồng Hồ 15s. Dựng đứng 1 chiếc đũa trên mu bàn tay và giữ thăng bằng. Thất bại: Chiếc đũa rơi xuống bàn trước khi đồng hồ reo.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Tay run xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Vòng Quay Nô Lệ",
+    "category": "ROLE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Mở Xoay Chai. Chai chỉ trúng ai, người đó lập tức trở thành 'Nô Lệ' của bạn trong 3 vòng. Bạn sai bảo lấy đồ, rót nước, gắp mồi phải làm theo.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Nô lệ của bạn"
+    },
+    "penalty": {
+      "template": "Cãi lời chủ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Toán Học Xúc Xắc",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL",
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 5
+    },
+    "content": "Mở Xúc Xắc đổ 2 lần liên tiếp. Bật Đồng Hồ 5s, bạn phải HÉT TO kết quả phép NHÂN của 2 số vừa đổ ra. Thất bại: Quá 5s hoặc tính sai.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Học sinh dốt toán"
+    },
+    "penalty": {
+      "template": "Tính sai xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Quyền Trượng RNG",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Giữ thẻ này! Khi có ai cãi cọ hoặc đùn đẩy ly phạt. Lôi Máy Quay Số ra (Set từ 1 đến số người trong bàn). Bạn ấn quay, trúng số ai người đó LÃNH TRỌN hình phạt.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ bị RNG chọn"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Hack Não: Liệt Kê Nhanh 10s",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Mở Đồng Hồ 10s. Bạn phải kể tên 5 đồ vật ĐANG CÓ MẶT trên bàn nhậu (Không tính điện thoại, ly, đũa). Thất bại: Quá giờ hoặc kể không đủ 5 món.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Mắt kém xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Vòng Xoáy Hôn Nhân",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Xoay Chai. Đầu chai chỉ ai, đuôi chai chỉ ai thì 2 người đó BẮT BUỘC phải cụng ly giao bôi với nhau. (Nếu đáy chai không rõ, quay lại).",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Cặp đôi do chai chọn"
+    },
+    "penalty": {
+      "template": "Mời phu thê cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Đánh Cược Bằng Đồng Xu",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn muốn phạt 1 người. Hai bạn cá cược Sấp/Ngửa rồi mở Lật Đồng Xu. Bạn đoán sai: Bạn uống 2 ly. Bạn đoán đúng: Họ uống 2 ly.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Người bị thách thức"
+    },
+    "penalty": {
+      "template": "Thua cược xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Cơn Mưa Xúc Xắc",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn mở công cụ Đổ Xúc Xắc. Ra số nào, TẤT CẢ mọi người trong bàn phải uống SỐ NGỤM bằng đúng với con số trên mặt xúc xắc.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn nhậu"
+    },
+    "penalty": {
+      "template": "Mời cả bàn uống {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Khéo Léo: Cầm Ly Bằng Hai Ngón 20s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 20
+    },
+    "content": "Bật Đồng Hồ 20s. Bạn phải dùng 2 ngón út nhấc ly nước/bia của mình lên cách mặt bàn 5cm và giữ yên. Thất bại: Rơi ly hoặc chạm bàn trước khi hết giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Tay yếu xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Khiên Đổi Mệnh Xúc Xắc",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi ai đó chuẩn bị ép bạn uống. Tung thẻ này ra, bắt họ mở Đổ Xúc Xắc. Ra số CHẴN bạn thoát phạt. Ra số LẺ bạn vẫn uống nhưng họ phải uống CÙNG.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ ra đòn"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Vòng Xoáy Khẩu Nghiệp",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Xoay Chai. Chai chỉ trúng ai, người đó phải tự kể ra 1 tật xấu nhất của bản thân để cả bàn cùng cười. Thất bại: Không kể được thì uống 1 ly.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ bị chọn"
+    },
+    "penalty": {
+      "template": "Dấu diếm xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Máy Quay Định Đoạt",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Cả bàn đếm số thứ tự. Mở Máy Quay Số (Max = số người). Bạn bấm quay. Máy ra số của ai, người đó ăn trọn 1 ly. Quay thêm lần nữa nếu ra chính bạn!",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Người trúng số"
+    },
+    "penalty": {
+      "template": "Giải đặc biệt xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đồng Minh: Tung Đồng Xu Gánh Tạ",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Chọn 1 đồng minh. Mỗi khi 1 trong 2 người bị phạt, mở Lật Đồng Xu. Ra SẤP: Bạn uống hết. Ra NGỬA: Đồng minh uống hết. Chơi trong 3 vòng.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Kẻ cùng chung bát họ"
+    },
+    "penalty": {
+      "template": "Xui xẻo xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Hack Não: Kể Tên 5 Quốc Gia 10s",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải kể tên 5 quốc gia ở Châu Á. Thất bại: Không đủ 5 quốc gia hoặc hết 10 giây.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Học sinh môn Địa"
+    },
+    "penalty": {
+      "template": "Mù địa lý xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Chai Rượu Chuyển Hướng",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn bị bắt làm DARE, dùng thẻ này mở Xoay Chai. Đầu chai chỉ vào ai, TRỪ BẠN, người đó BẮT BUỘC phải làm DARE đó thay bạn.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Người bị chai chọn thế mạng"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Xúc Xắc Phân Phối Đồ Nhắm",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Đổ Xúc Xắc. Ra số nào, bạn phải gắp đúng số lượng miếng mồi đó chia đều cho những người bạn ghét nhất trong bàn (Hoặc chia cho 1 người ăn hết).",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ bị nhồi nhét"
+    },
+    "penalty": {
+      "template": "Từ chối ăn xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "4"
+    }
+  },
+  {
+    "title": "Khéo Léo: Cân Bằng Ly Trên Mu Bàn Tay 15s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 15
+    },
+    "content": "Bật Đồng Hồ 15s. Đặt chiếc ly vơi lên mu bàn tay, đứng dậy và đứng im tại chỗ. Thất bại: Ly rơi xuống đất trước khi hết giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Rớt ly xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Lật Đồng Xu Quyết Định Sự Sống",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Cả bàn ai cũng đang cầm ly. Mở Lật Đồng Xu. SẤP: Nửa bàn bên trái cạn. NGỬA: Nửa bàn bên phải cạn. Không được cãi!",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Nửa bàn xui xẻo"
+    },
+    "penalty": {
+      "template": "Ý trời xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Nhiệm Vụ Quay Số Chạm Trán",
+    "category": "SECRET_MISSION",
+    "actionType": "KEEP",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "ĐỌC THẦM: Chọn 1 người, ngầm đoán số 1 hoặc 2. Bật Máy Quay Số (Max 2). Nếu ra đúng số bạn đoán, hô 'Bắt bài' và phạt họ 2 ly. Thất bại: Lộ thẻ trước khi quay.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Con mồi"
+    },
+    "penalty": {
+      "template": "Thất bại xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Hack Não: 10s Tìm Chữ Khác Biệt",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải đọc NGƯỢC tên thật của người ngồi bên trái (VD: Nam -> Man) 3 lần liên tiếp không vấp. Thất bại: Vấp hoặc quá giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Não load chậm xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Vòng Xoay Hôn Tay",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Xoay Chai. Chai chỉ trúng ai, bạn PHẢI cầm tay người đó lên và hôn nhẹ lên mu bàn tay như quý tộc. Thất bại: Nhát gan không dám làm.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ nhát gan"
+    },
+    "penalty": {
+      "template": "Từ chối xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Quyền Lực Xúc Xắc Kép",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn bị ép uống, tung thẻ và Đổ Xúc Xắc. Bạn được GẢM số ngụm uống đúng bằng con số trên xúc xắc. Nếu ra 6, bạn gần như được miễn.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người giữ thẻ"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Đồng Minh: Máy Quay Số Tình Bạn",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Bạn và người bên phải hợp tác. Bật RNG (Max 3). Nếu ra số 1: Bạn uống. Số 2: Người kia uống. Số 3: Cả hai an toàn. Áp dụng mỗi khi có lệnh cụng ly chung trong 3 vòng.",
+    "target": {
+      "type": "NEIGHBORS",
+      "count": 1,
+      "definition": "Bạn và người bên phải"
+    },
+    "penalty": {
+      "template": "Xui xẻo xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Khéo Léo: Nín Thở 30s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 30
+    },
+    "content": "Bật Đồng Hồ 30s. Bóp mũi và nín thở liên tục cho đến khi chuông reo. Thất bại: Thở ra, lấy hơi trước khi hết giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người phổi yếu"
+    },
+    "penalty": {
+      "template": "Bỏ cuộc xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Đồng Xu Thách Thức DARE",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi ai đó bốc thẻ DARE, bạn tung thẻ này. Ép họ lật đồng xu. Sấp: Họ phải làm DARE và uống thêm 1 ly. Ngửa: Họ làm DARE nhưng BẠN phải uống 1 ly.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ làm DARE"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Sát Thủ Quay Chai Bí Mật",
+    "category": "SECRET_MISSION",
+    "actionType": "KEEP",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "ĐỌC THẦM: Rút điện thoại ra vờ nghịch, lén bấm Xoay Chai. Nó chỉ hướng nào, bạn lập tức vu oan: 'Mặt đứa kia trông ghét quá, phạt nó'. Nếu họ cãi, họ uống 2 ly.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Nạn nhân bị vu oan"
+    },
+    "penalty": {
+      "template": "Bị lật tẩy xin tự cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Hack Não: 10s 5 App Ngân Hàng",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Hãy kể tên 5 ứng dụng Ngân Hàng có màu Xanh Lá hoặc Xanh Dương. Thất bại: Hết giờ hoặc kể sai màu.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ mù ngân hàng"
+    },
+    "penalty": {
+      "template": "Đứng hình xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Vận Mệnh Con Số Ngẫu Nhiên",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn bật Máy Quay Số (Tùy chọn 1-5). Con số hiện ra chính là SỐ LY BIA/RƯỢU mà bạn PHẢI phân phát cho những người trong bàn. Bạn tùy ý chỉ định ai uống bao nhiêu.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Những kẻ bị bạn chọn"
+    },
+    "penalty": {
+      "template": "Nhận lộc xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Khéo Léo: Gắp Đá Bằng 2 Đầu Đũa 15s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 15
+    },
+    "content": "Bật Đồng Hồ 15s. Dùng 2 chiếc đũa kẹp chéo nhau, gắp 1 viên đá nhỏ và giữ nó lơ lửng trên không trung. Thất bại: Đá rơi trước khi hết 15s.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Vụng về xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đồng Minh: Xúc Xắc Đồng Hưởng",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Chọn 1 đồng minh. Đầu mỗi vòng trong 3 vòng tới, đổ xúc xắc 1 lần. Số LẺ: Bạn làm osin rót bia cho họ. Số CHẴN: Họ làm osin rót bia cho bạn.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Đồng minh kiêm Osin"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Hack Não: 10s Giải Nghĩa",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Yêu cầu người đối diện giải thích từ lóng 'Red Flag' là gì. Thất bại: Quá giờ mà người đó vẫn ấp úng không diễn đạt được.",
+    "target": {
+      "type": "OPPOSITE",
+      "count": 1,
+      "definition": "Người tối cổ"
+    },
+    "penalty": {
+      "template": "Không hiểu luật mạng xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Vòng Quay Của Bạo Chúa",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn trở thành Bạo Chúa. Mở Xoay Chai 3 lần liên tiếp. Cứ chai chỉ vào ai, bạn ép người đó nhấp 1 ngụm. Nếu chai chỉ vào bạn, bạo chúa băng hà, bạn tự uống 3 ly.",
+    "target": {
+      "type": "SELECT",
+      "count": 3,
+      "definition": "Ba nạn nhân"
+    },
+    "penalty": {
+      "template": "Bạo chúa hiển linh xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Lật Đồng Xu Thay Lời Xin Lỗi",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Giữ thẻ này! Khi bạn lỡ tay làm đổ nước/rơi đũa và bị phạt. Bật Lật Đồng Xu. Nếu Ngửa: Mọi người tha lỗi cho bạn. Nếu Sấp: Phạt gấp đôi tội hậu đậu.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ làm sai"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Hack Não: 15s Đếm Ngược Lẻ",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 15
+    },
+    "content": "Bật Đồng Hồ 15s. Bạn phải đếm lùi CÁC SỐ LẺ từ 25 về 1 (25, 23, 21...). Thất bại: Đọc dính số chẵn hoặc không kịp trước khi hết 15s.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ loạn số"
+    },
+    "penalty": {
+      "template": "Não chậm xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Vòng Xoáy Lột Đồ",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Xoay Chai. Chai chỉ trúng ai, người đó BẮT BUỘC phải tháo/cởi 1 món phụ kiện trên người (Nhẫn, đồng hồ, tất, kính) đặt lên bàn. Thất bại: Kẻ không chịu cởi.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ bị lột"
+    },
+    "penalty": {
+      "template": "Cứng đầu xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Quyền Trượng Con Số Bí Ẩn",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Giữ thẻ! Khi 1 MINI_GAME bắt đầu, bạn lén mở Máy Quay Số (1-3) để cộng thêm hình phạt. Kẻ thua cuộc game đó sẽ phải uống thêm số ly bằng đúng số RNG hiện ra.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Kẻ thua mini game"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đồng Minh: Xúc Xắc Phân Chia Đau Khổ",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Chọn 1 đồng minh. Hễ 1 trong 2 bị phạt 1 ly đầy, đổ Xúc Xắc. Số 1-3: Bạn uống. Số 4-6: Đồng minh uống. Áp dụng 3 vòng.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Kẻ chung vận mệnh"
+    },
+    "penalty": {
+      "template": "Chịu phạt giùm bạn xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Khéo Léo: Cầm Ly Bằng Ngón Út 20s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 20
+    },
+    "content": "Bật Đồng Hồ 20s. Móc 2 ngón út của 2 tay vào quai ly (hoặc kẹp mép ly) nhấc lên cao khỏi bàn. Thất bại: Ly rớt hoặc đổi ngón trước khi hết giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Ngón tay yếu xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Mũi Tên Tình Yêu Ngẫu Nhiên",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Xoay Chai. Chai chỉ trúng ai, người đó phải lập tức khen bạn 1 câu sến súa nhất có thể. Nếu chai chỉ vào bạn, bạn phải tự khen mình.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Người phải mở lời khen"
+    },
+    "penalty": {
+      "template": "Lười nịnh xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Đồng Tiền Sinh Tử",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Cả bàn mỗi người chọn SẤP hoặc NGỬA. Bật lật đồng xu. Ai chọn sai so với kết quả đồng xu hiện ra thì phải uống. Ai đúng được an toàn.",
+    "target": {
+      "type": "LOSER",
+      "count": 0,
+      "definition": "Những người đoán sai"
+    },
+    "penalty": {
+      "template": "Trật kèo xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Hack Não: 10s Nhớ Màu Áo",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bạn phải nhắm mắt lại ngay lập tức. Bật Đồng Hồ 10s. Bạn phải gọi tên đúng MÀU ÁO của 3 người bất kỳ trong bàn. Thất bại: Đoán sai 1 màu hoặc quá giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ bị mù màu tạm thời"
+    },
+    "penalty": {
+      "template": "Trí nhớ tệ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Lệnh Bài Quay Số Chặn Phạt",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn bị ép uống, lôi thẻ này ra bật Máy Quay Số (1-100). Nếu ra số LỚN HƠN 50, bạn được tha thứ hoàn toàn. Nhỏ hơn 50, uống gấp đôi.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người cược mạng"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Sát Thủ Vòng Tròn 2.0",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai! Đầu chai hướng vào ai, người đó và 2 người ngồi sát bên cạnh tạo thành 1 'Nhóm Chết', cả 3 cùng phải nâng ly uống 1 ngụm.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 3,
+      "definition": "Ba người chung số phận"
+    },
+    "penalty": {
+      "template": "Vạ lây xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Khéo Léo: Lật Úp Ly 10s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải hất mép 1 chiếc ly nhựa đang ngửa sao cho nó lật lộn vòng và ÚP xuống bàn hoàn hảo. Thất bại: Hết 10s chưa làm được.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Lóng ngóng xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Đồng Minh: Lời Cầu Cứu Xúc Xắc",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Chọn 1 đồng minh. Hễ bạn bị phạt, bạn tung Xúc Xắc. Ra số 6, đồng minh uống HẾT thay bạn. Ra số khác, bạn tự chịu trận.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Kẻ gánh tạ tiềm năng"
+    },
+    "penalty": {
+      "template": "Chịu phạt xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Thử Thách: Giữ Nước Trong Miệng 30s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 30
+    },
+    "content": "Ngậm 1 ngụm nước lớn. Bật Đồng Hồ 30s. Người đối diện được quyền kể chuyện hài, làm mặt xấu chọc bạn. Thất bại: Phun nước hoặc nuốt trước 30s.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người chịu đựng"
+    },
+    "penalty": {
+      "template": "Yếu đuối xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Máy Quay Định Đoạt Người Phục Vụ",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bật Máy Quay Số (1 đến N người). Ra số của ai, người đó phải trở thành phục vụ: đi vòng quanh bàn gắp đá cho mọi người trong 1 vòng.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Bồi bàn ngẫu nhiên"
+    },
+    "penalty": {
+      "template": "Lười biếng xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Đồng Xu Thách Thức DARE",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi 1 người rút trúng thẻ DARE, tung thẻ này ép họ Lật Đồng Xu. SẤP: Họ phải làm DARE. NGỬA: Họ thoát DARE nhưng phải uống 1 ly thay thế.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ làm DARE"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Hack Não: 10s Kể Tên Món Nhậu",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải kể nhanh tên 5 món mồi nhậu KHÔNG CÓ TRÊN BÀN. Thất bại: Kể sai, kể lặp lại hoặc hết giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Thực thần não chậm"
+    },
+    "penalty": {
+      "template": "Đói bụng xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Khéo Léo: Gắp Tăm Bằng Khủy Tay 20s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 20
+    },
+    "content": "Bật Đồng Hồ 20s. Đặt 1 cây tăm lên bàn, gập 2 khủy tay lại như càng cua để kẹp lấy nó nhấc lên. Thất bại: Không nhấc lên được trước khi hết 20s.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Cứng khớp xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Cặp Đôi Đồng Xu",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Chỉ định 1 đồng minh. Mỗi khi 1 trong 2 người uống, lật đồng xu. Nếu SẤP: Người kia không phải uống theo. Nếu NGỬA: Người kia uống y chang.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Kẻ phụ thuộc may rủi"
+    },
+    "penalty": {
+      "template": "Dính bùa xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Xúc Xắc Phá Băng",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đổ Xúc Xắc 1 lần. Mọi người trong bàn có số điện thoại TẬN CÙNG khớp với con số vừa đổ ra (hoặc chia hết cho nó) đều được miễn uống vòng sau.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Những người được ban phước"
+    },
+    "penalty": {
+      "template": "Kẻ xui xẻo tự giác cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Mũi Tên Đâm Lén",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai. Đầu chai chỉ vào ai, bạn CÓ QUYỀN bóc mẽ 1 tật xấu của người đó trước cả bàn. Nếu họ cãi lại, họ bị phạt 2 ly.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ bị bóc phốt"
+    },
+    "penalty": {
+      "template": "Tự ái xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Bẫy Ngôn Từ: Kể Tên 10s Không Nghỉ",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải nói tên 5 hãng mỹ phẩm/nước hoa. Thất bại: Ngập ngừng chữ 'À, Ờ' quá 1s hoặc kể thiếu món.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ não ngắn"
+    },
+    "penalty": {
+      "template": "Chậm chạp xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Xoay Chai Đổi Ngôi",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Dùng thẻ này để HỦY MỌI ROLE/CURSE trên người bạn. Bật Xoay Chai, chai chỉ vào ai, TẤT CẢ lời nguyền của bạn sẽ chuyển sang người đó.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ hứng nghiệp thay"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đồng Minh: RNG Ban Phước",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Chọn 1 đồng minh. Hễ 1 trong 2 bị phạt, bấm RNG (1-100). Nếu ra số > 80, CẢ BÀN phải uống thay cho 2 bạn. Dưới 80, hai bạn chia nhau ly đó.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Kẻ chung phe may rủi"
+    },
+    "penalty": {
+      "template": "Thử vận may xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Khéo Léo: Cầm Ly Bằng Răng 15s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 15
+    },
+    "content": "Bật Đồng Hồ 15s. Dùng răng cắn quai ly hoặc mép ly nhấc lên khỏi mặt bàn. Thất bại: Ly rớt, dùng tay hỗ trợ, hoặc nước tràn.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Vụng về xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đổ Xúc Xắc Chéo Tay",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn và người đối diện cùng đổ Xúc Xắc. Ai ra số THẤP HƠN sẽ phải dùng tay trái (nếu thuận tay phải) vòng qua eo để uống 1 ly. Thất bại: Ly bị đổ.",
+    "target": {
+      "type": "OPPOSITE",
+      "count": 1,
+      "definition": "Đối thủ xui xẻo"
+    },
+    "penalty": {
+      "template": "Số đen xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Giao Kèo Lật Xu",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn chọn 'Sấp'. Tất cả những người còn lại mặc định là 'Ngửa'. Lật Đồng Xu! Nếu ra Sấp, cả bàn uống. Nếu ra Ngửa, bạn uống 2 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn chơi"
+    },
+    "penalty": {
+      "template": "Thua cuộc xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Vòng Quay Lệnh Cấm",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Quay chai. Chai chỉ vào ai, người đó bị 'Cấm sử dụng điện thoại' trong 3 vòng tới. Chạm vào điện thoại phạt 1 ly.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ bị cấm vận"
+    },
+    "penalty": {
+      "template": "Phá luật xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Hack Não: 15s Đọc Ngược Tên Món",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 15
+    },
+    "content": "Bật Đồng Hồ 15s. Nhìn vào đĩa mồi gần nhất và đánh vần tên món ăn đó theo THỨ TỰ NGƯỢC (VD: Bò -> Ò B). Thất bại: Đọc sai, vấp hoặc hết giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Lag não xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Cơ Hội Số Ngẫu Nhiên",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn đang bị phạt, lôi thẻ này ra bật Máy Quay Số (1-3). Số hiện ra chính là SỐ LẦN bạn được miễn hình phạt từ giờ đến cuối cuộc chơi.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người giữ thẻ"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đồng Minh: Cùng Chung Xúc Xắc",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Chọn 1 đồng minh. Bất cứ ai trong bàn bị phạt, bạn đổ xúc xắc. Nếu ra số 6, bạn và đồng minh phải đứng lên uống chia vui cùng kẻ đó.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Người đồng hành xui xẻo"
+    },
+    "penalty": {
+      "template": "Dính bùa xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Khéo Léo: Gắp Đậu Bằng Đũa Trái Tay 20s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 20
+    },
+    "content": "Bật Đồng Hồ 20s. Dùng tay KHÔNG THUẬN cầm đũa gắp 3 hạt đậu phộng (hoặc vật nhỏ) từ đĩa sang ly. Thất bại: Hết 20s chưa xong hoặc làm rớt.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Vụng về xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Trò Chơi Nhân Phẩm 50/50",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bật Đồng Xu. Nếu SẤP: Những người mặc áo SÁNG MÀU uống. Nếu NGỬA: Những người mặc áo TỐI MÀU uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe bị đồng xu gọi tên"
+    },
+    "penalty": {
+      "template": "Ý trời xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Xoay Chai Định Mệnh Kẻ Trả Tiền",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đặt ly rượu đầy giữa bàn. Quay chai. Đầu chai chỉ ai, kẻ đó phải uống ly rượu đó và chịu trách nhiệm gọi thêm 1 món mồi mới.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ bị chọn"
+    },
+    "penalty": {
+      "template": "Không gọi mồi xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Hack Não: 5s Phản Xạ Âm Thanh",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 5
+    },
+    "content": "Bật Đồng Hồ 5s. Bạn phải kêu tiếng 3 con vật khác nhau (Meo, Gâu, Quác...). Thất bại: Nhại tiếng sai hoặc quá 5s chưa xong.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Sở thú di động"
+    },
+    "penalty": {
+      "template": "Lag não xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Lá Chắn Mệnh Giá Quay Số",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn bị phạt nhiều ly. Lôi thẻ này ra và bật Máy Quay Số (1-100). Số hiện ra là TỶ LỆ % hình phạt bạn được giảm (VD: ra 50 là giảm nửa số ly).",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người giữ thẻ"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đổ Xúc Xắc Phá Băng 2.0",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đổ Xúc Xắc. Ra số nào, bạn phải chỉ định 1 người trong bàn làm ĐỘNG TÁC CON VẬT tương ứng số đó (Tự quy định). Người đó không làm phải uống.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ phải làm trò"
+    },
+    "penalty": {
+      "template": "Quê quá xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Khéo Léo: Cân Bằng Ly Rượu Trên Mu Bàn Tay 10s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Đặt ly rượu đầy lên mu bàn tay không thuận, sau đó giơ thẳng tay ra phía trước. Thất bại: Rơi ly hoặc đổ rượu.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Vụng về xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đồng Minh: Lật Xu Chia Nhau Nỗi Đau",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Chọn 1 đồng minh. Hễ 1 người bị phạt, lật đồng xu. Sấp: Bạn chịu hết. Ngửa: Đồng minh chịu hết. Áp dụng trong 3 vòng.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Người cùng khổ"
+    },
+    "penalty": {
+      "template": "Xui rủi xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Vòng Xoáy Hận Thù",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai. Đầu chai chỉ vào ai, người đó có quyền PHẠT BẤT KỲ AI TRONG BÀN 1 ly mà không cần lý do. Quyền lực tối thượng 1 lần.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ nắm quyền sinh sát"
+    },
+    "penalty": {
+      "template": "Thích thì phạt, mời nâng {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Máy Quay Số Tra Tấn Thể Lực",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER",
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 15
+    },
+    "content": "Bật RNG (1-10). Ra số nào, bạn phải Hít Đất / Squat bấy nhiêu cái. Bật Đồng Hồ 15s để thực hiện. Thất bại: Không xong kịp giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ tập thể dục"
+    },
+    "penalty": {
+      "template": "Yếu xìu xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Hack Não: 10s Kể Tên 5 Ca Sĩ Nữ",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải kể tên 5 nữ ca sĩ Việt Nam có tên bắt đầu bằng chữ T. Thất bại: Ngập ngừng hoặc kể sai, kể thiếu.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Fan âm nhạc dỏm"
+    },
+    "penalty": {
+      "template": "Tối cổ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Xúc Xắc Phân Quyền Hút Đá",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn đang phải ăn 1 miếng chanh/ớt, tung thẻ này. Đổ Xúc Xắc. Ra số CHẴN, bạn chuyển miếng chua/cay đó cho người bên phải.",
+    "target": {
+      "type": "NEIGHBORS",
+      "count": 1,
+      "definition": "Người bên phải"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Khéo Léo: Cầm Ly Bằng Hai Ngón Trỏ 20s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 20
+    },
+    "content": "Bật Đồng Hồ 20s. Dùng 2 ngón trỏ của 2 bàn tay ép chặt 2 bên ly nước nhấc lên khỏi bàn. Thất bại: Ly rơi, trượt hoặc đổi ngón.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Mất sức xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đồng Tiền Giải Cứu DARE",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Nếu bạn bốc trúng thẻ DARE nhục nhã. Lôi thẻ này ra Lật Đồng Xu. SẤP: Bạn được miễn làm DARE. NGỬA: Bạn làm DARE và bị phạt thêm 1 ly.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ cược liêm sỉ"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đồng Minh: Vòng Quay Sinh Tử",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Chọn 1 đồng minh. Hễ 1 trong 2 bị bắt uống, phải quay Xoay Chai. Chai chỉ ai trong 2 người, người đó uống 2 ly, người kia thoát.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Đồng minh xui xẻo"
+    },
+    "penalty": {
+      "template": "Hứng đạn xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Máy Quay Số Quyết Định Tương Lai",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn bật Máy Quay Số (1-4). 1: Bạn uống. 2: Cả bàn uống. 3: Người bên trái uống. 4: Người bên phải uống. Khỏi cãi!",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Tùy kết quả máy quay"
+    },
+    "penalty": {
+      "template": "Chịu phạt đi xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Hack Não: 10s Đọc Ngược Tên Món Nhậu",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải đánh vần tên 1 món nhậu trên bàn theo thứ tự NGƯỢC LẠI (VD: Mực -> C-Ư-M). Thất bại: Lố giờ hoặc sai.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ loạn chữ"
+    },
+    "penalty": {
+      "template": "Rối não xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Xúc Xắc Chỉ Điểm Kẻ Thù",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Xúc Xắc. Ra số nào, bạn đếm từ bạn sang phải bấy nhiêu người. Kẻ bị chỉ điểm phải chịu phạt 1 ly và kể 1 bí mật xấu hổ.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Người bị đếm trúng"
+    },
+    "penalty": {
+      "template": "Số trời đã định xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Khéo Léo: Gắp Tăm Bằng Răng 10s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Cúi người dùng răng ngậm 1 cây tăm trên bàn. Thất bại: Không ngậm được trước khi hết 10s hoặc dùng tay hỗ trợ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Răng yếu xin nâng {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Đồng Xu Thay Lời Xin Lỗi Lần 2",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn lỡ nói hớ 1 câu TRUTH bị cả bàn lên án. Dùng thẻ này Lật Đồng Xu. Sấp: Bạn phải uống 2 ly xin lỗi. Ngửa: Mọi người phải quên lời bạn nói.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ lỡ mồm"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Vòng Xoay Hát Nhép",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai. Đầu chai chỉ ai, người đó phải bật 1 bài hát và HÁT NHÉP thật sâu đíp theo điệu nhạc trong 15s. Thất bại: Không dám làm.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Ca sĩ nhép"
+    },
+    "penalty": {
+      "template": "Ngại ngùng xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Đồng Minh: RNG San Sẻ Hình Phạt",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 4
+    },
+    "content": "Chọn 1 đồng minh. Khi 1 người bị phạt 2 ly, Bật RNG (1-2). Số 1: Bạn uống 1 ly, bạn kia thoát. Số 2: Bạn kia uống, bạn thoát.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Cặp đôi hên xui"
+    },
+    "penalty": {
+      "template": "Xui xẻo xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Hack Não: 10s 5 Loại Nước Ngọt",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải kể tên 5 loại nước ngọt có ga KHÔNG CÓ MÀU ĐEN. Thất bại: Không kể đủ số lượng trước 10s.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Thánh hảo ngọt"
+    },
+    "penalty": {
+      "template": "Chậm tiêu xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Xúc Xắc Quyết Định Số Phận",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Xúc Xắc đổ 1 lần. Nếu ra CHẴN, các bạn Nam uống. Nếu ra LẺ, các bạn Nữ uống. Đừng cãi số mệnh!",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe bị phạt theo giới tính"
+    },
+    "penalty": {
+      "template": "Nam/Nữ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Khéo Léo: Cân Bằng Ly Rượu Trên Điện Thoại 15s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 15
+    },
+    "content": "Bật Đồng Hồ 15s. Đặt ly rượu đầy lên màn hình điện thoại (để nằm ngang), 1 tay cầm điện thoại giơ lên cao. Thất bại: Ly trượt hoặc đổ nước.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người liều lĩnh"
+    },
+    "penalty": {
+      "template": "Rớt ly xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đồng Xu Thay Lời Nói Dối",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi trả lời TRUTH, bạn có thể nói dối. Lật Đồng Xu. Sấp: Bạn thoát tội nói dối. Ngửa: Mọi người phát hiện bạn xạo, phạt 2 ly.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ xạo l"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Vòng Xoay Hôn Môi Ảo",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai. Chai chỉ trúng ai, bạn phải lấy 1 tờ giấy ăn, đặt lên môi người đó và... hôn qua tờ giấy. Thất bại: Nhát gan từ chối.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Người được chọn"
+    },
+    "penalty": {
+      "template": "Sợ đụng chạm xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "RNG Chọn Kẻ Chịu Tội",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bàn có N người. Bật Máy Quay Số (1 đến N). Ai mang số giống máy quay sẽ phải ăn 1 miếng mồi KHÔNG NGON NHẤT trên bàn (hoặc uống 1 ly).",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ xui xẻo"
+    },
+    "penalty": {
+      "template": "Chịu phạt xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Hack Não: 10s Đếm Ngược Bước Nhảy 2",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải đếm lùi từ 20 về 0 nhưng BƯỚC NHẢY LÀ 2 (20, 18, 16...). Thất bại: Đếm sai số hoặc không kịp 10s.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Học dốt toán xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Xúc Xắc Phân Phối Tình Yêu",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Xúc Xắc đổ 1 lần. Nếu ra CHẴN, bạn phải thả tim (bằng tay) với tất cả các bạn Nữ. Ra LẺ, thả tim với tất cả bạn Nam. Không làm uống 1 ly.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ rắc thính"
+    },
+    "penalty": {
+      "template": "Từ chối yêu thương xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Khéo Léo: Gắp Đậu Phộng Bằng Đũa Trái Tay 15s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 15
+    },
+    "content": "Bật Đồng Hồ 15s. Dùng tay KHÔNG THUẬN cầm đũa gắp 3 hạt đậu phộng từ đĩa sang ly. Thất bại: Không gắp đủ 3 hạt trước khi chuông reo.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Vụng về xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đồng Minh: Lật Xu Chia Nhau Nỗi Đau 2.0",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Chọn 1 đồng minh. Hễ 1 người bị phạt, lật đồng xu. Sấp: Bạn chịu phạt X2. Ngửa: Đồng minh chịu phạt X2. Áp dụng trong 3 vòng.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Kẻ cùng chung số phận thảm khốc"
+    },
+    "penalty": {
+      "template": "Đen đủi xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Vòng Xoáy Hận Thù 2.0",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai. Đầu chai chỉ vào ai, người đó CÓ QUYỀN bắt 1 người khác (trừ bạn) thực hiện lại thẻ DARE vừa qua. Nếu không có DARE, phạt 1 ly.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Người nắm quyền lực mới"
+    },
+    "penalty": {
+      "template": "Thực thi quyền lực xin nâng {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Máy Quay Số Tra Tấn Trí Tuệ",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER",
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật RNG (1-5). Ra số nào, bạn có đúng 10 giây (Bật Đồng Hồ) để liệt kê SỐ LƯỢNG bài hát tương ứng của 1 ca sĩ bất kỳ. Thất bại: Quá 10s hoặc thiếu.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Fan âm nhạc nửa mùa"
+    },
+    "penalty": {
+      "template": "Não lag xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Hack Não: 10s Kể Tên 5 Loại Rau Củ",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải kể tên 5 loại rau củ BẮT ĐẦU BẰNG CHỮ C. Thất bại: Ngập ngừng hoặc kể sai, kể thiếu.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Tối cổ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Xúc Xắc Phân Quyền Ăn Chua",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Tung thẻ này khi có đĩa chanh/xoài chua. Đổ Xúc Xắc. Ra số LẺ, bạn ăn. Ra số CHẴN, bạn chỉ định người đối diện ăn.",
+    "target": {
+      "type": "OPPOSITE",
+      "count": 1,
+      "definition": "Nạn nhân ăn chua"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Khéo Léo: Xếp Tháp Ly Nhựa 15s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 15
+    },
+    "content": "Bật Đồng Hồ 15s. Bạn phải xếp 3 chiếc ly nhựa úp ngược thành 1 tháp thẳng đứng (1 ly làm trụ, 2 ly phía trên). Thất bại: Tháp đổ hoặc hết giờ.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kiến trúc sư tồi"
+    },
+    "penalty": {
+      "template": "Vụng về xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đồng Xu Miễn Trừ Trạng Thái",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn bị dính 1 Lời Nguyền (CURSE). Lật Đồng Xu. SẤP: Bạn được giải nguyền lập tức. NGỬA: Lời nguyền nhân đôi thời gian áp dụng lên bạn.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người gánh nghiệp"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Vòng Xoay Hát Nhạc Phim",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai. Đầu chai chỉ ai, người đó phải hát 1 câu nhạc phim bất kỳ (Tây Du Ký, Tây Du Ký...). Thất bại: Hát dở quá hoặc không biết hát.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Ca sĩ bất đắc dĩ"
+    },
+    "penalty": {
+      "template": "Hát dở xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Đồng Minh: Máy Quay Số San Sẻ",
+    "category": "BUDDY",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 4
+    },
+    "content": "Chọn 1 đồng minh. Khi 1 người bị phạt 3 ly, Bật RNG (1-3). Số 1: Bạn uống hết. Số 2: Đồng minh uống hết. Số 3: Chia đều mỗi người 1.5 ly.",
+    "target": {
+      "type": "ALLIES",
+      "count": 1,
+      "definition": "Kẻ gánh team hên xui"
+    },
+    "penalty": {
+      "template": "Nhân phẩm quyết định xin cạn {value} {unit} {type}",
+      "value": 3
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Hack Não: 10s 5 Loại Trái Cây Màu Xanh",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải kể tên 5 loại trái cây CÓ VỎ MÀU XANH (khi chín). Thất bại: Không kể đủ số lượng trước 10s.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người mù màu sắc"
+    },
+    "penalty": {
+      "template": "Chậm tiêu xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Xúc Xắc Quyết Định Số Phận Nam Nữ",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Xúc Xắc đổ 1 lần. Nếu ra CHẴN, các bạn Nam phải đứng lên mời các bạn Nữ 1 ly. Nếu ra LẺ, ngược lại. (Nếu bàn 1 giới tính thì tự mời nhau).",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe bị ép mời"
+    },
+    "penalty": {
+      "template": "Giao lưu xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Khéo Léo: Cân Bằng Ly Rượu Trên Điện Thoại 10s",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Đặt ly rượu vơi lên màn hình điện thoại, 1 tay cầm điện thoại giơ lên cao. Thất bại: Ly trượt hoặc nước đổ ra điện thoại.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ liều lĩnh xót máy"
+    },
+    "penalty": {
+      "template": "Rớt ly xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đồng Xu Thay Lời Giải Thích",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn bị phát hiện gian lận (giấu rượu/đổ rượu). Lật Đồng Xu. Sấp: Bạn được tha tội lần này. Ngửa: Mọi người phát hiện bạn cố tình, phạt x2.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ gian lận"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Vòng Xoay Hôn Môi Ảo 2.0",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai. Chai chỉ trúng ai, bạn phải dùng tay làm thành hình trái tim và gửi 1 nụ hôn gió lãng mạn tới người đó. Thất bại: Nhát gan từ chối.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Người được chọn"
+    },
+    "penalty": {
+      "template": "Sợ đụng chạm xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "RNG Chọn Người Trả Bill",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bàn có N người. Bật Máy Quay Số (1 đến N). Ai mang số giống máy quay sẽ phải chịu phạt cạn 2 ly vì 'nhân phẩm yếu'. (Không bắt trả bill thật đâu).",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Kẻ xui xẻo"
+    },
+    "penalty": {
+      "template": "Nhân phẩm tồi xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Hack Não: 10s Đếm Ngược Bước Nhảy 3",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải đếm lùi từ 30 về 0 nhưng BƯỚC NHẢY LÀ 3 (30, 27, 24...). Thất bại: Đếm sai số hoặc không kịp 10s.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Học dốt toán xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Bão Đổ Bộ Hướng Đông",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Lấy bạn làm tâm. Tất cả những người ngồi ở NỬA BÀN BÊN PHẢI của bạn đều bị trúng bão. Mỗi người tự giác cạn 1 ly để tránh bão.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Nửa bàn bên phải"
+    },
+    "penalty": {
+      "template": "Trúng gió độc xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Bão Đổ Bộ Hướng Tây",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Lấy bạn làm tâm. Tất cả những người ngồi ở NỬA BÀN BÊN TRÁI của bạn đều bị trúng bão. Mời các đồng chí phía Tây cạn 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Nửa bàn bên trái"
+    },
+    "penalty": {
+      "template": "Sập nhà xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Gọng Kìm Siết Chặt",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Người ngồi ngay bên TRÁI và người ngồi ngay bên PHẢI bạn bị kẹp vào gọng kìm. Hai người này phải cụng ly và uống cùng nhau.",
+    "target": {
+      "type": "NEIGHBORS",
+      "count": 2,
+      "definition": "Hai người bên cạnh"
+    },
+    "penalty": {
+      "template": "Bị kẹp chả xin nâng {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Vụ Nổ Big Bang",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quả bom nổ tại vị trí của bạn! Bạn an toàn, nhưng TẤT CẢ NHỮNG NGƯỜI CÒN LẠI trong bàn đều bị dính sóng xung kích và phải uống 1 ngụm.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn trừ người bốc thẻ"
+    },
+    "penalty": {
+      "template": "Trúng mảnh văng xin nâng {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đại Lộ Âm Dương",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả các bạn NAM trong bàn phải đứng lên, tự tay rót bia/rượu và đi mời TẤT CẢ các bạn NỮ trong bàn 1 ly. (Nếu bàn 1 giới tính thì 2 nửa bàn mời nhau).",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Toàn bộ Nam và Nữ"
+    },
+    "penalty": {
+      "template": "Giao lưu giới tính {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Nạn Đói Quét Qua",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Toàn bộ đĩa mồi trên bàn bị tịch thu (đẩy ra xa). Trong 2 vòng tới, cả bàn KHÔNG AI ĐƯỢC ĂN. Ai lén gắp mồi phạt 2 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Toàn bộ thực khách"
+    },
+    "penalty": {
+      "template": "Lén ăn vụng xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đại Dịch Câm Lặng",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 60
+    },
+    "content": "Bật Đồng Hồ 1 Phút. Trong 60s này, CẢ BÀN bị cấm phát ra bất kỳ âm thanh nào (kể cả tiếng cười). Kẻ nào tạo ra tiếng ồn lập tức bị cả bàn phạt 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn nhậu"
+    },
+    "penalty": {
+      "template": "Gây ồn ào xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Sợi Dây Tơ Hồng",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Cứ 2 người ngồi cạnh nhau là 1 cặp. Trong 3 vòng tới, hễ 1 người trong cặp bị phạt, người kia cũng BẮT BUỘC phải uống cùng 1 lượng tương đương.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Các cặp đôi kề cạnh"
+    },
+    "penalty": {
+      "template": "Liên đới trách nhiệm xin nâng {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Virus Lây Nhiễm Nụ Cười",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, hễ bạn cười, người bên trái bạn phải cười theo, rồi người tiếp theo... tạo thành làn sóng cười quanh bàn. Ai đứt nhịp phạt 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn lan truyền"
+    },
+    "penalty": {
+      "template": "Đứt sóng nụ cười xin nâng {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Đồng Bộ Hóa Động Tác",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Bất cứ khi nào bạn cầm ly lên nhấp môi, CẢ BÀN cũng phải lập tức cầm ly lên nhấp môi 1 ngụm. Ai chậm nhất bị phạt thêm 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Lệch nhịp xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Mạng Lưới Kính Cận",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đại chiến thị lực! Tất cả những người ĐEO KÍNH tạo thành 1 team, những người KHÔNG ĐEO KÍNH tạo thành 1 team. Team nào ít thành viên hơn phải uống 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thiểu số"
+    },
+    "penalty": {
+      "template": "Thua thiệt quân số xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Trận Chiến Hệ Điều Hành",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Phe dùng iPhone (iOS) đối đầu phe dùng Android (Samsung, Oppo...). Phe nào đang có số lượng điện thoại để trên bàn ÍT HƠN, toàn phe đó uống 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thiểu số HĐH"
+    },
+    "penalty": {
+      "template": "Thua công nghệ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Xúc Xắc Phán Xét Cả Bàn",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Đổ Xúc Xắc. Ra số nào, CẢ BÀN phải uống đúng BẤY NHIÊU NGỤM rượu/bia. (Ví dụ ra 5 thì mỗi người tự nhấp 5 ngụm).",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Tất cả mọi người"
+    },
+    "penalty": {
+      "template": "Tuân lệnh xúc xắc xin uống {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Vòng Quay Cặp Đôi",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bật Xoay Chai lần 1 để chọn người A. Bật Xoay Chai lần 2 để chọn người B. Người A và B BẮT BUỘC phải vòng tay uống Giao Bôi 100% ly hiện tại.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Hai người bị chai chọn"
+    },
+    "penalty": {
+      "template": "Tân lang tân nương xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đồng Xu Sinh Tử Tập Thể",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn đại diện cho cả bàn chọn SẤP hoặc NGỬA. Bật Lật Đồng Xu. Nếu đúng: Cả bàn thoát. Nếu SAI: TẤT CẢ mọi người phải uống cạn 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Đại diện tay thối xin cả bàn cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Máy Quay Số Thanh Trừng",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đếm số người (N). Bật Máy Quay Số từ 1 đến N. Trúng số ai, người đó thoát. NHỮNG NGƯỜI CÒN LẠI ĐỀU PHẢI UỐNG 1 LY.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Tất cả trừ người trúng số"
+    },
+    "penalty": {
+      "template": "Không có nhân phẩm xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Quần Đùi vs Quần Dài",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả đứng lên show chân! Phe mặc quần đùi/váy ngắn (hở đầu gối) đối đầu phe quần dài. Phe nào đông hơn, phe đó thắng. Phe thua uống 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thiểu số"
+    },
+    "penalty": {
+      "template": "Thua cuộc xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Áo Sáng vs Áo Tối",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Chia bàn thành 2 phe: Áo Trắng/Sáng Màu và Áo Đen/Tối Màu. Hai phe bốc đại diện oẳn tù tì. Đại diện phe nào thua, cả phe đó uống 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Toàn bộ phe thua"
+    },
+    "penalty": {
+      "template": "Đại diện bất lực xin cả team cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Hội FA Lên Ngôi",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả những ai đang ĐỘC THÂN (FA) được quyền hợp lực lại, chỉ định MỘT người ĐÃ CÓ BỒ phải uống thay cho sự ghen tị của họ. (Uống số ly bằng số FA).",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Người có bồ xui xẻo"
+    },
+    "penalty": {
+      "template": "Có bồ là cái tội xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Bão Đổ Bộ Góc Bàn",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả 4 người (hoặc 2 người) ngồi ở các GÓC CỦA BÀN NHẬU phải đứng lên, chạm ly chéo nhau và cùng cạn 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 4,
+      "definition": "Những người ngồi góc bàn"
+    },
+    "penalty": {
+      "template": "Trấn thủ góc bàn xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Lời Nguyền Trái Đất Quay",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, BẤT CỨ AI uống xong 1 ly phạt ĐỀU PHẢI đứng lên xoay 1 vòng tròn tại chỗ rồi mới được ngồi xuống. Quên xoay, uống thêm ly nữa.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Người vừa bị phạt"
+    },
+    "penalty": {
+      "template": "Trái đất không quay xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Chuyền Đá Chết Chóc",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Gắp 1 viên đá. Bạn chuyền cho người bên phải (chỉ dùng đũa). Cứ thế chuyền vòng quanh bàn. Thất bại: Ai làm rơi viên đá xuống bàn/đất thì CẢ BÀN cùng uống, trừ người làm rơi.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn trừ kẻ làm rơi"
+    },
+    "penalty": {
+      "template": "Vạ lây xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đếm Số Đạn Lạc",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đếm số từ 1. Ai bốc trúng số có đuôi '7' (7, 17, 27) thay vì đọc số phải vỗ tay. Thất bại: Người đọc sai sẽ BỊ PHẠT, VÀ 2 NGƯỜI NGỒI CẠNH họ cũng bị phạt lây.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 3,
+      "definition": "Người đếm sai và 2 người bên cạnh"
+    },
+    "penalty": {
+      "template": "Sát thương lan xin nâng {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Oẳn Tù Tì Liên Hoàn",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn oẳn tù tì với người bên trái. Ai thắng đi oẳn tù tì tiếp với người tiếp theo. Kẻ nào THUA CUỐI CÙNG trong chuỗi sẽ phải uống số ly = số người trong bàn.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Người thua cuối cùng"
+    },
+    "penalty": {
+      "template": "Thua chung cuộc xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Lời Nguyền Tên Giả",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Đổi tên toàn bàn! Người A sẽ mang tên người B ngồi bên trái mình. Trong 3 vòng tới, ai gọi sai tên 'mới' của người khác sẽ bị phạt.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ gọi nhầm tên"
+    },
+    "penalty": {
+      "template": "Nhầm tên xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Điệp Viên Nháy Mắt",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 60
+    },
+    "content": "Bật Đồng Hồ 1 phút. Trong 1 phút này, nếu ai ĐƯỢC BẠN NHÁY MẮT TRÚNG, họ phải uống 1 ly. NHƯNG nếu họ nháy mắt lại bạn nhanh hơn, BẠN PHẢI UỐNG.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn chơi"
+    },
+    "penalty": {
+      "template": "Trúng đạn tình xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Xếp Tháp Ly Tập Thể",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mỗi người đặt ly của mình ra giữa bàn. Xếp chồng lên nhau. Ai là người đặt chiếc ly cuối cùng làm ĐỔ THÁP thì CẢ BÀN trừ người đó sẽ thoát. Kẻ làm đổ uống 3 ly.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Kẻ làm đổ tháp"
+    },
+    "penalty": {
+      "template": "Phá hoại xin cạn {value} {unit} {type}",
+      "value": 3
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Lệnh Bài Tướng Quân",
+    "category": "ROLE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Bạn là Tướng Quân. Trong 3 vòng tới, hễ bạn hô 'Cạn!', CẢ BÀN phải đồng thanh hô 'Dạ!' và nhấp 1 ngụm. Ai nói nhỏ hoặc không uống bị Tướng Quân phạt thêm.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Binh lính (Cả bàn)"
+    },
+    "penalty": {
+      "template": "Chống lệnh xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Máy Phóng Xạ Cấp 5",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Bạn bị nhiễm phóng xạ. Trong 3 vòng tới, BẤT CỨ KHI NÀO bạn uống (dù là nhấp môi), 2 người ngồi sát bên TRÁI và PHẢI bạn cũng PHẢI uống theo.",
+    "target": {
+      "type": "NEIGHBORS",
+      "count": 2,
+      "definition": "Hai người kề cận"
+    },
+    "penalty": {
+      "template": "Nhiễm phóng xạ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Bùa Đổi Cốc Toàn Bàn",
+    "category": "ITEM",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Lệnh Dịch Chuyển Ly! Tung thẻ này, TẤT CẢ mọi người phải đẩy ly của mình sang cho người bên PHẢI. Bạn sẽ phải uống bằng ly của người bên trái.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Toàn bộ ly trên bàn"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Nút Reset Ván Nhậu",
+    "category": "ITEM",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Cơn lốc làm mới! Tung thẻ này, TẤT CẢ mọi người (kể cả bạn) phải DÔ 100% cạn sạch ly hiện tại để bắt đầu một kỷ nguyên nhậu mới.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn nhậu"
+    },
+    "penalty": {
+      "template": "Reset server xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Bùa Thanh Trừng Vật Phẩm",
+    "category": "ITEM",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Kẻ Hủy Diệt Thẻ! Tung thẻ này lên bàn, TẤT CẢ mọi thẻ ITEM (KEEP) mà mọi người đang găm giữ sẽ lập tức bị THU HỒI (Hủy bỏ). Trắng tay!",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Những người có thẻ KEEP"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Kẻ Gieo Sầu Thập Phương",
+    "category": "ITEM",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tung thẻ này, bạn được quyền CHỈ ĐỊNH 3 NGƯỜI BẤT KỲ. 3 người đó phải chia nhau uống cạn 3 ly rượu/bia ngay lập tức.",
+    "target": {
+      "type": "SELECT",
+      "count": 3,
+      "definition": "Ba nạn nhân"
+    },
+    "penalty": {
+      "template": "Nhận sầu xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Xúc Xắc Phân Mảnh Ánh Sáng",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đổ Xúc Xắc. Ra CHẴN: Nửa bàn bên Trái phải uống. Ra LẺ: Nửa bàn bên Phải phải uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Nửa bàn xui xẻo"
+    },
+    "penalty": {
+      "template": "Trời kêu ai nấy cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Xúc Xắc Số Ngụm Tử Thần",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mở Đổ Xúc Xắc. Ra số nào, mỗi người trong bàn phải TỰ NHẤP số ngụm tương ứng. Nếu ra số 6, tất cả cạn ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Xúc xắc định mệnh {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Máy Quay Số Đại Hồng Thủy",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bật RNG từ 1 đến 100. Nếu số > 50, nhóm NGƯỜI LỚN TUỔI HƠN (so với mốc trung bình) uống. Số < 50, nhóm TRẺ TUỔI HƠN uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe tuổi tác xui xẻo"
+    },
+    "penalty": {
+      "template": "Tuổi tác là cái tội xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Vòng Xoay Kết Đôi",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay Chai 2 lần liên tiếp. Hai người bị chai chỉ trúng SẼ TRỞ THÀNH 1 CẶP (Đồng Minh) trong 5 vòng tới. Một người uống, người kia phải uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Hai người bị ghép đôi"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Đồng Xu Dân Chủ",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Cả bàn giơ tay Biểu Quyết chọn 1 người 'đáng ghét nhất' để phạt. Sau đó Lật Đồng Xu. SẤP: Kẻ đó bị phạt 2 ly. NGỬA: Những người đã vote kẻ đó bị phạt 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Tùy kết quả đồng xu"
+    },
+    "penalty": {
+      "template": "Nghiệp quật xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Sát Thủ Mù Vòng Tròn",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn bịt mắt lại và bấm Quay Chai. Đầu chai chỉ vào ai, CẢ BÀN trừ người đó phải uống 1 ly kính cẩn người may mắn.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn trừ 1 người"
+    },
+    "penalty": {
+      "template": "Kính cẩn xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Lời Nguyền Tượng Đá",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Bất cứ khi nào bạn hô 'Hóa Đá!', CẢ BÀN phải lập tức đứng yên không nhúc nhích. Ai cử động trước hoặc bật cười sẽ bị phạt 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ thiếu kiên nhẫn"
+    },
+    "penalty": {
+      "template": "Hóa giải tượng đá xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Lời Nguyền Chạm Cốc 'Leng Keng'",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng, mỗi khi CẢ BÀN cụng ly tập thể, thay vì để ly chạm nhau, mọi người chỉ cụng ly ảo (không chạm) và tự dùng MỒM kêu 'Leng Keng'. Quên kêu là phạt.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Thiếu âm thanh xin nâng {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đại Dịch Khen Ngợi",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng, bất cứ ai muốn uống ly của mình ĐỀU PHẢI khen người ngồi ĐỐI DIỆN 1 câu. (VD: Cậu áo đen đẹp trai quá, tớ xin uống). Quên là phạt gấp đôi.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ vô ơn"
+    },
+    "penalty": {
+      "template": "Lười nịnh nọt xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Cấm Mang Điện Thoại",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 300
+    },
+    "content": "Bật Đồng Hồ 5 phút. Tất cả chồng điện thoại úp xuống giữa bàn. Ai ngứa tay rút điện thoại ra kiểm tra trước khi hết 5 phút sẽ bị CẢ BÀN phạt 2 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ nghiện smartphone"
+    },
+    "penalty": {
+      "template": "Phá luật xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Nối Từ Tập Thể",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Cả bàn chơi nối từ với tốc độ x2. ĐIỂM ĐẶC BIỆT: Nếu người số 1 bí, người số 2 cũng phải uống. Nếu 1 người chết, cả 2 bên cạnh vạ lây.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 3,
+      "definition": "Người thua và 2 người bên cạnh"
+    },
+    "penalty": {
+      "template": "Chết chùm xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Telephone - Truyền Tin Độc",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn thì thầm 1 câu lóng (VD: Đầu lòng hai ả tố nga) cho người bên trái. Truyền 1 vòng. Người cuối đọc to. Nếu sai, CẢ BÀN uống. Nếu đúng, bạn uống.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Tùy kết quả truyền tin"
+    },
+    "penalty": {
+      "template": "Tam sao thất bản xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Đồng Ca Mất Nhịp",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bắt nhịp hát bài 'Cháu lên ba'. Người 1 hát chữ 'Cháu', người 2 hát 'Lên', người 3 hát 'Ba'... Ai hát sai chữ, sai nhịp làm đứt bài hát CẢ BÀN cùng uống.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Hát dở xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Phân Biệt Cung Khí vs Đất",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Hội Cung Đất (Kim Ngưu, Xử Nữ, Ma Kết) đại chiến Cung Khí (Song Tử, Thiên Bình, Bảo Bình). Phe nào ít thành viên hơn phải nốc cạn 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thiểu số"
+    },
+    "penalty": {
+      "template": "Yếu thế xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Phân Biệt Hình Xăm",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Ai có HÌNH XĂM trên người tạo thành 1 phe, ai KHÔNG có tạo 1 phe. Phe đông người hơn được quyền ép phe ít người hơn uống 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thiểu số xăm hình"
+    },
+    "penalty": {
+      "template": "Chấp nhận luật chơi xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Mạng Lưới Thức Khuya",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Hôm qua ai đi ngủ SAU 1h sáng? Những 'cú đêm' này phải cùng nhau cạn 1 ly để tạ lỗi với gan và thận.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội thức khuya"
+    },
+    "penalty": {
+      "template": "Bảo vệ sức khỏe xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "4"
+    }
+  },
+  {
+    "title": "Đại Chiến Team Trà Sữa",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Ai thích Trà Sữa hơn Cà Phê? Phe Trà Sữa và phe Cà Phê cụng ly với nhau. Phe nào ít người hơn phải uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thiểu số đồ uống"
+    },
+    "penalty": {
+      "template": "Khác biệt xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Lời Nguyền Tên Lót",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, nghiêm cấm gọi tên chính. Mọi người BẮT BUỘC phải gọi nhau bằng TÊN LÓT (VD: Thị, Văn, Ngọc...). Gọi sai phạt 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ gọi sai tên lót"
+    },
+    "penalty": {
+      "template": "Sai tên xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Máy Phóng Xạ Cấp 10",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn bị phạt 1 ly, tung thẻ này để TRUYỀN NHIỄM. Bạn uống 1 ngụm, người bên trái uống 1 ngụm, người bên phải uống 1 ngụm. San sẻ nỗi đau!",
+    "target": {
+      "type": "NEIGHBORS",
+      "count": 2,
+      "definition": "Hai người bên cạnh"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Vùng Cấm Địa Phía Trước",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Khoảng trống trên bàn trước mặt bạn là VÙNG CẤM. Trong 3 vòng tới, ai lỡ tay thò đũa qua vùng cấm của bạn để gắp mồi sẽ bị bạn phạt 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ xâm phạm lãnh thổ"
+    },
+    "penalty": {
+      "template": "Xâm phạm biên giới xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Trò Chơi Cắn Giấy Truyền Nhau",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Cả bàn lấy 1 tờ khăn giấy, ngậm bằng môi truyền cho người kế bên. Truyền hết 1 vòng, tờ giấy rớt ở ai thì người đó VÀ NGƯỜI ĐƯA ĐỀU PHẢI UỐNG.",
+    "target": {
+      "type": "LOSER",
+      "count": 2,
+      "definition": "Hai người làm rớt giấy"
+    },
+    "penalty": {
+      "template": "Hụt môi xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Luật Rừng: Cấm Nhìn Điện Thoại",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, hễ màn hình điện thoại của ai SÁNG LÊN (có tin nhắn/cuộc gọi), người đó VÀ 2 NGƯỜI NGỒI CẠNH phải cùng nhau cụng ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 3,
+      "definition": "Chủ điện thoại và 2 người cạnh"
+    },
+    "penalty": {
+      "template": "Công nghệ làm hại xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Lệnh Bài Cảnh Sát Trưởng",
+    "category": "ROLE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 4
+    },
+    "content": "Bạn là Cảnh Sát Trưởng. Trong 4 vòng, ai muốn rời bàn đi WC phải xin phép bạn. Bạn có quyền từ chối hoặc bắt họ nộp phạt 1 ly mới cho đi.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ muốn rời bàn"
+    },
+    "penalty": {
+      "template": "Nộp thuế di chuyển xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Mưa Rơi Kẻ Thù",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mọi người đồng loạt giơ tay chỉ vào 1 người mình MUỐN HỌ SAY NHẤT. Ai nhận nhiều ngón tay nhất phải uống 2 ly, ai nhận ít ngón tay nhất uống 1 ly.",
+    "target": {
+      "type": "LOSER",
+      "count": 2,
+      "definition": "Kẻ bị nhắm và kẻ không ai quan tâm"
+    },
+    "penalty": {
+      "template": "Nghiệp quật xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Uống Nước Dây Chuyền",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bắt đầu từ bạn, bạn uống 1 ngụm xong đập bàn, người bên trái mới được uống, rồi đập bàn... Ai uống sai thứ tự hoặc quên đập bàn, CẢ BÀN PHẠT NGƯỜI ĐÓ.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Kẻ đứt dây chuyền"
+    },
+    "penalty": {
+      "template": "Phá game xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Giao Kèo Im Lặng Tuyệt Đối",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 60
+    },
+    "content": "Bật Đồng Hồ 60s. Cả bàn nhắm mắt, không ai được phát ra tiếng động. Bạn sẽ lén chạm vào 1 người. Hết giờ, người đó phải đoán ai chạm. Sai họ uống, đúng bạn uống.",
+    "target": {
+      "type": "SELECT",
+      "count": 1,
+      "definition": "Người bị chạm"
+    },
+    "penalty": {
+      "template": "Giác quan kém xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đại Chiến Mùa Sinh",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Phe sinh 6 tháng đầu năm (1-6) đối đầu phe sinh 6 tháng cuối năm (7-12). Phe nào đông người hơn thì phe đó được quyền yêu cầu phe kia uống 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thiểu số"
+    },
+    "penalty": {
+      "template": "Thua quân số xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Lời Nguyền Chạm Cốc 'Keng'",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, hễ có ai cụng ly, MỌI NGƯỜI TRONG BÀN phải dùng miệng phát ra tiếng 'Keng' thật to. Ai quên Keng thì bị phạt.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Người quên tạo hiệu ứng âm thanh"
+    },
+    "penalty": {
+      "template": "Mất âm thanh xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Tọa Độ Đen Đủi: Người Đến Cuối",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Ai là người đến buổi nhậu này muộn nhất (trễ giờ nhất)? Cả bàn cùng cụng ly ép kẻ cao su đó phải cạn 1 ly tạ tội.",
+    "target": {
+      "type": "RELATIVE_COMPLEX",
+      "count": 1,
+      "definition": "Kẻ đến trễ nhất"
+    },
+    "penalty": {
+      "template": "Giờ dây thun xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "4"
+    }
+  },
+  {
+    "title": "Lệnh Bài Đổi Cốc",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Tung thẻ này ra, BẮT BUỘC 2 người ngồi xa nhau nhất bàn phải đứng dậy, đổi chỗ ngồi và đổi luôn ly đồ uống cho nhau.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Hai người xa nhất"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Vòng Tròn Sinh Lão Bệnh Tử",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Chỉ từng người theo vòng tròn đếm: Sinh, Lão, Bệnh, Tử. Ai rơi vào chữ TỬ phải uống 1 ly. Lặp lại 3 vòng.",
+    "target": {
+      "type": "LOSER",
+      "count": 3,
+      "definition": "Những người trúng chữ Tử"
+    },
+    "penalty": {
+      "template": "Hết số xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Luật: Uống Cạn Mới Hạ Ly",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 2
+    },
+    "content": "Cực gắt! Trong 2 vòng tới, hễ ai đã CẦM LY LÊN thì không được đặt xuống bàn cho đến khi uống xong 1 ngụm/1 ly phạt. Ai thả ly xuống trước khi uống bị phạt gấp đôi.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ vi phạm"
+    },
+    "penalty": {
+      "template": "Phá luật xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đại Chiến Nợ Nần",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Ai trong bàn đang vay nợ (ngân hàng, bạn bè, trả góp...) tạo thành 1 phe. Những người không nợ tạo 1 phe. Phe Không Nợ ép phe Nợ uống 1 ly cho mau giàu.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội con nợ"
+    },
+    "penalty": {
+      "template": "Nghèo quá xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Trò Chơi Thả Tim Liên Hoàn",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bạn làm 1 kiểu bắn tim (bằng tay), người bên phải phải làm kiểu khác, người tiếp theo làm kiểu khác. Ai trùng lặp hoặc chậm bị CẢ BÀN bắt uống.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Kẻ thiếu sáng tạo"
+    },
+    "penalty": {
+      "template": "Bí ý tưởng xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Lời Nguyền Nhắm Mắt Khi Uống",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, mọi người khi đưa ly lên miệng uống ĐỀU PHẢI NHẮM MẮT. Ai ti hí mắt mở sẽ bị phạt 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Ăn gian xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Chia Rẽ Kẻ Kề Cạnh",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Tung thẻ này để chỉ định 2 người đang ngồi cạnh nhau. Bắt họ phải lập tức di chuyển đến 2 đầu bàn cách xa nhau nhất có thể.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Cặp đôi bị chia rẽ"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Bão Đổ Bộ Nhóm Cận Thị",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Toàn bộ những người ĐANG ĐEO KÍNH trong bàn phải tháo kính ra, để lên bàn. Người nào không thể nhìn thấy chữ trên lá bài này ở khoảng cách 1m phải uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội mù dở"
+    },
+    "penalty": {
+      "template": "Mắt kém xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Đại Cục Đồng Phục",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Những ai đang mặc ÁO ĐEN cùng cụng ly với hội mặc ÁO TRẮNG. Những màu khác bị coi là 'lạc quẻ' và phải tự động uống 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Những người mặc màu nổi"
+    },
+    "penalty": {
+      "template": "Lạc quẻ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Liên Minh Họ Nguyễn",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả những ai mang HỌ NGUYỄN (hoặc họ đông nhất bàn) được quyền hô to 1 câu. TẤT CẢ những họ khác phải vỗ tay và uống 1 ly kính nể.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội thiểu số họ"
+    },
+    "penalty": {
+      "template": "Kính nể dòng tộc xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Máy Xay Lời Nói",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn nói 1 từ, người bên trái lặp lại từ đó và thêm 1 từ. Cứ thế nối dài câu (VD: Tớ -> Tớ ăn -> Tớ ăn cơm...). Ai quên thứ tự bị CẢ BÀN phạt.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Người trí nhớ kém"
+    },
+    "penalty": {
+      "template": "Não lag xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Lời Nguyền Cấm Cười Mồi",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, ai nhếch mép cười hoặc hở răng khi người khác đang nói chuyện nghiêm túc (hoặc làm trò) sẽ bị TẤT CẢ mọi người ép uống.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ cười mồi"
+    },
+    "penalty": {
+      "template": "Thiếu kiềm chế xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Gương Mặt Vô Cảm Tập Thể",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 30
+    },
+    "content": "Bật Đồng Hồ 30s. Bạn có 30s để làm đủ trò (kể chuyện, làm mặt xấu) chọc cười CẢ BÀN. Ai cười hoặc nhếch mép phải uống.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Những người không nhịn được cười"
+    },
+    "penalty": {
+      "template": "Thua cuộc xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Bùa Thanh Tẩy Nhóm Chat",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Tung thẻ này để ÉP TẤT CẢ mọi người mở điện thoại ra. Ai không có ai nhắn tin trong vòng 1 tiếng qua phải uống vì tội 'không ai quan tâm'.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Những người bị mạng bỏ quên"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Bão Đổ Bộ Hướng Nhìn",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn hãy nhắm mắt lại, chỉ tay xoay vòng tròn. Khi hô 'Dừng!', người bị chỉ tay trúng VÀ NGƯỜI ĐỐI DIỆN của họ cùng phải uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Người bị chỉ trúng và đối diện"
+    },
+    "penalty": {
+      "template": "Xui xẻo xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Tâm Điểm Tuổi Tác",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Người LỚN TUỔI NHẤT và người NHỎ TUỔI NHẤT bàn đứng lên. Cả 2 cụng ly chéo tay nhau để kết nối thế hệ. Cả bàn vỗ tay.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Già nhất và Trẻ nhất"
+    },
+    "penalty": {
+      "template": "Giao thoa thế hệ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Đại Chiến Mùa Lạnh",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Những ai đang mặc áo khoác (hoặc đồ dài tay) cụng ly với hội áo cộc tay/áo dây. Hội nào mặc 'thời trang phang thời tiết' (ít đồ ấm) thì uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội mặc mỏng manh"
+    },
+    "penalty": {
+      "template": "Lạnh run xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "4"
+    }
+  },
+  {
+    "title": "Luật: Bắt Kẻ Cầm Điện Thoại",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng, CẢ BÀN phải úp điện thoại xuống. Hễ ai chạm tay vào điện thoại, 2 NGƯỜI NGỒI CẠNH có quyền đánh vào tay họ và bắt họ uống 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ nghiện smartphone"
+    },
+    "penalty": {
+      "template": "Nghiện mạng xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Phản Xạ Bắt Chéo",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn vỗ đùi phải, người bên phải phải vỗ đùi trái của họ. Truyền nhanh vòng quanh bàn. Ai làm sai hướng tay sẽ bị CẢ BÀN phạt.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Người loạn tay"
+    },
+    "penalty": {
+      "template": "Vụng về xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Tọa Độ Tình Cũ",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Ai có số lượng Người Yêu Cũ nhiều nhất bàn (theo sự tự nhận hoặc bóc phốt) phải uống 1 ly vì sự đào hoa tốn kém.",
+    "target": {
+      "type": "RELATIVE_COMPLEX",
+      "count": 1,
+      "definition": "Kẻ nhiều NYC nhất"
+    },
+    "penalty": {
+      "template": "Đào hoa xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Lệnh Bài Đồng Hóa",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn bị phạt uống, dùng thẻ này để ĐỒNG HÓA. Tất cả những người có CÙNG GIỚI TÍNH với bạn đều phải uống cùng bạn.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Những người cùng giới tính"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Xúc Xắc Phân Quyền Hút Đá",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bật Xúc Xắc. Ra số N. N người tính từ bạn sang bên phải TẠO THÀNH 1 ĐỘI. Đội này phải oẳn tù tì với nhóm còn lại, thua thì đội đó uống hết.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Đội bị chọn"
+    },
+    "penalty": {
+      "template": "Chiến bại xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Vòng Xoáy Lệch Múi Giờ",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai. Đầu chai chỉ vào ai, TẤT CẢ những người đang ĐEO ĐỒNG HỒ phải cụng ly với người đó.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội quản lý thời gian"
+    },
+    "penalty": {
+      "template": "Kính thời gian xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Mũi Tên Tình Yêu (Bottle)",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai. Đầu chai chỉ ai, Đáy chai chỉ ai thì 2 người đó phải TẮT ĐIỆN THOẠI và nhìn vào mắt nhau 10 giây. Ai chớp mắt trước uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Cặp đôi định mệnh"
+    },
+    "penalty": {
+      "template": "Ngại ngùng xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Quyền Trượng Định Mệnh (RNG)",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bật RNG từ 1-100. Số hiện ra là SỐ PHẦN TRĂM (%) ly rượu mà CẢ BÀN phải uống. (VD ra 50 là cả bàn nốc nửa ly).",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn nhậu"
+    },
+    "penalty": {
+      "template": "Sức mạnh RNG xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Lật Xu Sinh Tử (Coin)",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn đại diện cả bàn lật đồng xu. SẤP: Những người chẵn tuổi uống. NGỬA: Những người lẻ tuổi uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe tuổi chẵn/lẻ"
+    },
+    "penalty": {
+      "template": "Ý trời xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Bão Đổ Bộ Hướng Camera",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Ai đang để điện thoại úp mặt xuống bàn thì ĐƯỢC THA. Ai để điện thoại ngửa mặt lên (màn hình sáng) TẤT CẢ phải uống 1 ly vì sự không tập trung.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội để điện thoại ngửa"
+    },
+    "penalty": {
+      "template": "Mất tập trung xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Điểm Giao Thoa App Giao Hàng",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Kiểm tra Shopee/TikTok. Ai có NHIỀU ĐƠN HÀNG ĐANG GIAO NHẤT trong bàn phải khao 1 ly (hoặc uống 1 ly) vì tội nghiện mua sắm.",
+    "target": {
+      "type": "RELATIVE_COMPLEX",
+      "count": 1,
+      "definition": "Đại gia chốt đơn"
+    },
+    "penalty": {
+      "template": "Tiêu hoang xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Vòng Xoáy Khẩu Nghiệp Tổ Đội",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Chơi nối từ tốc độ cao. NẾU 1 người bí, 2 NGƯỜI NGỒI BÊN CẠNH HỌ cũng bị vạ lây và phải uống cùng. Áp lực tăng gấp 3!",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 3,
+      "definition": "Người thua và 2 đồng minh kế bên"
+    },
+    "penalty": {
+      "template": "Vạ lây xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đại Hội Phân Loại Tên Có Dấu",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả những ai TÊN THẬT (Tên chính) KHÔNG CÓ DẤU (VD: Nam, Minh, Lan, Anh...) phải cụng ly với nhau. Tên có dấu uống phạt.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội tên có dấu"
+    },
+    "penalty": {
+      "template": "Dấu nặng nề xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Tọa Độ Tình Cảm Lệch Pha",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Những ai đang FA nhưng ngồi CẠNH 1 NGƯỜI CÓ BỒ. Tọa độ này rất đau đớn, hãy uống 1 ly giải sầu.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "FA ngồi cạnh người có bồ"
+    },
+    "penalty": {
+      "template": "Tủi thân xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Bão Đổ Bộ Hướng Màn Hình",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Kiểm tra màn hình nền điện thoại. Ai dùng hình nền LÀ ẢNH CHÍNH MÌNH (Tự luyến) tạo thành 1 phe. Phe còn lại là 1 phe. Oẳn tù tì đại diện xem phe nào uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thua oẳn tù tì"
+    },
+    "penalty": {
+      "template": "Thua cuộc xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Lời Nguyền Chia Ngọt Sẻ Bùi",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, hễ bạn gắp 1 miếng mồi cho vào miệng, CẢ BÀN cũng phải gắp 1 miếng ăn theo. Nếu bạn uống, CẢ BÀN cũng phải uống.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Không ăn nhậu cùng xin phạt {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đại Dịch Khen Ngợi 2.0",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Khi ai đó bị phạt uống, 2 NGƯỜI NGỒI HAI BÊN phải đồng thanh nói: 'Tuyệt vời quá, uống giỏi quá!'. Quên khen là bị phạt uống chung.",
+    "target": {
+      "type": "NEIGHBORS",
+      "count": 2,
+      "definition": "Hai vệ sĩ bên cạnh"
+    },
+    "penalty": {
+      "template": "Thiếu nịnh nọt xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Lệnh Bài Liên Kết Mạng Dưới",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Tung thẻ này để Gắn Kết 2 người ngồi XA NHAU NHẤT trong bàn. Trong 2 vòng tới, hễ 1 người uống, người kia cũng phải cạn ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Hai kẻ xa nhau"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Gọng Kìm Sát Thủ Bằng Tên",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả những ai có TÊN BẮT ĐẦU bằng CHỮ CÁI giống với người bốc thẻ này đều phải uống 1 ly 'Anh em sinh đôi'.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội trùng chữ cái đầu"
+    },
+    "penalty": {
+      "template": "Duyên nợ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Trò Chơi Truyền Cảm Hứng (Chửi)",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn nhìn người bên phải nói 1 tính từ XẤU (VD: Lười). Người bên phải truyền tính từ đó + 1 từ mới cho người tiếp. Ai quên chuỗi từ, CẢ BÀN PHẠT NGƯỜI ĐÓ.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Kẻ mất trí nhớ"
+    },
+    "penalty": {
+      "template": "Lãng trí xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Lệnh Đảo Vị Trí Vua",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Khi bạn bị ép uống, tung thẻ này. CẢ BÀN phải ĐỨNG LÊN và DỜI SANG GHẾ BÊN TRÁI 1 vị trí. Hình phạt của bạn chuyển cho người vừa ngồi vào chỗ cũ của bạn.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Toàn bộ bàn nhậu"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Điểm Đen Tọa Độ 3.0",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Ai đang ngồi ở vị trí MÀ ĐẰNG SAU LÀ BỨC TƯỜNG (hoặc góc kẹt không có lối đi) phải uống 1 ly vì sự bế tắc.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Những người ngồi góc kẹt"
+    },
+    "penalty": {
+      "template": "Bế tắc xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "4"
+    }
+  },
+  {
+    "title": "Vòng Tròn Hỗ Trợ Kép",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả khoác vai nhau thành vòng tròn. Bạn đếm 1, 2, 3 và tất cả phải cùng ĐỨNG LÊN. Ai đứng chậm hoặc làm rớt tay người bên cạnh, 2 người đó cùng phạt.",
+    "target": {
+      "type": "LOSER",
+      "count": 2,
+      "definition": "Hai người làm đứt vòng"
+    },
+    "penalty": {
+      "template": "Yếu đuối xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đại Cục Mất Trật Tự Kép",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả những ai ĐANG ĐỘC THÂN phải đứng lên và tự chọn chỗ ngồi mới (đổi chỗ cho nhau). Cặp đôi ngồi im.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội FA"
+    },
+    "penalty": {
+      "template": "Di chuyển xin nâng {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Lời Nguyền Nháy Mắt Tập Thể",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, TẤT CẢ mọi người trước khi đưa ly lên miệng uống ĐỀU PHẢI nháy mắt với 1 người bất kỳ. Ai không nháy mắt bị phạt 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ uống không tương tác"
+    },
+    "penalty": {
+      "template": "Quên nháy mắt xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Bão Đổ Bộ Nhóm Pin Yếu",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Cả bàn mở điện thoại lên. Những người có pin DƯỚI 30% tạo thành 1 đội, TRÊN 30% 1 đội. Đội DƯỚI 30% phải cạn 1 ly sạc năng lượng.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Đội pin yếu"
+    },
+    "penalty": {
+      "template": "Cạn pin xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Điểm Giao Thoa App Mua Sắm",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Ai KHÔNG CÓ app Shopee hoặc TikTok trong điện thoại? Kẻ tối cổ đó (nếu có) phải uống 2 ly. Nếu ai cũng có, TẤT CẢ CÙNG CẠN 1 ly vì sự nghiện ngập.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Tùy tình huống"
+    },
+    "penalty": {
+      "template": "Tốn tiền xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Tâm Điểm Phê Bình Dây Chuyền",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn chê người bên phải 1 câu. Người đó phải chê người bên phải họ 1 câu mạnh hơn. Truyền 1 vòng, ai bí từ để chê hoặc cười sẽ bị CẢ BÀN phạt.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Người bí từ"
+    },
+    "penalty": {
+      "template": "Kém khẩu nghiệp xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Sát Thủ Vòng Tròn Kép (Bottle)",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay chai. Chai chỉ trúng ai, NGƯỜI ĐÓ và TẤT CẢ Những Người Cùng Giới Tính với họ trong bàn đều phải nâng ly cạn.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe cùng giới với nạn nhân"
+    },
+    "penalty": {
+      "template": "Liên đới giới tính xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Vòng Xoáy Âm Dương (Coin)",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đại diện nam và nữ oẳn tù tì. Nam thắng chọn Sấp/Nữ chọn Ngửa (hoặc ngược lại). Lật Đồng Xu. Phe nào trùng mặt đồng xu thì THẮNG, phe kia UỐNG TẬP THỂ.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thua cược"
+    },
+    "penalty": {
+      "template": "Thua cược xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Xúc Xắc Phân Phối Sát Thương",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn đổ Xúc Xắc. Ra số N. TẤT CẢ mọi người phải đếm từ mình sang trái N người và KẸP CỔ người đó. Ai chậm nhịp uống 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Người thao tác chậm"
+    },
+    "penalty": {
+      "template": "Chậm chạp xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Mạng Lưới Thợ Săn (RNG)",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Số người là N. Mở RNG (1-N). Người mang số trúng thưởng trở thành THỢ SĂN. Họ được quyền CHỈ ĐỊNH 1 NỬA BÀN PHẢI UỐNG.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Nửa bàn bị Thợ Săn chọn"
+    },
+    "penalty": {
+      "template": "Lọt vào tầm ngắm xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Bão Đổ Bộ Hướng Dép",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả những ai đang cởi giày/dép ra khỏi chân (để chân trần hoặc đi tất trên nền) ĐỀU PHẢI UỐNG 1 LY vì tội mất vệ sinh.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội cởi giày/dép"
+    },
+    "penalty": {
+      "template": "Kém sang xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "4"
+    }
+  },
+  {
+    "title": "Lời Nguyền Bức Tường Vô Hình",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Cả bàn bị chia đôi bởi 1 bức tường vô hình (Lấy bạn làm mốc). Nửa trái KHÔNG ĐƯỢC CHẠM VÀO nửa phải (kể cả cụng ly). Vi phạm, cả 2 bên cùng uống.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ phá vỡ ranh giới"
+    },
+    "penalty": {
+      "template": "Vượt rào xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Tọa Độ Đen: Kẻ Hát Phụ",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Người ngồi bên TRÁI và PHẢI của người hát hay nhất bàn (do vote) phải uống 1 ly vì tội 'hát dở mà thích làm nền'.",
+    "target": {
+      "type": "NEIGHBORS",
+      "count": 2,
+      "definition": "Hai người cạnh ca sĩ"
+    },
+    "penalty": {
+      "template": "Làm nền xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Điểm Giao Thoa Phụ Kiện Đen",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả những ai đang đeo đồng hồ/vòng tay màu ĐEN phải chạm ly với nhau và uống 1 ngụm.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội phụ kiện đen"
+    },
+    "penalty": {
+      "template": "Hắc ám xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "4"
+    }
+  },
+  {
+    "title": "Lệnh Bài Chặn Đũa Tập Thể",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Tung thẻ này ra! CẢ BÀN (trừ bạn) KHÔNG ĐƯỢC PHÉP dùng đũa trong 5 phút. Phải dùng muỗng hoặc nĩa để gắp mồi.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn trừ bạn"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Thẻ Đảo Ngược Múi Giờ",
+    "category": "ITEM",
+    "actionType": "KEEP",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "keep",
+      "value": 0
+    },
+    "content": "Trong các trò chơi Truyền Điện/Nối Từ, tung thẻ này để ĐẢO CHIỀU vòng chơi. Người vừa đánh đố bạn phải chơi tiếp thay vì bạn.",
+    "target": {
+      "type": "NEIGHBORS",
+      "count": 1,
+      "definition": "Người đánh đố bạn"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Mưa Rơi Kẻ Thù Trái Dấu",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Các bạn Nam đồng loạt chỉ tay vào 1 bạn Nữ. Các bạn Nữ đồng loạt chỉ tay vào 1 bạn Nam. Hai người bị chỉ nhiều nhất phải uống giao bôi.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Cặp đôi bị nhắm tới"
+    },
+    "penalty": {
+      "template": "Giao bôi xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đại Cục Mất Trật Tự 2.0",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả mọi người phải TỰ TÌM 1 LY CỦA NGƯỜI KHÁC để cụng (không dùng ly của mình). Ai chậm chạp hoặc không tìm được ly uống 2 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ chậm chạp"
+    },
+    "penalty": {
+      "template": "Bơ vơ xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Bão Đổ Bộ Hướng Camera 2.0",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Những ai đang CÓ ỐP ĐIỆN THOẠI (bất kể màu) ĐỀU PHẢI uống 1 ly. Hội máy trần (không ốp) được an toàn.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội dùng ốp"
+    },
+    "penalty": {
+      "template": "Sợ vỡ máy xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Tâm Điểm Phê Bình Tốc Độ Cao",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 10
+    },
+    "content": "Bật Đồng Hồ 10s. Bạn phải CHỈ TAY và đọc to tên 3 người có mái tóc DÀI NHẤT bàn. Nếu sai, CẢ 3 NGƯỜI ĐÓ hợp lực phạt bạn.",
+    "target": {
+      "type": "SELF",
+      "count": 1,
+      "definition": "Kẻ đánh giá"
+    },
+    "penalty": {
+      "template": "Đoán sai xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Vòng Tròn Phản Chiếu Cảm Xúc",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn hãy làm 1 biểu cảm KHÓ ĐỠ nhất. Lần lượt vòng quanh bàn mọi người phải làm y hệt. Ai làm xấu nhất (bị cả bàn vote) phải uống 1 ly.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Kẻ diễn đơ nhất"
+    },
+    "penalty": {
+      "template": "Diễn tệ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Lưới Nhện Kẹp Tay",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả mọi người phải lấy TAY TRÁI nắm lấy TAI TRÁI của người ngồi bên phải. Giữ nguyên đội hình đó cùng nhau uống 1 ngụm bằng tay phải.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Tách đàn xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Sát Thủ Vòng Tròn 3.0",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bạn hô 'BÙM'. Bạn đứng im, 2 người kề cạnh bạn phải ôm đầu, 2 người tiếp theo phải giơ tay đầu hàng. Ai làm sai động tác phạt 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Những người phản xạ sai"
+    },
+    "penalty": {
+      "template": "Chết cháy xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Đại Chiến Nợ Nần 2.0",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Ai đang xài thẻ Tín Dụng (Credit Card) tạo thành 1 phe. Ai xài thẻ Ghi Nợ (ATM thường) 1 phe. Phe ít người hơn uống 1 ly.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thiểu số tài chính"
+    },
+    "penalty": {
+      "template": "Thua kém xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Giao Thoa Âm Dương Bằng Đũa",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Toàn bộ NAM giới dùng đũa đút 1 miếng mồi cho 1 bạn NỮ (và ngược lại). Cặp nào không phối hợp được cùng uống.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Toàn bàn"
+    },
+    "penalty": {
+      "template": "Thiếu tình cảm xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Lời Nguyền Trái Đất Quay 2.0",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, MỖI KHI BẠN UỐNG, TẤT CẢ mọi người trong bàn phải cùng đứng lên xoay 1 vòng. Bạn như một vị Vua. Ai lười xoay bị phạt.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Bề tôi lười biếng"
+    },
+    "penalty": {
+      "template": "Kháng chỉ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Lời Nguyền Nâng Ly Bằng 2 Tay",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Luật quý tộc: Trong 3 vòng tới, CẢ BÀN khi uống BẮT BUỘC phải nâng ly bằng 2 tay và che miệng khi uống. Quên luật phạt 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ uống 1 tay"
+    },
+    "penalty": {
+      "template": "Kém sang xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Chuyền Đá Chết Chóc Bằng Muỗng",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Mỗi người ngậm 1 chiếc muỗng. Đặt 1 viên đá lên muỗng của bạn và truyền 1 vòng quanh bàn. Rớt ở ai, 2 NGƯỜI BÊN CẠNH NGƯỜI ĐÓ uống.",
+    "target": {
+      "type": "NEIGHBORS",
+      "count": 2,
+      "definition": "Hai người kề kẻ làm rớt"
+    },
+    "penalty": {
+      "template": "Họa vô đơn chí xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Đếm Số Đạn Lạc 2.0",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đếm số từ 1. Số chia hết cho 3 phải VỖ TAY. Thất bại: Người làm sai KHÔNG UỐNG, mà TẤT CẢ những người CÒN LẠI phải uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Cả bàn trừ kẻ làm sai"
+    },
+    "penalty": {
+      "template": "Vạ lây xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Lời Nguyền Tên Giả: Tráo Đổi Thân Phận",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Các bạn Nam đổi tên cho nhau. Các bạn Nữ đổi tên cho nhau. Trong 3 vòng, ai gọi sai tên 'mới' CẢ BÀN sẽ cùng uống 1 ngụm.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Lú lẫn xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Xếp Tháp Ly Tập Thể 2.0",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "TIMER_COUNTDOWN"
+    ],
+    "duration": {
+      "type": "timer",
+      "value": 20
+    },
+    "content": "Bật Đồng Hồ 20s. Cả bàn phải xếp được 1 tháp 6 ly. Nếu làm đổ hoặc hết giờ, CẢ BÀN cùng cạn 1 ly phạt chung.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Kém đoàn kết xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Máy Phóng Xạ Cấp 100",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 2
+    },
+    "content": "Trong 2 vòng tới, MỖI KHI 1 NGƯỜI UỐNG, TẤT CẢ mọi người phải chạm ly vào nhau 1 tiếng KENG mới được hạ ly xuống.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Quên chạm ly xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Bùa Thanh Trừng Vật Phẩm Kép",
+    "category": "ITEM",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tung thẻ này, TẤT CẢ những ai đang KHÔNG có thẻ ITEM nào trong tay phải UỐNG 1 LY. (Bảo vệ những kẻ đã có hàng).",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội tay trắng"
+    },
+    "penalty": {
+      "template": "Nghèo thẻ xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Vùng Cấm Địa Phía Sau",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Khu vực tựa lưng ghế của mọi người là Vùng Cấm. CẢ BÀN phải ngồi thẳng lưng không được dựa ghế trong 3 vòng. Vi phạm phạt 1 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ yếu lưng mỏi gối"
+    },
+    "penalty": {
+      "template": "Lười biếng xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Luật Rừng: Cấm Nhìn Điện Thoại Của Người Khác",
+    "category": "CURSE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Trong 3 vòng tới, CẢ BÀN cấm tuyệt đối việc liếc nhìn màn hình điện thoại của nhau. Ai bị phát hiện 'liếc trộm' phạt 2 ly.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ tò mò"
+    },
+    "penalty": {
+      "template": "Tò mò xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Lệnh Bài Cảnh Sát Trưởng 2.0",
+    "category": "ROLE",
+    "actionType": "GLOBAL_RULE",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "turn",
+      "value": 3
+    },
+    "content": "Bạn làm Cảnh Sát. Trong 3 vòng, CẢ BÀN trước khi uống đều phải giơ ly lên hỏi bạn: 'Tôi uống được chưa?'. Cảnh sát gật đầu mới được uống.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Toàn bộ thực khách"
+    },
+    "penalty": {
+      "template": "Tội khi quân xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Mưa Rơi Kẻ Thù Kép",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Cả bàn nhắm mắt chỉ tay vào 1 người. Ai BỊ CHỈ NHIỀU NHẤT phạt 1 ly. NHỮNG NGƯỜI CHỈ VÀO KẺ ĐÓ cũng phải uống theo 1 ly vì tội 'hùa'.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Nạn nhân và những kẻ hùa"
+    },
+    "penalty": {
+      "template": "Bè phái xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Đại Chiến Mùa Sinh 2.0",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Ai sinh VÀO MÙA MƯA (tháng 5-10) tạo thành 1 phe. MÙA KHÔ (11-4) tạo 1 phe. Hai phe thi oẳn tù tì tập thể, phe thua uống cạn.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe thua cuộc"
+    },
+    "penalty": {
+      "template": "Thua thời tiết xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Tọa Độ Đen: Kẻ Hát Phụ Múa Phụ",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Hai người ngồi CẠNH người bốc thẻ này phải đứng lên, múa quạt 10 giây. Không múa thì CẢ BÀN phạt 2 người đó uống.",
+    "target": {
+      "type": "NEIGHBORS",
+      "count": 2,
+      "definition": "Hai người bên cạnh"
+    },
+    "penalty": {
+      "template": "Từ chối múa xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "6"
+    }
+  },
+  {
+    "title": "Điểm Giao Thoa Quần Áo Đen",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tất cả những ai có CHI TIẾT MÀU ĐEN trên quần/áo phải đứng lên cụng ly. Những ai không có ĐƯỢC QUYỀN bắt 1 người áo đen uống thêm 1 ngụm.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Hội áo đen"
+    },
+    "penalty": {
+      "template": "Hắc ám xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "5"
+    }
+  },
+  {
+    "title": "Chuyển Đổi Vận Mệnh Cả Bàn",
+    "category": "ITEM",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Tung thẻ này! CẢ BÀN ĐỒNG LOẠT đưa ly của mình sang cho người bên TRÁI. Trò chơi tiếp tục với chiếc ly mới.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": null,
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Mưa Rơi Kẻ Thù Trái Dấu 2.0",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Các bạn Nam đút 1 miếng mồi cho các bạn Nữ. Các bạn Nữ gắp 1 miếng mồi cho các bạn Nam. Ai từ chối nhận CẢ BÀN ép uống.",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Kẻ khước từ tình cảm"
+    },
+    "penalty": {
+      "template": "Chê bai xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "social",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Vòng Quay Sát Thủ: Bottle + Dice",
+    "category": "DARE",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN",
+      "DICE_ROLL"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay Chai chọn 1 nạn nhân. Nạn nhân đổ Xúc Xắc. Ra số CHẴN: Nạn nhân uống. Ra số LẺ: CẢ BÀN (trừ nạn nhân) phải uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Tùy kết quả xúc xắc"
+    },
+    "penalty": {
+      "template": "Định mệnh xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "10"
+    }
+  },
+  {
+    "title": "Coin Lật Bàn",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "COIN_FLIP"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bật Lật Đồng Xu. SẤP: TẤT CẢ những người có người yêu uống. NGỬA: TẤT CẢ những người độc thân uống. Cấm giấu diếm!",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Phe FA hoặc Phe Có Bồ"
+    },
+    "penalty": {
+      "template": "Sự thật mất lòng xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Máy Quay Số Quyết Định Tương Lai Cả Bàn",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "RNG_PICKER"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bật RNG từ 1-100. <30: Nửa bàn trái uống. 31-60: Nửa bàn phải uống. >60: CẢ BÀN cùng cạn ly. Không đường lui!",
+    "target": {
+      "type": "ALL",
+      "count": 0,
+      "definition": "Cả bàn"
+    },
+    "penalty": {
+      "template": "Thần xui xẻo gọi tên xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "9"
+    }
+  },
+  {
+    "title": "Vòng Xoáy Kép Đôi",
+    "category": "EVENT",
+    "actionType": "INSTANT",
+    "tools": [
+      "BOTTLE_SPIN"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Quay Chai 2 lần. Hai người bị chai chỉ trúng SẼ LÀM ĐỒNG MINH VÀ PHẢI Oẳn tù tì với 2 NGƯỜI BÊN CẠNH HỌ. Bên nào thua uống.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 2,
+      "definition": "Nhóm 2 người thua"
+    },
+    "penalty": {
+      "template": "Thua cuộc xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "strategy",
+      "sophistication_level": "8"
+    }
+  },
+  {
+    "title": "Cả Bàn Nối Lời Khẩu Nghiệp",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Bắt đầu từ bạn. Mỗi người nối 1 chữ để tạo thành 1 câu chửi/khịa vui (VD: Đứa - Nào - Ngu...). Ai bí từ làm đứt câu CẢ BÀN ÉP UỐNG 2 LY.",
+    "target": {
+      "type": "LOSER",
+      "count": 1,
+      "definition": "Kẻ đứt mạch khẩu nghiệp"
+    },
+    "penalty": {
+      "template": "Không biết chửi xin cạn {value} {unit} {type}",
+      "value": 2
+    },
+    "metadata": {
+      "vibe": "funny",
+      "sophistication_level": "7"
+    }
+  },
+  {
+    "title": "Sát Thủ Đếm Bàn Nhậu",
+    "category": "MINI_GAME",
+    "actionType": "INSTANT",
+    "tools": [
+      "NONE"
+    ],
+    "duration": {
+      "type": "instant",
+      "value": 0
+    },
+    "content": "Đếm số từ 1. Đến số có chứa số 5, thay vì đọc số, người đó CÓ QUYỀN chỉ định MỘT NỬA BÀN PHẢI UỐNG. Trò chơi kết thúc.",
+    "target": {
+      "type": "GROUP_CUSTOM",
+      "count": 0,
+      "definition": "Nửa bàn bị chỉ định"
+    },
+    "penalty": {
+      "template": "Trúng đạn xin cạn {value} {unit} {type}",
+      "value": 1
+    },
+    "metadata": {
+      "vibe": "chaos",
+      "sophistication_level": "8"
+    }
   }
 ]
