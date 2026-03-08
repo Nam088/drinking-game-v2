@@ -3,6 +3,7 @@ import { InjectRepository } from "@common/decorators/inject-repository.decorator
 import { Service } from "@common/decorators/service.decorator"
 import { createLogger } from "@common/utils/logger"
 import { Card } from "./card.entity"
+import { CardV2 } from "./card-v2.entity"
 import fs from "fs"
 import path from "path"
 
@@ -12,7 +13,9 @@ const logger = createLogger("CardService")
 export class CardService {
     constructor(
         @InjectRepository(Card)
-        private cardRepository: Repository<Card>
+        private cardRepository: Repository<Card>,
+        @InjectRepository(CardV2)
+        private cardV2Repository: Repository<CardV2>
     ) { }
 
     async seed(): Promise<void> {
@@ -74,6 +77,21 @@ export class CardService {
         return card
     }
 
+    async getRandomCardV2(excludeIds: number[] = []): Promise<CardV2 | null> {
+        // SQLite specific random ordering with exclusions
+        let query = this.cardV2Repository.createQueryBuilder("card")
+        
+        if (excludeIds.length > 0) {
+            query = query.where("card.id NOT IN (:...excludeIds)", { excludeIds })
+        }
+
+        const card = await query
+            .orderBy("RANDOM()")
+            .getOne()
+
+        return card
+    }
+
     async clearAll(): Promise<void> {
         await this.cardRepository.clear()
         logger.info("All cards cleared")
@@ -82,5 +100,15 @@ export class CardService {
     async create(cardData: Partial<Card>): Promise<Card> {
         const card = this.cardRepository.create(cardData)
         return this.cardRepository.save(card)
+    }
+
+    async clearAllV2(): Promise<void> {
+        await this.cardV2Repository.clear()
+        logger.info("All cards V2 cleared")
+    }
+
+    async createV2(cardData: Partial<CardV2>): Promise<CardV2> {
+        const card = this.cardV2Repository.create(cardData)
+        return this.cardV2Repository.save(card)
     }
 }

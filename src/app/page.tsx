@@ -10,6 +10,7 @@ import { PlayerManager } from "@/components/game/inventory/PlayerManager"
 import { RuleModal } from "@/components/game/RuleModal"
 import { TimerPanel } from "@/components/game/TimerPanel"
 import { Icons } from "@/components/icons"
+import Link from "next/link"
 
 interface CardData {
   id: number
@@ -119,8 +120,11 @@ export default function GamePage() {
             Không say không về
           </h1>
           <p className="text-slate-400 mt-2 font-medium tracking-wider text-sm">
-            Chế độ nhậu vô hạn
+            Chế độ nhậu vô hạn (V1)
           </p>
+          <Link href="/v2" className="mt-4 px-4 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/50 text-xs font-bold uppercase tracking-widest hover:bg-indigo-500/40 transition-colors">
+            Chế Độ Bùng Nổ →
+          </Link>
         </motion.div>
 
         {/* Card Area with Deck */}

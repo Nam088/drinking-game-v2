@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "better-sqlite3": "^12.4.6",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
     "csv-parse": "^6.1.0",
     "framer-motion": "^12.23.24",
     "next": "16.0.10",

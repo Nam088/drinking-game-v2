@@ -21,6 +21,7 @@ interface TimerState {
   setTimerDuration: (id: string, durationMs: number) => void
   toggleTimer: (id: string) => void
   resetTimer: (id: string) => void
+  clearTimers: () => void
   tick: () => void // Called in a global interval to update all running timers
 }
 
@@ -92,6 +93,8 @@ export const useTimerStore = create<TimerState>()(
           t.id === id ? { ...t, remainingMs: t.durationMs, isRunning: false, startedAt: null } : t
         )
       })),
+
+      clearTimers: () => set({ timers: [] }),
 
       tick: () => set((state) => {
         const now = Date.now();
